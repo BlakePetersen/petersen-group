@@ -4,7 +4,7 @@ import { initStore, toggleNavMenu, toggleSearchMenu } from '../../store'
 
 import Link from 'next/link'
 import styled from 'styled-components'
-import withRedux from "../../utils/withRedux";
+import withRedux from "../../lib/withRedux";
 
 const _SearchMenu = styled.div`
   background-color: #18443b;

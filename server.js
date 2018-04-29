@@ -11,7 +11,7 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/blog/:slug', (req, res) => {
+    server.get('/:slug', (req, res) => {
       const actualPage = '/post';
       const queryParams = { slug: req.params.slug };
       app.render(req, res, actualPage, queryParams);
@@ -23,7 +23,7 @@ app
 
     server.listen(port, (err) => {
       if (err) throw err;
-      console.log('http://localhost:' + port)
+      console.log('👉👉 http://localhost:' + port)
     });
   })
   .catch((e) => {

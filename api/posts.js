@@ -2,8 +2,8 @@ const contentful = require('contentful');
 const env = require('../env-config');
 
 const client = contentful.createClient({
-  space: env.CONTENTFUL_SPACE_ID,
-  accessToken: env.CONTENTFUL_ACCESS_TOKEN
+  space: env.CONTENTFUL.SPACE_ID,
+  accessToken: env.CONTENTFUL.ACCESS_TOKEN
 });
 
 function getBlake() {
@@ -16,8 +16,8 @@ function getBlake() {
 
 function getPosts() {
   const entries = client.getEntries({
-    'content_type': 'blogPost'
-  });
+      'content_type': 'blogPost'
+    });
   return entries;
 };
 

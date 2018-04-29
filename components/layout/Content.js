@@ -9,6 +9,7 @@ const _Content = styled.main`
 `;
 
 const _Container = styled.div`
+  margin-top: 110px;
   display: flex;
   flex-direction: column;
   max-width: 1000px;

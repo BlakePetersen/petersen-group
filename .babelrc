@@ -1,8 +1,11 @@
 {
-  "presets": [
-    "next/babel"
-  ],
+  "presets": ["next/babel"],
   "plugins": [
-    ["./env-config.js"]
+    [
+      "inline-import",
+      {
+        "extensions": [".css"]
+      }
+    ]
   ]
 }

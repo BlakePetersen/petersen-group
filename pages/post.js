@@ -1,41 +1,94 @@
-import { initStore } from '../store'
-import withRedux from '../utils/withRedux'
+import { initStore, setPageAsPost , setPageTitle} from '../store'
+import withRedux from '../lib/withRedux'
 
-import Layout from '../components/Layout'
+import { getBlake, getPost } from '../api/posts'
+
+import Layout from '../components/layout/Layout'
+
 import Markdown from 'react-markdown'
-import { getPost } from '../api/posts'
+import Moment from 'react-moment'
+import 'prismjs';
+import prismTheme from '../static/prism-duotone-sea.css';
+import loadLanguages from 'prismjs/components/index';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
 
-const post = (props) =>
-  <Layout>
-    <h1>{props.post.fields.title}</h1>
-    <div className="markdown">
-      <Markdown source={props.post.fields.body} />
-    </div>
-    <style jsx global>{`
-     .markdown {
-       font-family: 'Arial';
-     }
+import { DiscussionEmbed, CommentCount } from 'disqus-react';
 
-     .markdown a {
-       text-decoration: none;
-       color: blue;
-     }
+import styled from 'styled-components'
+import { bindActionCreators } from "redux";
 
-     .markdown a:hover {
-       opacity: 0.6;
-     }
+const _Title = styled.h1`
+  color: #435469;
+`;
 
-     .markdown h3 {
-       margin: 0;
-       padding: 0;
-       text-transform: uppercase;
-     }
-  `}</style>
-</Layout>
+const _Meta = styled.h3`
+  color: transparentize(#435469, .75);
+`;
 
-post.getInitialProps = async function ({ query }) {
-  const res = await getPost(query.slug);
-  return { post: res.items[0] }
+const _Tags = styled.div`
+  color: transparentize(#435469, .75);
+`;
+
+class Post extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentWillMount() {
+    this.props.setPageAsPost();
+    this.props.setPageTitle(this.props.post.fields.title);
+
+    this.disqusShortname = 'BlakePetersen';
+
+    this.disqusConfig = {
+      url: "/" + this.props.post.fields.slug + "/",
+      identifier: "17"
+    };
+  }
+
+  componentDidMount() {
+    // load Prismjs
+    loadLanguages(['apacheconf','bash','php','python']);
+    const _codeBlocks = document.querySelectorAll('pre');
+    _codeBlocks.forEach((codeBlock) => {
+      codeBlock.classList.add('line-numbers')
+    });
+    Prism.highlightAll()
+  }
+
+  static async getInitialProps({ query }) {
+    let _posts = await getPost(query.slug);
+    const _author = await getBlake();
+    return {
+      post: _posts.items[0],
+      author: _author.items[0],
+    }
+  }
+
+  render() {
+    return <Layout>
+      <style>
+        { prismTheme }
+      </style>
+      <_Title>{ this.props.post.fields.title }</_Title>
+      <_Meta>By { this.props.author.fields.name } on <Moment format={ `MMMM Do, YYYY` }>{ this.props.post.fields.publishDate }</Moment></_Meta>
+      <CommentCount shortname={this.disqusShortname} config={this.disqusConfig}>
+        Comments
+      </CommentCount>
+      <_Tags>TAAAAAGGGGGSSSSSS</_Tags>
+      <Markdown source={ this.props.post.fields.body } />
+      <DiscussionEmbed shortname={this.disqusShortname} config={this.disqusConfig} />
+    </Layout>
+  }
 };
 
-export default withRedux(initStore, null, null)(post)
+const mapStateToProps = ({ isPost, pageTitle }) => ({ isPost, pageTitle });
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setPageTitle: bindActionCreators(setPageTitle, dispatch),
+    setPageAsPost: bindActionCreators(setPageAsPost, dispatch),
+  }
+};
+
+export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(Post)

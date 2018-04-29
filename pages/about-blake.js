@@ -1,7 +1,7 @@
 import { initStore } from '../store'
-import withRedux from '../utils/withRedux'
+import withRedux from '../lib/withRedux'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import { getBlake } from '../api/posts'
 
 const aboutBlake = (props) => (

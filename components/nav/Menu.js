@@ -4,7 +4,7 @@ import { initStore, toggleNavMenu } from '../../store'
 
 import Link from 'next/link'
 import styled from 'styled-components'
-import withRedux from "../../utils/withRedux";
+import withRedux from "../../lib/withRedux";
 
 const _NavMenu = styled.div`
   background-color: #bdccdc;
@@ -17,6 +17,7 @@ const _NavMenu = styled.div`
   transform: translateX(-220px);
   box-shadow: 10px 0 30px rgba(0, 0, 0, .15), 2px 0 10px rgba(0, 0, 0, .15);
   transition: transform 200ms ease-in-out;
+  flex-shrink: 0;
   
   &.opened{
       transform: translateX(0);

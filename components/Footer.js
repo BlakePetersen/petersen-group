@@ -13,7 +13,7 @@ const _Footer = styled.footer`
   color: #BBC7CC;
   text-align: center;
   background: #F7FAFB;
-  border-top: 6px solid rgba(199, 204, 207, 0.5);
+  border-top: 6px solid #DDE2E5;
   
   p {
     max-width: 500px;
@@ -28,7 +28,7 @@ const _Footer = styled.footer`
     font-weight: bold;
     height: 1rem;
     text-decoration: none;
-    border-bottom: #BBC7CC 0px solid;
+    border-bottom: #BBC7CC 0 solid;
     padding-bottom: 2px;
     transition: border-width 150ms ease 50ms, transform 250ms ease;
   

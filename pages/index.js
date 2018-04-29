@@ -1,10 +1,18 @@
+// State
+import { initStore, clearPageAsPost } from '../store'
+import { bindActionCreators } from "redux";
+import withRedux from '../lib/withRedux'
+
+// Content
+import { getPosts, getBlake } from '../api/posts'
+
+// Layout
+import Layout from '../components/layout/Layout'
 import Link from 'next/link'
+import Moment from 'react-moment'
+import sortBy from 'sort-by';
 
-import { initStore } from '../store'
-import withRedux from '../utils/withRedux'
-
-import Layout from '../components/Layout'
-import { getPosts } from '../api/posts'
+// Styled Components
 import styled from 'styled-components'
 
 const _ListWrapper = styled.div`
@@ -15,28 +23,73 @@ const _ListWrapper = styled.div`
   } 
 `;
 
-const _Title = styled.h1`
-  color: #84B0C8;
-  line-height: 
+const _TitleLink = styled.a`
+  color: #435469;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 2px;
+  border-bottom: #435469 0 solid;
+  transition: border-width 150ms ease 50ms, transform 250ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-width: 2px;
+  } 
 `;
 
-const Index = (props) => (
-  <Layout>
-    { props.posts.items.map((item) => (
-      <_ListWrapper>
-        <Link key={item.fields.slug} href={`/blog/${item.fields.slug}`}>
-          <a>
-            <_Title>{ item.fields.title }</_Title>
-          </a>
-        </Link>
-      </_ListWrapper>
-    ))}
-  </Layout>
-);
+const _Meta = styled.h3`
+  color: transparentize(#435469, .75);
+`;
 
-Index.getInitialProps = async () => {
-  const _posts = await getPosts();
-  return { posts: _posts }
+const _Description = styled.p`
+  line-height: 1.4;
+`;
+
+class Index extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentWillMount() {
+    this.props.clearPageAsPost();
+    this.props.posts.items = this.props.posts.items.sort(sortBy('-fields.publishDate'));
+  }
+
+  static async getInitialProps() {
+    const _posts = await getPosts();
+    const _author = await getBlake();
+    return {
+      posts: _posts,
+      author: _author.items[0]
+    }
+  };
+
+  render() {
+    return <Layout>
+      { this.props.posts.items.map((item) => (
+        <_ListWrapper>
+          <Link key={ item.fields.slug } href={`/${ item.fields.slug }`}>
+            <h1>
+              <_TitleLink>{ item.fields.title }</_TitleLink>
+            </h1>
+          </Link>
+          <_Meta>
+            <Moment format={ `MMMM Do, YYYY` }>{ item.fields.publishDate }</Moment> / Tags
+          </_Meta>
+          <_Description>
+            { item.fields.description }
+          </_Description>
+        </_ListWrapper>
+      ))}
+    </Layout>
+  }
 };
 
-export default withRedux(initStore, null, null)(Index)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    clearPageAsPost: bindActionCreators(clearPageAsPost, dispatch),
+  }
+};
+
+export default withRedux(initStore, null, mapDispatchToProps)(Index)
