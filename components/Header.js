@@ -26,9 +26,7 @@ const _Header = styled.header`
 class Header extends React.Component {
   render() {
     return <_Header>
-      {/*<Menu />*/}
       <MainNav />
-      {/*<Search />*/}
     </_Header>
   }
 };
