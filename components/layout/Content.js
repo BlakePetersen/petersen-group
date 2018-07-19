@@ -5,14 +5,13 @@ const _Content = styled.main`
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding: 5rem;
+  padding: 3rem;
 `;
 
 const _Container = styled.div`
-  margin-top: 110px;
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
 `;
 

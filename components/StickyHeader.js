@@ -3,12 +3,12 @@ import Menu from './nav/Menu'
 import Search from './nav/Search'
 import styled from 'styled-components'
 
-const _Header = styled.header`
+const _StickyHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: sticky;
   z-index: 100;
   max-width: 100vw;
   width: 100%;
@@ -25,13 +25,15 @@ const _Header = styled.header`
 
 class Header extends React.Component {
   render() {
-    return <_Header>
-      {/*<Menu />*/}
+    return <_StickyHeader>
+      <Menu />
       <MainNav />
-      {/*<Search />*/}
-    </_Header>
+      <Search />
+    </_StickyHeader>
   }
 };
 
+
 // Export with Redux Wrapper
 export default Header
+

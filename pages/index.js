@@ -1,15 +1,9 @@
-// State
-import { initStore, clearPageAsPost } from '../store'
-import { bindActionCreators } from "redux";
-import withRedux from '../lib/withRedux'
-
 // Content
-import { getPosts, getBlake } from '../api/posts'
+import { getPosts } from '../api/contentful'
 
 // Layout
-import Layout from '../components/layout/Layout'
 import Link from 'next/link'
-import Moment from 'react-moment'
+import Meta from '../components/posts/meta'
 import sortBy from 'sort-by';
 
 // Styled Components
@@ -38,10 +32,6 @@ const _TitleLink = styled.a`
   } 
 `;
 
-const _Meta = styled.h3`
-  color: transparentize(#435469, .75);
-`;
-
 const _Description = styled.p`
   line-height: 1.4;
 `;
@@ -50,46 +40,34 @@ class Index extends React.Component {
   constructor(props) {
     super(props)
   }
-
-  componentWillMount() {
-    this.props.clearPageAsPost();
-    this.props.posts.items = this.props.posts.items.sort(sortBy('-fields.publishDate'));
-  }
-
+  
   static async getInitialProps() {
     const _posts = await getPosts();
-    const _author = await getBlake();
+    _posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
     return {
       posts: _posts,
-      author: _author.items[0]
     }
   };
 
   render() {
-    return <Layout>
+    return <>
       { this.props.posts.items.map((item) => (
-        <_ListWrapper>
-          <Link key={ item.fields.slug } href={`/${ item.fields.slug }`}>
+        <_ListWrapper key={ item.fields.slug }>
+          <Link href={`/posts/${ item.fields.slug }`} prefetch>
             <h1>
               <_TitleLink>{ item.fields.title }</_TitleLink>
             </h1>
           </Link>
-          <_Meta>
-            <Moment format={ `MMMM Do, YYYY` }>{ item.fields.publishDate }</Moment> / Tags
-          </_Meta>
+
+          <Meta publishDate={ item.fields.publishDate } />
+
           <_Description>
             { item.fields.description }
           </_Description>
         </_ListWrapper>
       ))}
-    </Layout>
+    </>
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    clearPageAsPost: bindActionCreators(clearPageAsPost, dispatch),
-  }
-};
-
-export default withRedux(initStore, null, mapDispatchToProps)(Index)
+export default Index

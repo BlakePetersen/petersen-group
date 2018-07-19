@@ -15,6 +15,10 @@ const _Footer = styled.footer`
   background: #F7FAFB;
   border-top: 6px solid #DDE2E5;
   
+  h3 {
+    margin-bottom: 0;
+  }
+  
   p {
     max-width: 500px;
     padding: 0 1rem;
@@ -41,6 +45,8 @@ const _Footer = styled.footer`
 
 const Footer = () => (
   <_Footer>
+    <h3>ʙ ʟ ▲ ĸ ᴇ</h3>
+
     <p>
       <Link href="/"><a>BlakePetersen.io</a></Link> • 2018
     </p>

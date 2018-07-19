@@ -14,6 +14,21 @@ function getBlake() {
   return entry;
 };
 
+function getPersons() {
+  const people = client.getEntries({
+    'content_type': 'person',
+  });
+  return people;
+};
+
+function getPerson(slug) {
+  const person = client.getEntries({
+    'content_type': 'person',
+    'fields.slug': slug
+  });
+  return person;
+};
+
 function getPosts() {
   const entries = client.getEntries({
       'content_type': 'blogPost'
@@ -31,6 +46,8 @@ function getPost(slug) {
 
 module.exports = {
   getBlake,
+  getPerson,
+  getPersons,
   getPost,
   getPosts
 };

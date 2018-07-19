@@ -1,5 +1,5 @@
 import Head from '../Head'
-import Header from '../Header'
+import Header from '../StickyHeader'
 import Content from './Content'
 import Footer from '../Footer'
 

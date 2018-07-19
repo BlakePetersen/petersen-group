@@ -11,6 +11,14 @@ injectGlobal`
    font-family: 'Open Sans', sans-serif;
   }
   
+  a {
+    color: gray;
+    
+    &:hover {
+      color: #535353;
+    }
+  }
+  
   p {
     line-height: 1.5;
   
@@ -41,15 +49,12 @@ injectGlobal`
     hyphens: none;
     background: #2e3c4b;
     color: #80a6ce;
+    border-radius: 3px;
   }
   
   pre {    
     padding: 1em;
-    margin: 2rem;
     overflow: auto;
-    box-shadow:  0 10px 40px rgba(0, 0, 0, .1), 0 2px 5px rgba(0, 0, 0, .1);
-    border: 3px solid #DDE2E5;
-    background: #2e3c4b;
     position: relative;
     padding-left: 3.8em;
     counter-reset: linenumber;
@@ -57,6 +62,7 @@ injectGlobal`
   
   code {
     position: relative;
+    padding: 3px 5px;
     white-space: inherit;
   }
 
@@ -82,7 +88,7 @@ injectGlobal`
     left: -3.8em;
     width: 3em; /* works for line-numbers below 1000 lines */
     letter-spacing: -1px;
-    border-right: 1px solid #999;
+    border-right: 1px solid #4a5f78;
   
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -99,7 +105,7 @@ injectGlobal`
   
   .line-numbers-rows > span:before {
     content: counter(linenumber);
-    color: transparentize(#DDE2E5, .5);
+    color: #4a5f78;
     display: block;
     padding-right: 0.8em;
     text-align: right;
