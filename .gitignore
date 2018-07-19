@@ -1,0 +1,8 @@
+/.idea
+/.next
+/node_modules
+/out
+
+.DS_Store
+.env
+*.log
