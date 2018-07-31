@@ -3,7 +3,7 @@ import Link from 'next/link'
 const PostLink = ({ post }) => (
   <div>
   <Link as={`/blog/${post.slug}`} href={`/post?slug=${post.slug}`}>
-    <a>{post.title}</a>
+    <a>{post.title} !!!</a>
   </Link>
   <style jsx>{`
       a {

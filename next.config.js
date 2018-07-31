@@ -23,7 +23,7 @@ module.exports = withCSS({
       _getPersons(),
       _getPosts()
     ])
-      .then((data) => {
+      .then(data => {
 
         data[0].items.forEach((person) => {
           _routes['/about/' + person.fields.slug] = {

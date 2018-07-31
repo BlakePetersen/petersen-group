@@ -23,13 +23,6 @@ const _TitleLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   padding-bottom: 2px;
-  border-bottom: #435469 0 solid;
-  transition: border-width 150ms ease 50ms, transform 250ms ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-width: 2px;
-  } 
 `;
 
 const _Description = styled.p`
@@ -51,9 +44,9 @@ class Index extends React.Component {
 
   render() {
     return <>
-      { this.props.posts.items.map((item) => (
+      { this.props.posts.items.map(item => (
         <_ListWrapper key={ item.fields.slug }>
-          <Link href={`/posts/${ item.fields.slug }`} prefetch>
+          <Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
             <h1>
               <_TitleLink>{ item.fields.title }</_TitleLink>
             </h1>

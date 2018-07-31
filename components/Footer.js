@@ -48,7 +48,9 @@ const Footer = () => (
     <h3>ʙ ʟ ▲ ĸ ᴇ</h3>
 
     <p>
-      <Link href="/"><a>BlakePetersen.io</a></Link> • 2018
+      <Link as="/" href="/">
+        <a>BlakePetersen.io</a>
+      </Link> • 2018
     </p>
 
     <p>
