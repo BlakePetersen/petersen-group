@@ -1,6 +1,5 @@
-import App, {Container} from 'next/app'
+import App, { Container } from 'next/app'
 import Layout from '../components/layout/Layout'
-
 
 export default class MyApp extends App {
   static async getInitialProps ({ Component, router, ctx }) {

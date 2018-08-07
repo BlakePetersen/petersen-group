@@ -20,7 +20,7 @@ injectGlobal`
   }
   
   p {
-    line-height: 1.5;
+    line-height: 2;
   
     > img {
       background: #F7FAFB;
@@ -30,84 +30,58 @@ injectGlobal`
     }
   }
   
-  code,
+  code.hljs,
   pre {
     font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
+    font-size: 1rem;
     direction: ltr;
     text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
     tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
     hyphens: none;
-    background: #2e3c4b;
-    color: #80a6ce;
-    border-radius: 3px;
+    white-space: pre;
+    background: #eaeef3;
+    border-radius: 4px;
   }
   
-  pre {    
-    padding: 1em;
+  pre {
     overflow: auto;
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
+    line-height: 1.5;
+    padding: .75rem 1rem;
+
+    > code.hljs {
+      padding: 0;
+    }
   }
   
   code {
+    padding: .5rem;
     position: relative;
-    padding: 3px 5px;
     white-space: inherit;
   }
-
-  .line-numbers .line-numbers-rows {
-    border-right-color: #1f2932;
+  
+  .page-transition-enter {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
   }
-  
-  .line-numbers-rows > span:before {
-    color: #2c3847;
+  .page-transition-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 250ms, transform 250ms;
   }
-  
-  .line-highlight {
-    background: rgba(10, 163, 112, 0.2);
-    background: -webkit-linear-gradient(left, rgba(10, 163, 112, 0.2) 70%, rgba(10, 163, 112, 0));
-    background: linear-gradient(to right, rgba(10, 163, 112, 0.2) 70%, rgba(10, 163, 112, 0));
+  .page-transition-exit {
+    opacity: 1;
   }
-  
-  .line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em; /* works for line-numbers below 1000 lines */
-    letter-spacing: -1px;
-    border-right: 1px solid #4a5f78;
-  
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  
+  .page-transition-exit-active {
+    opacity: 0;
+    transition: opacity 250ms;
   }
-  
-  .line-numbers-rows > span {
-    pointer-events: none;
-    display: block;
-    counter-increment: linenumber;
+  .loading-indicator-appear,
+  .loading-indicator-enter {
+    opacity: 0;
   }
-  
-  .line-numbers-rows > span:before {
-    content: counter(linenumber);
-    color: #4a5f78;
-    display: block;
-    padding-right: 0.8em;
-    text-align: right;
+  .loading-indicator-appear-active,
+  .loading-indicator-enter-active {
+    opacity: 1;
+    transition: opacity 250ms;
   }
 `;

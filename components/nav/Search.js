@@ -23,7 +23,7 @@ const _SearchMenu = styled.div`
   }
 `;
 
-class NavMenu extends React.Component {
+class SearchMenu extends React.Component {
   constructor(props) {
     super(props);
     this.setWrapperRef = this.setWrapperRef.bind(this);
@@ -78,4 +78,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 // Export with Redux Wrapper
-export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(NavMenu)
+export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(SearchMenu)

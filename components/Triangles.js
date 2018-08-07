@@ -11,7 +11,7 @@ const _Triangles = styled.div`
     transition: opacity 420ms ease, transform 420ms ease-out; 
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0 0 5px rgba(0,0,0,.2), inset 0 0 25px rgba(0,0,0,.2), inset 0 0 125px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 10px rgba(0,0,0,.1), inset 0 0 25px rgba(0,0,0,.15), inset 0 0 125px rgba(0,0,0,.2);
         
     &.activate {
       opacity: 1;
