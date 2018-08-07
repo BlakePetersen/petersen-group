@@ -25,9 +25,7 @@ const _TitleLink = styled.a`
   padding-bottom: 2px;
 `;
 
-const _Description = styled.p`
-  line-height: 1.4;
-`;
+const _Description = styled.p``;
 
 class Index extends React.Component {
   constructor(props) {

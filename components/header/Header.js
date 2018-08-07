@@ -1,7 +1,7 @@
-import MainNav from './nav/Main'
-import Menu from './nav/Menu'
-import PageProgress from './nav/PageProgress'
-import Search from './nav/Search'
+import MainNav from '../nav/Main'
+import Menu from '../nav/Menu'
+import PageProgress from '../nav/PageProgress'
+import Search from '../nav/Search'
 import styled from 'styled-components'
 
 const _StickyHeader = styled.header`

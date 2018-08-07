@@ -1,6 +1,6 @@
 import { getPost } from '../api/contentful'
-import Markdown from 'react-markdown'
 
+import Body from '../components/posts/body'
 import Meta from '../components/posts/meta'
 
 import styled from 'styled-components'
@@ -20,14 +20,6 @@ class Post extends React.Component {
   //   identifier: this.props.post.fields.disqusId || false
   // };
 
-  // componentDidMount() {
-  //   const _codeBlocks = document.querySelectorAll('pre');
-  //   _codeBlocks.forEach((codeBlock) => {
-  //     codeBlock.classList.add('line-numbers')
-  //   });
-  //   // Prism.highlightAll()
-  // }
-
   static async getInitialProps({ query }) {
     const _post = await getPost(query.slug);
     return {
@@ -38,11 +30,8 @@ class Post extends React.Component {
   render() {
     return <>
       <_Title>{ this.props.post.fields.title }</_Title>
-
       <Meta publishDate={ this.props.post.fields.publishDate } />
-
-      <Markdown source={ this.props.post.fields.body } />
-
+      <Body body={ this.props.post.fields.body } />
     </>
   }
 };

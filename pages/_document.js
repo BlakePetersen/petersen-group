@@ -12,12 +12,13 @@ export default class SiteDocument extends Document {
       <html>
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-          {styleTags}
+          { styleTags }
+          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
 
         <body>
           <div className="root">
-            {main}
+            { main }
           </div>
           <NextScript />
         </body>
