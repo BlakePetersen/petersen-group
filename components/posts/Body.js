@@ -6,7 +6,7 @@ import RemarkLowlight from 'remark-react-lowlight';
 import bash from 'highlight.js/lib/languages/bash';
 import js from 'highlight.js/lib/languages/javascript';
 
-import 'highlight.js/styles/magula.css';
+import 'highlight.js/styles/color-brewer.css';
 
 import styled from 'styled-components'
 

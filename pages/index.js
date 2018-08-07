@@ -3,7 +3,7 @@ import { getPosts } from '../api/contentful'
 
 // Layout
 import Link from 'next/link'
-import Meta from '../components/posts/meta'
+import Meta from '../components/posts/Meta'
 import sortBy from 'sort-by';
 
 // Styled Components
