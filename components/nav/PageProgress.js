@@ -16,15 +16,12 @@ class PageProgress extends Component {
   }
 
   componentDidMount() {
-    if (process.browser) {
-      const domNode = ReactDOM.findDOMNode(this);
-      ProgressBar(domNode).init()
-    }
+    ProgressBar(ReactDOM.findDOMNode(this));
   }
 
   render() {
     return <>
-        <_ProgressBar />
+      <_ProgressBar />
     </>
   }
 }

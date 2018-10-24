@@ -20,6 +20,7 @@ const Layout = ({ children, title }) => (
         exit: 0
       }}
       loadingClassNames='loading-indicator'
+      monkeyPatchScrolling={true}
     >
         <Content children={ children } />
     </PageTransition>

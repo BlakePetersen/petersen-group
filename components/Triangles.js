@@ -1,5 +1,6 @@
 import triangles from './../lib/triangles'
 import styled from 'styled-components'
+import ReactDOM from "react-dom";
 
 const _Triangles = styled.div`
     visibility: hidden;
@@ -21,11 +22,11 @@ const _Triangles = styled.div`
 
 class Triangles extends React.Component {
   componentDidMount() {
-    triangles.init();
+    triangles(ReactDOM.findDOMNode(this));
   };
 
   render() {
-    return <_Triangles className="triangles" />
+    return <_Triangles />
   }
 };
 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const _MainNav = styled.div`
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;    
@@ -144,7 +144,7 @@ class MainNav extends React.Component {
 
       <_Content>
         <_Title>
-          <Link prefetch href="/">
+          <Link prefetch href={`/`} as={`/`}>
             <a>
               ʙ ʟ ▲ ĸ ᴇ
               <span>Good Times in Web Development</span>

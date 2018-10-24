@@ -26,7 +26,7 @@ const _StickyHeader = styled.header`
 class Header extends React.Component {
   render() {
     return <_StickyHeader>
-      {/*<Menu />*/}
+      <Menu />
       <MainNav />
       {/*<Search />*/}
       <PageProgress />

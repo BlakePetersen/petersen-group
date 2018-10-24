@@ -1,10 +1,10 @@
 import ReactDOM from 'react-dom'
+import withRedux from "../../lib/withRedux";
 import { bindActionCreators } from 'redux'
 import { initStore, toggleNavMenu } from '../../store'
 
 import Link from 'next/link'
 import styled from 'styled-components'
-import withRedux from "../../lib/withRedux";
 
 const _NavMenu = styled.div`
   background-color: #bdccdc;
