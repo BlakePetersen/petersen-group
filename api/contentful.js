@@ -6,42 +6,56 @@ const client = contentful.createClient({
   accessToken: env.CONTENTFUL.ACCESS_TOKEN
 });
 
-function getBlake() {
+const getBlake = () => {
   const entry = client.getEntries({
     'content_type': 'person',
     'fields.slug': 'blake-petersen'
   });
+
   return entry;
 };
 
-function getPersons() {
+const getPersons = () => {
   const people = client.getEntries({
     'content_type': 'person',
   });
+
   return people;
 };
 
-function getPerson(slug) {
+const getPerson = (slug) => {
   const person = client.getEntries({
     'content_type': 'person',
     'fields.slug': slug
   });
+
   return person;
 };
 
-function getPosts() {
+const getPosts = () => {
   const entries = client.getEntries({
-      'content_type': 'blogPost'
-    });
+    'content_type': 'blogPost'
+  });
+
   return entries;
 };
 
-function getPost(slug) {
+const getPost = (slug) => {
   const entry = client.getEntries({
     'content_type': 'blogPost',
     'fields.slug': slug
   });
+
   return entry;
+};
+
+const getPostsByTag = (tag) => {
+  const entries = client.getEntries({
+    'content_type': 'blogPost',
+    'fields.tags': tag
+  });
+
+  return entries;
 };
 
 module.exports = {
@@ -49,5 +63,6 @@ module.exports = {
   getPerson,
   getPersons,
   getPost,
-  getPosts
+  getPosts,
+  getPostsByTag
 };

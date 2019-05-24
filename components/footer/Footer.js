@@ -45,8 +45,6 @@ const _Footer = styled.footer`
 
 const Footer = () => (
   <_Footer>
-    <h3>ʙ ʟ ▲ ĸ ᴇ</h3>
-
     <p>
       <Link as="/" href="/">
         <a>BlakePetersen.io</a>

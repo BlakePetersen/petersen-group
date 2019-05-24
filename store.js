@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
-const exampleInitialState = {
+const coldState = {
   navMenu: false,
   searchMenu: false,
   headerFullHeight: true,
@@ -29,7 +29,7 @@ export const actionTypes = {
 };
 
 // REDUCERS
-export const reducer = (state = exampleInitialState, action) => {
+export const reducer = (state = coldState, action) => {
   switch (action.type) {
 
     case actionTypes.CLEAR_HEADER_FULL_HEIGHT:
@@ -164,6 +164,6 @@ export const toggleSearchMenu = () => dispatch => {
   return dispatch({ type: actionTypes.TOGGLE_SEARCH_MENU })
 };
 
-export const initStore = (initialState = exampleInitialState) => {
+export const initStore = (initialState = coldState) => {
   return createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 };

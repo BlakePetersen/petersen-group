@@ -5,6 +5,7 @@ import Header from '../header/Header'
 import Content from './Content'
 import Footer from '../footer/Footer'
 import Loader from '../layout/Loader'
+import Twitter from '../footer/Twitter'
 
 const Layout = ({ children, title }) => (
   <>
@@ -24,6 +25,7 @@ const Layout = ({ children, title }) => (
     >
         <Content children={ children } />
     </PageTransition>
+    <Twitter />
     <Footer />
   </>
 );

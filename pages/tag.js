@@ -32,12 +32,8 @@ class Index extends React.Component {
     super(props)
   }
   
-  static async getInitialProps() {
-    const _posts = await getPosts();
-
-    const _testPosts = await getPostsByTag('A11y');
-
-    console.log('test', _testPosts.items);
+  static async getInitialProps({ req }) {
+    const _posts = await getPostsByTag(req.query.tag);
 
     _posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
     return {
