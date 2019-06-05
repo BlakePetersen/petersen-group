@@ -1,5 +1,5 @@
 // Content
-import { getPosts, getPostsByTag } from '../api/contentful'
+import { getPostsByTag } from '../api/contentful'
 
 // Layout
 import Link from 'next/link'
@@ -17,7 +17,7 @@ const _ListWrapper = styled.div`
   } 
 `;
 
-const _TitleLink = styled.a`
+const _TitleLink = styled.h1`
   color: #435469;
   display: inline-block;
   text-decoration: none;
@@ -27,39 +27,42 @@ const _TitleLink = styled.a`
 
 const _Description = styled.p``;
 
-class Index extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  
-  static async getInitialProps({ req }) {
-    const _posts = await getPostsByTag(req.query.tag);
+class Tag extends React.Component {
+	constructor(props) {
+		super(props)
+	}
 
-    _posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
-    return {
-      posts: _posts,
-    }
-  };
+	static async getInitialProps({ query }) {
+		const _posts = await getPostsByTag(query.tag);
 
-  render() {
-    return <>
-      { this.props.posts.items.map(item => (
-        <_ListWrapper key={ item.fields.slug }>
-          <Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
-            <h1>
-              <_TitleLink>{ item.fields.title }</_TitleLink>
-            </h1>
-          </Link>
+		_posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
 
-          <Meta publishDate={ item.fields.publishDate } />
+		return {
+			items: _posts.items,
+		}
+	};
 
-          <_Description>
-            { item.fields.description }
-          </_Description>
-        </_ListWrapper>
-      ))}
-    </>
-  }
+	render() {
+		return <>
+			{ this.props.items.map(item => (
+				<_ListWrapper key={ item.fields.slug }>
+					<Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
+						<a>
+							<_TitleLin>
+								{ item.fields.title }
+							</_TitleLin>
+						</a>
+					</Link>
+
+					<Meta publishDate={ item.fields.publishDate } />
+
+					<_Description>
+						{ item.fields.description }
+					</_Description>
+				</_ListWrapper>
+			))}
+		</>
+	}
 };
 
-export default Index
+export default Tag

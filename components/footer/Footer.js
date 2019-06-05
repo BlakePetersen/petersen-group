@@ -48,7 +48,7 @@ const Footer = () => (
     <p>
       <Link as="/" href="/">
         <a>BlakePetersen.io</a>
-      </Link> • 2018
+      </Link> • { new Date().getFullYear() }
     </p>
 
     <p>

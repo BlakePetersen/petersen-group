@@ -31,10 +31,8 @@ module.exports = withCSS({
 
         data[1].items.forEach((post) => {
 
-          console.log('tags', post.fields.tags);
-
           post.fields.tags && post.fields.tags.forEach((tag) => {
-            if (_tags.includes(tag)) {
+            if (!_tags.includes(tag)) {
               _tags.push(tag)
             }
           });

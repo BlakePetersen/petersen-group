@@ -17,53 +17,56 @@ const _ListWrapper = styled.div`
   } 
 `;
 
-const _TitleLink = styled.a`
-  color: #435469;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  padding-bottom: 2px;
+const _TitleLink = styled.h1`
+  	color: #435469;
+  	text-decoration: none;
+  	cursor: pointer;
+	font-size: 2rem;	
 `;
 
 const _Description = styled.p``;
 
 class Index extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  
-  static async getInitialProps() {
-    const _posts = await getPosts();
+	constructor(props) {
+		super(props)
+	}
 
-    const _testPosts = await getPostsByTag('A11y');
+	static async getInitialProps() {
+		const _posts = await getPosts();
 
-    console.log('test', _testPosts.items);
+		const _testPosts = await getPostsByTag('A11y');
 
-    _posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
-    return {
-      posts: _posts,
-    }
-  };
+		console.log('test', _testPosts.items);
 
-  render() {
-    return <>
-      { this.props.posts.items.map(item => (
-        <_ListWrapper key={ item.fields.slug }>
-          <Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
-            <h1>
-              <_TitleLink>{ item.fields.title }</_TitleLink>
-            </h1>
-          </Link>
+		_posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
+		return {
+			posts: _posts,
+		}
+	};
 
-          <Meta publishDate={ item.fields.publishDate } />
+	render() {
+		return <>
+			{ this.props.posts.items.map((item, index) => (
+				<_ListWrapper key={ item.fields.slug }>
 
-          <_Description>
-            { item.fields.description }
-          </_Description>
-        </_ListWrapper>
-      ))}
-    </>
-  }
+					<Meta publishDate={item.fields.publishDate} />
+
+					<Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
+						<a>
+							<_TitleLink>
+								{ item.fields.title }
+							</_TitleLink>
+						</a>
+					</Link>
+
+					<_Description>
+						{ item.fields.description }
+					</_Description>
+
+				</_ListWrapper>
+			))}
+        </>
+	}
 };
 
 export default Index
