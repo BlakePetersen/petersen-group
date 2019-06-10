@@ -1,0 +1,30 @@
+import styled from "styled-components";
+import Link from 'next/link'
+
+import Meta from '../posts/Meta'
+import Title from '../posts/Title'
+import Description from '../posts/Description'
+import Tags from '../posts/Tags'
+
+import Colors from '../../styles/colors'
+
+const _ListWrapper = styled.div`
+	display: grid;
+	grid-gap: 1.25rem;
+
+	&:not(:last-of-type) {
+		border-bottom: 1px solid ${Colors.ash};
+		padding: 4rem 0;
+	} 
+`;
+
+const PostPreview = ({ item }) => <>
+	<_ListWrapper>
+		<Meta publishDate={ item.fields.publishDate } />
+		<Title slug={ item.fields.slug } title={ item.fields.title } />
+		<Description description={ item.fields.description } />
+		<Tags tags={ item.fields.tags } />
+	</_ListWrapper>
+</>;
+
+export default PostPreview

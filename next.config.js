@@ -30,14 +30,13 @@ module.exports = withCSS({
         });
 
         data[1].items.forEach((post) => {
-
           post.fields.tags && post.fields.tags.forEach((tag) => {
             if (!_tags.includes(tag)) {
               _tags.push(tag)
             }
           });
 
-          _routes['/posts/' + post.fields.slug] = {
+          _routes['/post/' + post.fields.slug] = {
             page: '/post',
             query: { slug: post.fields.slug }
           }

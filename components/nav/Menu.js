@@ -61,7 +61,7 @@ class NavMenu extends React.Component {
     return <_NavMenu
       className={`main-nav ${this.props.navMenu ? 'opened' : 'closed'}`}
     >
-      <Link href={'/'}>Home</Link>
+        <Link href={'/'}><a>Home</a></Link>
     </_NavMenu>
   }
 };

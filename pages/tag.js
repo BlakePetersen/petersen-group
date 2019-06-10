@@ -39,6 +39,7 @@ class Tag extends React.Component {
 
 		return {
 			items: _posts.items,
+			tag: query.tag
 		}
 	};
 
@@ -48,9 +49,9 @@ class Tag extends React.Component {
 				<_ListWrapper key={ item.fields.slug }>
 					<Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
 						<a>
-							<_TitleLin>
+							<_TitleLink>
 								{ item.fields.title }
-							</_TitleLin>
+							</_TitleLink>
 						</a>
 					</Link>
 

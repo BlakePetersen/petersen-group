@@ -1,8 +1,13 @@
 import Moment from 'react-moment'
 import styled from 'styled-components'
 
-const _Meta = styled.h3`
-	color: transparentize(#435469, .75);
+import Colors from '../../styles/colors'
+
+const _Meta = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: transparentize(${Colors.slate}, .75);
 	font-size: .75rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;

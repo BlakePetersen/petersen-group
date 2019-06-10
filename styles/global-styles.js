@@ -1,22 +1,30 @@
 import styledNormalize from 'styled-normalize'
+import { darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
+
+import Colors from './colors'
 
 const GlobalStyles = createGlobalStyle`
   ${styledNormalize}
 
   body, html {
-   background: #F7FAFB;
+   background: ${Colors.snow};
    color: rgba(0,0,0,.5);
    font-size: 1rem;
    font-family: 'Open Sans', sans-serif;	
   }
   
   a {
-    color: gray;
+    color: ${Colors.ash};
+    transition: color 90ms ease-in;
     
     &:hover {
-      color: #535353;
+      color: ${darken(.1, Colors.concrete)};
     }
+  }
+  
+  h1 {
+  	margin: 0;
   }
   
   p {

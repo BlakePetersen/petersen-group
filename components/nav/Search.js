@@ -61,7 +61,7 @@ class SearchMenu extends React.Component {
       className={`main-nav ${this.props.searchMenu ? 'opened' : 'closed'}`}
       ref={this.wrapperRef}
     >
-      <Link href={'/'}>Home</Link>
+        <Link href={'/'}><a>Home</a></Link>
     </_SearchMenu>
   }
 }
