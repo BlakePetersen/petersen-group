@@ -1,9 +1,9 @@
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const { getPersons, getPosts } = require('./api/contentful');
-const withCSS = require('@zeit/next-css');
+const withSass = require('@zeit/next-sass');
 
 let _routes = {
-    '/': { page: '/' }
+    '/': { page: '/index' }
   },
   _tags = [];
 
@@ -15,7 +15,7 @@ const _getPosts = async function () {
   return await getPosts();
 };
 
-module.exports = withCSS({
+module.exports = withSass({
   exportPathMap: () => {
     return Promise.all([
       _getPersons(),
@@ -36,38 +36,20 @@ module.exports = withCSS({
             }
           });
 
-          _routes['/post/' + post.fields.slug] = {
+          _routes['/posts/' + post.fields.slug] = {
             page: '/post',
             query: { slug: post.fields.slug }
           }
         });
 
         _tags.forEach((tag) => {
-          _routes['/tag/' + tag] = {
+          _routes['/tags/' + tag] = {
             page: '/tag',
             query: { tag: tag }
           }
         });
 
-        console.log(_routes);
-
         return _routes;
       });
-  },
-  webpack: (config, options) => {
-    config.plugins.push(
-      new SWPrecacheWebpackPlugin({
-        verbose: true,
-        staticFileGlobsIgnorePatterns: [/\.next\//],
-        runtimeCaching: [
-          {
-            handler: 'networkFirst',
-            urlPattern: /^https?.*/
-          }
-        ]
-      })
-    );
-
-    return config
   }
 });

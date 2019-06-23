@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   
   a {
     color: ${Colors.ash};
-    transition: color 90ms ease-in;
+    transition: color 180ms ease-in;
     
     &:hover {
       color: ${darken(.1, Colors.concrete)};
@@ -71,22 +71,27 @@ const GlobalStyles = createGlobalStyle`
     opacity: 0;
     transform: translate3d(0, 20px, 0);
   }
+  
   .page-transition-enter-active {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: opacity 250ms, transform 250ms;
   }
+  
   .page-transition-exit {
     opacity: 1;
   }
+  
   .page-transition-exit-active {
     opacity: 0;
     transition: opacity 250ms;
   }
+  
   .loading-indicator-appear,
   .loading-indicator-enter {
     opacity: 0;
   }
+  
   .loading-indicator-appear-active,
   .loading-indicator-enter-active {
     opacity: 1;

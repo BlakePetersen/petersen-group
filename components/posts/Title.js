@@ -11,14 +11,13 @@ const _TitleLink = styled.h1`
 	font-weight: normal;
 `;
 
-const Title = ({ title, slug }) => <>
-	<Link href={ `/post?slug=` + slug } as={ `/posts/` + slug }>
+const Title = ({ title, slug }) =>
+	<Link as={ `/posts/` + slug } href={ `/post?slug=` + slug } key={ slug } prefetch>
 		<a>
 			<_TitleLink>
 				{ title }
 			</_TitleLink>
 		</a>
-	</Link>
-</>;
+	</Link>;
 
 export default Title

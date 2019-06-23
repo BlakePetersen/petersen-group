@@ -18,11 +18,11 @@ const Layout = ({ children, title, pathname }) => <>
 			exit: 0
 		}}
 		loadingClassNames='loading-indicator'
-		monkeyPatchScrolling={true}
+		monkeyPatchScrolling={ true }
 	>
 		<Content children={ children } key={ pathname } />
 	</PageTransition>
-	<Twitter />
+	{/*<Twitter />*/}
 	<Footer />
 </>;
 

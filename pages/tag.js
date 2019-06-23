@@ -1,68 +1,40 @@
+// Dependencies
+import sortBy from 'sort-by';
+
 // Content
 import { getPostsByTag } from '../api/contentful'
 
 // Layout
-import Link from 'next/link'
-import Meta from '../components/posts/Meta'
-import sortBy from 'sort-by';
+import Colors from '../styles/colors'
+import PostPreview from '../components/layout/PostPreview'
 
 // Styled Components
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Grid from "../components/layout/Grid";
 
-const _ListWrapper = styled.div`
-  &:not(:last-of-type) {
-    border-bottom: 1px solid #e5e8e9;
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
-  } 
+const _Title = styled.h1`
+	font-weight: normal;
+	justify-self: center;
+	padding: 1.5rem;
+	letter-spacing: .33em;
+	text-transform: uppercase;
+	border-bottom: 1px solid ${Colors.concrete};
 `;
 
-const _TitleLink = styled.h1`
-  color: #435469;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  padding-bottom: 2px;
-`;
+const Tag = ({ items, tag }) => <Grid>
+	<_Title>{ tag }</_Title>
 
-const _Description = styled.p``;
+	{ items.map((item, index) => <PostPreview item={ item } key={ index } />) }
+</Grid>;
 
-class Tag extends React.Component {
-	constructor(props) {
-		super(props)
-	}
+Tag.getInitialProps = async ({ query }) => {
+	const _posts = await getPostsByTag(query.tag);
 
-	static async getInitialProps({ query }) {
-		const _posts = await getPostsByTag(query.tag);
+	_posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
 
-		_posts.items = _posts.items.sort(sortBy('-fields.publishDate'));
-
-		return {
-			items: _posts.items,
-			tag: query.tag
-		}
-	};
-
-	render() {
-		return <>
-			{ this.props.items.map(item => (
-				<_ListWrapper key={ item.fields.slug }>
-					<Link as={`/posts/${item.fields.slug}`} href={`/post?slug=${item.fields.slug}`} prefetch>
-						<a>
-							<_TitleLink>
-								{ item.fields.title }
-							</_TitleLink>
-						</a>
-					</Link>
-
-					<Meta publishDate={ item.fields.publishDate } />
-
-					<_Description>
-						{ item.fields.description }
-					</_Description>
-				</_ListWrapper>
-			))}
-		</>
+	return {
+		items: _posts.items,
+		tag: query.tag
 	}
 };
 

@@ -1,5 +1,6 @@
 import App, { Container } from 'next/app'
 import Layout from '../components/layout/Layout'
+import GlobalStyles from './../styles/global-styles'
 
 export default class MyApp extends App {
 	static async getInitialProps ({ Component, router, ctx }) {
@@ -10,14 +11,14 @@ export default class MyApp extends App {
 		}
 
 		pageProps.pathname = router.route;
-
-		return {pageProps}
+		return { pageProps }
 	}
 
 	render () {
 		const {Component, pageProps} = this.props;
-		console.log('props', pageProps);
+
 		return <Container>
+			<GlobalStyles />
 			<Layout>
 				<Component {...pageProps} />
 			</Layout>

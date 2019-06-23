@@ -11,10 +11,10 @@ import Colors from '../../styles/colors'
 const _ListWrapper = styled.div`
 	display: grid;
 	grid-gap: 1.25rem;
+	padding: 4rem 0;
 
 	&:not(:last-of-type) {
 		border-bottom: 1px solid ${Colors.ash};
-		padding: 4rem 0;
 	} 
 `;
 
@@ -23,7 +23,7 @@ const PostPreview = ({ item }) => <>
 		<Meta publishDate={ item.fields.publishDate } />
 		<Title slug={ item.fields.slug } title={ item.fields.title } />
 		<Description description={ item.fields.description } />
-		<Tags tags={ item.fields.tags } />
+		{ item.fields.tags && <Tags tags={ item.fields.tags } /> }
 	</_ListWrapper>
 </>;
 

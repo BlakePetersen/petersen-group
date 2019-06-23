@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 import { rgba } from 'polished'
 import Link from 'next/link'
@@ -21,7 +20,7 @@ const _Tag = styled.div`
 	padding: .35rem;
 	font-size: .65rem;
 	text-transform: uppercase;
-	letter-spacing: .125rem;	
+	letter-spacing: .33em;
 	margin: .5rem;
 	transition: color 250ms ease, background-color 250ms ease, transform 250ms ease, box-shadow 250ms ease;
 	
@@ -33,20 +32,17 @@ const _Tag = styled.div`
 	}
 `;
 
-const Tags = ({ tags }) => (
+const Tags = ({ tags }) =>
 	<_Tags>
-		{ tags && <>
-			{ tags.map((tag, i) =>
-				<Link as={ `/tag/` + tag } href={ `/tag?tag=` + tag } key={i} prefetch>
-					<a>
-						<_Tag>
-							{ tag }
-						</_Tag>
-					</a>
-				</Link>
-			) }
-		</> }
-	</_Tags>
-);
+		{ tags && tags.map((tag, i) =>
+			<Link as={ `/tags/` + tag } href={ `/tags?tag=` + tag } key={i} prefetch>
+				<a>
+					<_Tag>
+						{ tag }
+					</_Tag>
+				</a>
+			</Link>
+		) }
+	</_Tags>;
 
 export default Tags

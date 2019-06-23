@@ -13,14 +13,8 @@ const _Meta = styled.div`
 	letter-spacing: .25rem;
 `;
 
-class Meta extends React.Component {
-	render() {
-		return <>
-			<_Meta>
-				<Moment format={ `MMMM Do, YYYY` }>{ this.props.publishDate }</Moment>
-			</_Meta>
-		</>
-	}
-}
+const Meta = ({ publishDate }) => <_Meta>
+	<Moment format={ `MMMM Do, YYYY` }>{ publishDate }</Moment>
+</_Meta>;
 
 export default Meta

@@ -41,12 +41,12 @@ const getPosts = () => {
 };
 
 const getPost = (slug) => {
-  const entry = client.getEntries({
+  const entries = client.getEntries({
     'content_type': 'blogPost',
     'fields.slug': slug
   });
 
-  return entry;
+  return entries;
 };
 
 const getPostsByTag = (tag) => {
