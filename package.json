@@ -50,7 +50,7 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "prod": "NODE_ENV=production npm run build && npm run export",
+    "prod": "NODE_ENV=production yarn build && NODE_ENV=production yarn export",
     "start": "NODE_ENV=production node server.js"
   },
   "devDependencies": {

@@ -1,68 +1,51 @@
 const contentful = require('contentful');
-const nconf = require('../config/nconf');
+import getConfig from 'next/config'
+const { serverRuntimeConfig } = getConfig();
 
 const client = contentful.createClient({
-  space: nconf.get("CONTENTFUL_SPACE_ID"),
-  accessToken: nconf.get("CONTENTFUL_ACCESS_TOKEN")
+	space: serverRuntimeConfig.CONTENTFUL_SPACE_ID,
+	accessToken: serverRuntimeConfig.CONTENTFUL_ACCESS_TOKEN
 });
 
-const getBlake = () => {
-  const entry = client.getEntries({
-    'content_type': 'person',
-    'fields.slug': 'blake-petersen'
-  });
+const getBlake = () =>
+	client.getEntries({
+		'content_type': 'person',
+		'fields.slug': 'blake-petersen'
+	});
 
-  return entry;
-};
+const getPersons = () =>
+	client.getEntries({
+		'content_type': 'person',
+	});
 
-const getPersons = () => {
-  const people = client.getEntries({
-    'content_type': 'person',
-  });
+const getPerson = (slug) =>
+	client.getEntries({
+		'content_type': 'person',
+		'fields.slug': slug
+	});
 
-  return people;
-};
+const getPosts = () =>
+	client.getEntries({
+		'content_type': 'blogPost'
+	});
 
-const getPerson = (slug) => {
-  const person = client.getEntries({
-    'content_type': 'person',
-    'fields.slug': slug
-  });
+const getPost = (slug) =>
+	client.getEntries({
+		'content_type': 'blogPost',
+		'fields.slug': slug
+	});
 
-  return person;
-};
-
-const getPosts = () => {
-  const entries = client.getEntries({
-    'content_type': 'blogPost'
-  });
-
-  return entries;
-};
-
-const getPost = (slug) => {
-  const entries = client.getEntries({
-    'content_type': 'blogPost',
-    'fields.slug': slug
-  });
-
-  return entries;
-};
-
-const getPostsByTag = (tag) => {
-  const entries = client.getEntries({
-    'content_type': 'blogPost',
-    'fields.tags': tag
-  });
-
-  return entries;
-};
+const getPostsByTag = (tag) =>
+	client.getEntries({
+		'content_type': 'blogPost',
+		'fields.tags': tag
+	});
 
 module.exports = {
-  getBlake,
-  getPerson,
-  getPersons,
-  getPost,
-  getPosts,
-  getPostsByTag
+	getBlake,
+	getPerson,
+	getPersons,
+	getPost,
+	getPosts,
+	getPostsByTag
 };
