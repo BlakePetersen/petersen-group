@@ -2,7 +2,8 @@ import styledNormalize from 'styled-normalize'
 import { darken } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
-import '../static/assets/open-sans.woff2';
+import '../static/assets/fonts.scss'
+
 import Colors from './colors'
 
 const GlobalStyles = createGlobalStyle`
@@ -68,20 +69,6 @@ const GlobalStyles = createGlobalStyle`
   .loading-indicator-enter-active {
     opacity: 1;
     transition: opacity 250ms;
-  }
-  
-  @font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/static/assets/open-sans.woff2') format('woff2')
-  }
-  
-  @font-face {
-	font-family: 'Ubuntu Mono';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/static/assets/ubuntu-mono.woff2') format('woff2')
   }
 `;
 

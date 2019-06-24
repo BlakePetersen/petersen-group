@@ -19,7 +19,7 @@ export default class MyApp extends App {
 
 		return <Container>
 			<GlobalStyles />
-			<Layout>
+			<Layout pathname={pageProps.pathname}>
 				<Component {...pageProps} />
 			</Layout>
 		</Container>
