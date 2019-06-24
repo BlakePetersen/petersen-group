@@ -4,7 +4,6 @@ import Head from '../Head'
 import Header from '../header/Header'
 import Content from './Content'
 import Footer from '../footer/Footer'
-import Twitter from '../footer/Twitter'
 
 const Layout = ({ children, title, pathname }) => <>
 	<Head title={ title } />
@@ -22,7 +21,6 @@ const Layout = ({ children, title, pathname }) => <>
 	>
 		<Content children={ children } key={ pathname } />
 	</PageTransition>
-	{/*<Twitter />*/}
 	<Footer />
 </>;
 
