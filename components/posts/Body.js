@@ -7,18 +7,38 @@ import bash from 'highlight.js/lib/languages/bash';
 import js from 'highlight.js/lib/languages/javascript';
 
 import styled from 'styled-components'
+import Colors from '../../styles/colors'
 
 const _Body = styled.div`
+	overflow-x: scroll;
+	display: grid;
+	grid-gap: 1rem;
+
 	h2:not(:first-of-type) {
 		padding-top: 4rem;
 	}
 	
-	.hljs {
-		display: block;
-		overflow-x: auto;
-		padding: 0.5em;
-		background: #fff;
-	}
+	code.hljs {
+		font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+		font-size: 1rem;
+		direction: ltr;
+		text-align: left;
+		tab-size: 4;
+		hyphens: none;
+		white-space: pre;
+  	}
+  
+  	pre {
+		overflow: auto;
+		line-height: 1.5;
+		padding: 1.5rem;
+		background: ${ Colors.snow };
+		border-radius: 4px;
+		
+		> code.hljs {
+		 	padding: 0;
+		}
+  	}
 	
 	.hljs,
 	.hljs-subst {
@@ -78,13 +98,13 @@ const _Body = styled.div`
 
 const Body = ({ body }) => <_Body>
 	{ remark().use(reactRenderer, {
-			remarkReactComponents: {
-				code: RemarkLowlight({
-					js,
-					bash
-				})
-			}
-		})
+		remarkReactComponents: {
+			code: RemarkLowlight({
+				js,
+				bash
+			})
+		}
+	})
 		.processSync(body)
 		.contents }
 </_Body>;

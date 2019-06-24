@@ -28,38 +28,11 @@ const GlobalStyles = createGlobalStyle`
   }
   
   p {
-    line-height: 2;
-  
-    > img {
-      background: #F7FAFB;
-      width: calc(100% - 4rem);
-      margin: 2rem;
-      box-shadow:  0 10px 40px rgba(0, 0, 0, .1), 0 2px 5px rgba(0, 0, 0, .1);
-    }
+    line-height: 1.8;
+    margin: 0;
   }
   
-  code.hljs,
-  pre {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-    font-size: 1rem;
-    direction: ltr;
-    text-align: left;
-    tab-size: 4;
-    hyphens: none;
-    white-space: pre;
-    background: #eaeef3;
-    border-radius: 4px;
-  }
   
-  pre {
-    overflow: auto;
-    line-height: 1.5;
-    padding: .75rem 1rem;
-
-    > code.hljs {
-      padding: 0;
-    }
-  }
   
   code {
     padding: .5rem;

@@ -1,9 +1,9 @@
 const contentful = require('contentful');
-const env = require('../env-config');
+const nconf = require('../config/nconf');
 
 const client = contentful.createClient({
-  space: env.CONTENTFUL.SPACE_ID,
-  accessToken: env.CONTENTFUL.ACCESS_TOKEN
+  space: nconf.get("CONTENTFUL_SPACE_ID"),
+  accessToken: nconf.get("CONTENTFUL_ACCESS_TOKEN")
 });
 
 const getBlake = () => {

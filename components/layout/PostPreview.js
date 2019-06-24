@@ -10,7 +10,7 @@ import Colors from '../../styles/colors'
 
 const _ListWrapper = styled.div`
 	display: grid;
-	grid-gap: 1.25rem;
+	grid-gap: 2rem;
 	padding: 4rem 0;
 
 	&:not(:last-of-type) {

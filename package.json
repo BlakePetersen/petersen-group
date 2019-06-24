@@ -21,6 +21,7 @@
     "jquery": "^3.4.1",
     "lodash": "^4.17.5",
     "moment": "^2.24.0",
+    "nconf": "^0.10.0",
     "next": "^8.1.1-canary.51",
     "next-routes": "^1.4.1",
     "node-sass": "^4.12.0",
@@ -49,7 +50,7 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "prod": "npm run build && npm run export",
+    "prod": "NODE_ENV=production npm run build && npm run export",
     "start": "NODE_ENV=production node server.js"
   },
   "devDependencies": {

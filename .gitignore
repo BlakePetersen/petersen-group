@@ -7,4 +7,5 @@
 .env
 *.log
 
-env-config.js
+/config/*.json
+!/config/sample.json
