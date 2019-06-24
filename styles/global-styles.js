@@ -74,14 +74,14 @@ const GlobalStyles = createGlobalStyle`
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: url('../static/assets/open-sans.woff2') format('woff2')
+	src: url('/static/assets/open-sans.woff2') format('woff2')
   }
   
   @font-face {
 	font-family: 'Ubuntu Mono';
 	font-style: normal;
 	font-weight: 400;
-	src: url('../static/assets/ubuntu-mono.woff2') format('woff2')
+	src: url('/static/assets/ubuntu-mono.woff2') format('woff2')
   }
 `;
 
