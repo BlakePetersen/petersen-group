@@ -8,7 +8,7 @@ export default class SiteDocument extends Document {
 		const styleTags = sheet.getStyleElement();
 
 		return (
-			<html>
+			<html lang={`en`}>
 				<Head>
 					{/* Meta */}
 					{/* Favicon */}

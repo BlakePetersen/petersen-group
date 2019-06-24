@@ -25,6 +25,8 @@ app.prepare().then(() => {
 		app.render(req, res, `/tag`, { tag : req.params.tag });
 	});
 
+
+
 	/**
 	 * NextJS Fallback
 	 * Here we check to see if we have an active route to work with, if we do, render the page.

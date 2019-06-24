@@ -2,6 +2,8 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const { getPersons, getPosts } = require('./api/contentful');
 const withSass = require('@zeit/next-sass');
 
+const nconf = require('./config/nconf');
+
 let _routes = {
 		'/': { page: '/index' }
 	},
@@ -57,4 +59,18 @@ module.exports = withSass({
 		CONTENTFUL_ACCESS_TOKEN: nconf.get('CONTENTFUL_ACCESS_TOKEN'),
 		CONTENTFUL_MANAGEMENT_TOKEN: nconf.get('CONTENTFUL_MANAGEMENT_TOKEN'),
 	},
+	webpack: function (config) {
+		config.module.rules.push({
+			test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+			use: {
+				loader: 'url-loader',
+				options: {
+					limit: 100000,
+					name: '[name].[ext]'
+				}
+			}
+		});
+
+		return config
+	}
 });

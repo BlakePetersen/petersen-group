@@ -1,10 +1,10 @@
 const contentful = require('contentful');
-import getConfig from 'next/config'
-const { serverRuntimeConfig } = getConfig();
+const env = require('../config/development.json');
+// const nconf = require('../config/nconf');
 
 const client = contentful.createClient({
-	space: serverRuntimeConfig.CONTENTFUL_SPACE_ID,
-	accessToken: serverRuntimeConfig.CONTENTFUL_ACCESS_TOKEN
+	space: env.CONTENTFUL_SPACE_ID,
+	accessToken: env.CONTENTFUL_ACCESS_TOKEN
 });
 
 const getBlake = () =>

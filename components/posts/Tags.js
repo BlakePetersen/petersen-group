@@ -35,7 +35,7 @@ const _Tag = styled.div`
 const Tags = ({ tags }) =>
 	<_Tags>
 		{ tags && tags.map((tag, i) =>
-			<Link as={ `/tags/` + tag } href={ `/tags?tag=` + tag } key={i} prefetch>
+			<Link as={ `/tags/` + tag } href={ `/tag?tag=` + tag } key={i} prefetch>
 				<a>
 					<_Tag>
 						{ tag }
