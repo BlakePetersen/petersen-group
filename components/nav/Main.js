@@ -25,7 +25,6 @@ const _MainNav = styled.div`
     }
   }
   
- 
   a,
   svg {
     display: block;
@@ -53,12 +52,12 @@ const _Content = styled.div`
   z-index: 3;
 `;
 
-const _Title = styled.h1`
+const _Logo = styled.h1`
   display: flex;
   font-weight: bold;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   margin: 1rem 1rem 2rem;
   position: relative;
   letter-spacing: -1px;
@@ -75,14 +74,16 @@ const _Title = styled.h1`
     opacity: 1;
     transform: translateY(0);
   }
-  
-  span {
+`;
+
+const _Title = styled.div``;
+
+const _Subtitle = styled.div`
     font-size: 10px;
     text-transform: uppercase;
     display: block;
     letter-spacing: 5px;
     font-weight: 400;
-  }
 `;
 
 const _PageTitle = styled.h2`
@@ -143,14 +144,14 @@ class MainNav extends React.Component {
       {/*</svg>*/}
 
       <_Content>
-        <_Title>
+        <_Logo>
           <Link prefetch href={`/`} as={`/`}>
             <a>
-              ʙ ʟ ▲ ĸ ᴇ
-              <span>Good Times in Web Development</span>
+              <_Title>🦕   ʙ ʟ 🌋 ĸ ᴇ   🦖</_Title>
+              <_Subtitle>Good Times in Web Development</_Subtitle>
             </a>
           </Link>
-        </_Title>
+        </_Logo>
 
         {/*{ this.props.pageTitle &&*/}
         {/*<_PageTitle>*/}

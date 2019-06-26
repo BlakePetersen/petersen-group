@@ -6,6 +6,7 @@ import Colors from '../../styles/colors'
 
 const _Tags = styled.div`
 	display: flex;
+	flex-flow: wrap;
 	margin: -.5rem;
 	
 	a {

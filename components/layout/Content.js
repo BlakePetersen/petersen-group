@@ -5,7 +5,7 @@ const _Content = styled.main`
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding: 3rem;
+  padding: 4rem;
 `;
 
 const _Container = styled.div`

@@ -7,15 +7,32 @@ import bash from 'highlight.js/lib/languages/bash';
 import js from 'highlight.js/lib/languages/javascript';
 
 import styled from 'styled-components'
+import { darken } from 'polished'
 import Colors from '../../styles/colors'
 
 const _Body = styled.div`
 	overflow-x: scroll;
 	display: grid;
-	grid-gap: 1rem;
+	grid-gap: 1.5rem;
+	line-height: 1.75;
+	padding: 0 0 2rem 0;
 
-	h2:not(:first-of-type) {
-		padding-top: 4rem;
+	h1, h2, h3, h4, h5, h6 {
+	    color: ${ Colors.slate };
+
+		&:not(:first-child) {
+			margin-top: 1rem;
+		}
+	}
+	
+	a {
+		color: ${ Colors.slate };
+		transition: color 180ms ease-in;
+		word-break: break-all;
+		
+		&:hover {
+			color: ${ darken(.2, Colors.slate) };
+		}
 	}
 	
 	code.hljs {
@@ -26,6 +43,8 @@ const _Body = styled.div`
 		tab-size: 4;
 		hyphens: none;
 		white-space: pre;
+		background: ${ Colors.snow };
+		border-radius: 4px;
   	}
   
   	pre {

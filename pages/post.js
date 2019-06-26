@@ -8,7 +8,6 @@ import Title from '../components/posts/Title'
 const _PostWrapper = styled.div`
 	display: grid;
 	grid-gap: 2rem;
-	padding: 4rem 0;
 `;
 
 const Post = ({ post }) => <_PostWrapper>
