@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+
 import { getPost } from '../api/contentful'
+
 import Body from '../components/posts/Body'
 import Tags from '../components/posts/Tags'
 import Meta from '../components/posts/Meta'

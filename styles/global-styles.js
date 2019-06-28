@@ -10,10 +10,10 @@ const GlobalStyles = createGlobalStyle`
   ${styledNormalize}
 
   body, html {
-   background: ${Colors.snow};
-   color: rgba(0,0,0,.5);
-   font-size: 1rem;
-   font-family: 'Open Sans', sans-serif;	
+   	background: ${Colors.snow};
+   	color: rgba(0,0,0,.5);
+   	font-size: 1rem;
+   	font-family: 'Open Sans', sans-serif;	
   }
   
   a {

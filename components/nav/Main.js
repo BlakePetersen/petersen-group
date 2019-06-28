@@ -54,16 +54,16 @@ const _Content = styled.div`
 
 const _Logo = styled.h1`
   display: flex;
-  font-weight: bold;
   align-items: center;
   justify-content: center;
-  font-size: 3.25rem;
-  margin: 1rem 1rem 2rem;
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin: 1.5rem;
   position: relative;
   letter-spacing: -1px;
-  font-family: sans-serif;
   transition: font-size 300ms ease-out;
-    
+  white-space: nowrap;
+
   .is-post & {
     transition: opacity 150ms ease-out, transform 300ms ease-out;
     opacity: 0;
@@ -76,7 +76,9 @@ const _Logo = styled.h1`
   }
 `;
 
-const _Title = styled.div``;
+const _Title = styled.div`
+  padding: 0 0 .5rem;
+`;
 
 const _Subtitle = styled.div`
     font-size: 10px;
@@ -147,7 +149,7 @@ class MainNav extends React.Component {
         <_Logo>
           <Link prefetch href={`/`} as={`/`}>
             <a>
-              <_Title>🦕   ʙ ʟ 🌋 ĸ ᴇ   🦖</_Title>
+              <_Title>ʙ ʟ 🌋 ĸ ᴇ </_Title>
               <_Subtitle>Good Times in Web Development</_Subtitle>
             </a>
           </Link>
