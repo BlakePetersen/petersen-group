@@ -1,5 +1,4 @@
-import { Component } from 'react';
-import ReactDOM from 'react-dom'
+import { useRef, useEffect } from 'react';
 import ProgressBar from '../../lib/progress-bar'
 
 import styled from 'styled-components';
@@ -10,21 +9,14 @@ const _ProgressBar = styled.div`
   display: flex;
 `;
 
-class PageProgress extends Component {
-  constructor(props) {
-    super(props);
-  }
+const PageProgress = () => {
+	const _ProgressBarRef = useRef(null);
 
-  componentDidMount() {
-    ProgressBar(ReactDOM.findDOMNode(this));
-  }
+	useEffect(() => {
+		ProgressBar(_ProgressBarRef.current);
+	});
 
-  render() {
-    return <>
-      <_ProgressBar />
-    </>
-  }
-}
-
+	return <_ProgressBar ref={_ProgressBarRef} />
+};
 
 export default PageProgress

@@ -5,14 +5,15 @@ import sortBy from 'sort-by';
 import { getPostsByTag } from '../api/contentful'
 
 // Layout
-import Colors from '../styles/colors'
 import PostPreview from '../components/layout/PostPreview'
+import Grid from "../components/layout/Grid";
+import Hr from '../components/layout/Hr'
 
 // Styled Components
 import styled from 'styled-components';
-import Grid from "../components/layout/Grid";
+import Colors from '../styles/colors'
 
-const _Title = styled.h1`
+const _Title = styled.h2`
 	font-weight: normal;
 	justify-self: center;
 	padding: 1.5rem;
@@ -24,7 +25,12 @@ const _Title = styled.h1`
 const Tag = ({ items, tag }) => <Grid>
 	<_Title>{ tag }</_Title>
 
-	{ items.map((item, index) => <PostPreview item={ item } key={ index } />) }
+	<Grid>
+		{ items.map((item, index) => <>
+			<PostPreview item={ item } key={ index } />
+			{ index !== (items.length - 1) && <Hr /> }
+		</>) }
+	</Grid>
 </Grid>;
 
 Tag.getInitialProps = async ({ query }) => {
