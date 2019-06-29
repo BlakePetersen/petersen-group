@@ -16,7 +16,7 @@ const _Tags = styled.div`
 
 const _Tag = styled.div`
 	background-color: ${rgba(Colors.ash, .35)};
-	color: ${rgba(Colors.slate, .5)};
+	color: ${rgba(Colors.slate, .85)};
 	border-radius: 4px;
 	padding: .35rem;
 	font-size: .65rem;

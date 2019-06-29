@@ -1,5 +1,5 @@
 import styledNormalize from 'styled-normalize'
-import { darken } from 'polished'
+import { darken, rgba } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
 import '../static/assets/fonts.scss'
@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
   body, html {
    	background: ${Colors.snow};
-   	color: rgba(0,0,0,.5);
+   	color: ${rgba(Colors.onyx, .75)};
    	font-size: 1rem;
    	font-family: 'Open Sans', sans-serif;	
   }
