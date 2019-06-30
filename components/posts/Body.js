@@ -34,7 +34,7 @@ const _Body = styled.div`
 			color: ${ darken(.2, Colors.slate) };
 		}
 	}
-	
+
 	code.hljs {
 		font-family: 'Ubuntu Mono', monospace;
 		font-size: 1rem;

@@ -30,6 +30,10 @@ const GlobalStyles = createGlobalStyle`
   	font-weight: 300;
   }
   
+	img {
+		max-width: 100%;
+	}
+  
   p, pre {
     line-height: 1.8;
     margin: 0;
