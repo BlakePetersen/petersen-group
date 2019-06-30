@@ -1,5 +1,6 @@
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const { getPersons, getPosts } = require('./api/contentful');
+const withManifest = require('next-manifest');
+const withOffline = require('next-offline');
 const withSass = require('@zeit/next-sass');
 
 const nconf = require('./config/nconf');
@@ -17,7 +18,7 @@ const _getPosts = async function () {
 	return await getPosts();
 };
 
-module.exports = withSass({
+module.exports = withManifest(withOffline(withSass({
 	exportPathMap: () => {
 		return Promise.all([
 			_getPersons(),
@@ -72,5 +73,28 @@ module.exports = withSass({
 		});
 
 		return config
+	},
+	manifest: {
+		"name": "blakepetersen.io",
+		"short_name": "blakepetersen.io",
+		"start_url": "/",
+		"display": "standalone",
+		"background_color": "#111111",
+		"theme_color": "#111111",
+		icons: false
+	},
+	workboxOpts: {
+		runtimeCaching: [
+			{
+				urlPattern: /^https?.*/,
+				handler: 'NetworkFirst',
+				options: {
+					cacheName: 'offlineCache',
+					expiration: {
+						maxEntries: 200
+					}
+				}
+			}
+		]
 	}
-});
+})));

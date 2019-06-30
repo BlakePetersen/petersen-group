@@ -37,7 +37,11 @@ app.prepare().then(() => {
 		const { pathname } = parsedUrl;
 		await getRoutes().then(routes => {
 			const route = routes[pathname];
-			if (route) {
+			if (pathname === '/service-worker.js') {
+				const filePath = join(__dirname, '.next', pathname);
+
+				return app.serveStatic(req, res, filePath)
+			} else if (route) {
 				// We have a route defined for this -- Roll with it!
 				return app.render(req, res, pathname, route);
 			} else {
