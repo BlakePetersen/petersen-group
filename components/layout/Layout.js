@@ -11,13 +11,7 @@ const Layout = ({ children, title, pathname }) => <>
 	<PageTransition
 		timeout={250}
 		classNames='page-transition'
-		loadingDelay={500}
-		loadingTimeout={{
-			enter: 250,
-			exit: 0
-		}}
-		loadingClassNames='loading-indicator'
-		monkeyPatchScrolling={ false }
+		monkeyPatchScrolling={ true }
 	>
 		<Content children={ children } key={ pathname } />
 	</PageTransition>
