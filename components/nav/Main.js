@@ -149,7 +149,7 @@ class MainNav extends React.Component {
         <_Logo>
           <Link prefetch href={`/`} as={`/`}>
             <a>
-              <_Title>ʙ ʟ 🌋 ĸ ᴇ </_Title>
+              <_Title>ʙ ʟ Λ ĸ ᴇ </_Title>
               <_Subtitle>Good Times in Web Development</_Subtitle>
             </a>
           </Link>
