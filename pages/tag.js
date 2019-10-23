@@ -22,16 +22,22 @@ const _Title = styled.h2`
 	border-bottom: 1px solid ${Colors.concrete};
 `;
 
-const Tag = ({ items, tag }) => <Grid>
-	<_Title>{ tag }</_Title>
+const Tag = ({ items, tag }) => <>
+	<Head>
+		<title>{ tag } posts &mdash; ʙ ʟ Λ ĸ ᴇ</title>
+	</Head>
 
 	<Grid>
-		{ items.map((item, index) => <>
-			<PostPreview item={ item } key={ index } />
-			{ index !== (items.length - 1) && <Hr /> }
-		</>) }
+		<_Title>{ tag }</_Title>
+
+		<Grid>
+			{ items.map((item, index) => <>
+				<PostPreview item={ item } key={ index } />
+				{ index !== (items.length - 1) && <Hr /> }
+			</>) }
+		</Grid>
 	</Grid>
-</Grid>;
+</>;
 
 Tag.getInitialProps = async ({ query }) => {
 	const _posts = await getPostsByTag(query.tag);
