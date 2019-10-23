@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Layout from '../components/layout/Layout'
 import GlobalStyles from './../styles/global-styles'
 
@@ -17,11 +17,11 @@ export default class MyApp extends App {
 	render () {
 		const {Component, pageProps} = this.props;
 
-		return <Container>
+		return <>
 			<GlobalStyles />
 			<Layout pathname={pageProps.pathname}>
 				<Component {...pageProps} />
 			</Layout>
-		</Container>
+		</>
 	}
 }

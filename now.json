@@ -12,8 +12,9 @@
   ],
   "builds": [
     {
-      "src": "out",
-      "use": "@now/static"
+      "src": "*.html",
+      "use": "@now/static",
+      "config": { "outDir": "out" }
     }
   ]
 }

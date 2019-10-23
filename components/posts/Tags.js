@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 import Link from 'next/link'
 
+import isStatic	 from '../../helpers/util';
+
 import Colors from '../../styles/colors'
 
 const _Tags = styled.div`
@@ -36,7 +38,7 @@ const _Tag = styled.div`
 const Tags = ({ tags }) =>
 	<_Tags>
 		{ tags && tags.map((tag, i) =>
-			<Link as={ `/tags/` + tag } href={ `/tag?tag=` + tag } key={i} prefetch>
+			<Link as={ `/tags/${tag}.html` } href={ `/tag?tag=` + tag } key={ i }>
 				<a>
 					<_Tag>
 						{ tag }

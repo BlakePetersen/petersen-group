@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { Gtm, GtmLegacy } from './../components/Gtm'
 
 export default class SiteDocument extends Document {
 	render () {
@@ -10,6 +11,7 @@ export default class SiteDocument extends Document {
 		return (
 			<html lang={`en`}>
 				<Head>
+					<div dangerouslySetInnerHTML={{ __html: Gtm() }} />
 					{/* Meta */}
 					{/* Favicon */}
 					{/* OpenGraph */}
@@ -20,6 +22,7 @@ export default class SiteDocument extends Document {
 				</Head>
 
 				<body>
+					<div dangerouslySetInnerHTML={{ __html: GtmLegacy() }} />
 					{ main }
 					<NextScript />
 				</body>
