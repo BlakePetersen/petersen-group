@@ -1,5 +1,4 @@
 import sortBy from 'sort-by';
-import Head from 'next/head';
 
 import { getPosts } from '../api/contentful'
 
