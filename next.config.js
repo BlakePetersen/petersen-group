@@ -1,7 +1,6 @@
 const { getPersons, getPosts } = require('./api/contentful');
 const withManifest = require('next-manifest');
 const withOffline = require('next-offline');
-const withSass = require('@zeit/next-sass');
 
 const nconf = require('./config/nconf');
 
@@ -18,7 +17,7 @@ const _getPosts = async function () {
 	return await getPosts();
 };
 
-module.exports = withManifest(withOffline(withSass({
+module.exports = withManifest(withOffline({
 	exportPathMap: () => {
 		return Promise.all([
 			_getPersons(),
@@ -75,6 +74,7 @@ module.exports = withManifest(withOffline(withSass({
 		return config
 	},
 	manifest: {
+		output: './public/',
 		"name": "blakepetersen.io",
 		"short_name": "blakepetersen.io",
 		"start_url": "/",
@@ -97,4 +97,4 @@ module.exports = withManifest(withOffline(withSass({
 			}
 		]
 	}
-})));
+}));

@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { Gtm, GtmLegacy } from './../components/Gtm'
 
@@ -9,7 +9,7 @@ export default class SiteDocument extends Document {
 		const styleTags = sheet.getStyleElement();
 
 		return (
-			<html lang={`en`}>
+			<Html lang={`en`}>
 				<Head>
 					<div dangerouslySetInnerHTML={{ __html: Gtm() }} />
 					{/* Meta */}
@@ -27,7 +27,7 @@ export default class SiteDocument extends Document {
 					<NextScript />
 				</body>
 
-			</html>
+			</Html>
 		)
 	}
 }

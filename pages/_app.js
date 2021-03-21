@@ -1,6 +1,6 @@
 import App from 'next/app'
 import Layout from '../components/layout/Layout'
-import GlobalStyles from './../styles/global-styles'
+import GlobalStyles from '../styles/global-styles'
 
 export default class MyApp extends App {
 	static async getInitialProps ({ Component, router, ctx }) {

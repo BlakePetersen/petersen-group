@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Triangles from './../Triangles'
 import styled from 'styled-components'
+import React from "react";
 
 const _MainNav = styled.div`
   position: relative;

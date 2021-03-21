@@ -30,7 +30,7 @@ app.prepare().then(() => {
 	/**
 	 * NextJS Fallback
 	 * Here we check to see if we have an active route to work with, if we do, render the page.
-	 * If not, let NextJS handle it (404, static file, etc). Routes are pulled from CMS
+	 * If not, let NextJS handle it (404, public file, etc). Routes are pulled from CMS
 	 */
 	server.get('*', async (req, res) => {
 		const parsedUrl = parse(req.url, true);

@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from 'react-dom'
 import { bindActionCreators } from 'redux'
 import { initStore, toggleNavMenu, toggleSearchMenu } from '../../store'

@@ -2,12 +2,12 @@ import styledNormalize from 'styled-normalize'
 import { darken, rgba } from 'polished'
 import { createGlobalStyle } from 'styled-components'
 
-import '../static/assets/fonts.scss'
-
 import Colors from './colors'
+import Fonts from './fonts'
 
 const GlobalStyles = createGlobalStyle`
   ${styledNormalize}
+  ${Fonts}
 
   body, html {
    	background: ${Colors.snow};

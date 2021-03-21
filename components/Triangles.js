@@ -1,5 +1,6 @@
 import triangles from './../lib/triangles'
 import styled from 'styled-components'
+import React from "react";
 import ReactDOM from "react-dom";
 
 const _Triangles = styled.div`

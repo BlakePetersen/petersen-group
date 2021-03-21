@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from 'react-dom'
 import withRedux from "../../lib/withRedux";
 import { bindActionCreators } from 'redux'
