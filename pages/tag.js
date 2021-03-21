@@ -1,5 +1,6 @@
 // Dependencies
 import sortBy from 'sort-by';
+import Head from 'next/head';
 
 // Content
 import { getPostsByTag } from '../api/contentful'

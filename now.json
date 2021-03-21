@@ -9,12 +9,5 @@
         "Service-Worker-Allowed": "/"
       }
     }
-  ],
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@now/static",
-      "config": { "outDir": "out" }
-    }
   ]
 }
