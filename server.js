@@ -25,8 +25,6 @@ app.prepare().then(() => {
 		app.render(req, res, `/tag`, { tag : req.params.tag });
 	});
 
-
-
 	/**
 	 * NextJS Fallback
 	 * Here we check to see if we have an active route to work with, if we do, render the page.
@@ -35,7 +33,9 @@ app.prepare().then(() => {
 	server.get('*', async (req, res) => {
 		const parsedUrl = parse(req.url, true);
 		const { pathname } = parsedUrl;
+
 		await getRoutes().then(routes => {
+
 			const route = routes[pathname];
 			if (pathname === '/service-worker.js') {
 				const filePath = join(__dirname, '.next', pathname);

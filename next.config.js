@@ -5,7 +5,7 @@ const withOffline = require('next-offline');
 const nconf = require('./config/nconf');
 
 let _routes = {
-		'/': { page: '/index' }
+		'/': { page: '/' }
 	},
 	_tags = [];
 
@@ -74,7 +74,7 @@ module.exports = withManifest(withOffline({
 		return config
 	},
 	manifest: {
-		output: './public/',
+		output: './public/manifest',
 		"name": "blakepetersen.io",
 		"short_name": "blakepetersen.io",
 		"start_url": "/",
