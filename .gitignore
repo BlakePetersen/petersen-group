@@ -9,3 +9,5 @@
 
 /config/*.json
 !/config/sample.json
+
+.vercel
