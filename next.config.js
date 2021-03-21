@@ -2,8 +2,6 @@ const { getPersons, getPosts } = require('./api/contentful');
 const withManifest = require('next-manifest');
 const withOffline = require('next-offline');
 
-const nconf = require('./config/nconf');
-
 let _routes = {
 		'/': { page: '/' }
 	},
@@ -53,11 +51,6 @@ module.exports = withManifest(withOffline({
 
 				return _routes;
 			});
-	},
-	serverRuntimeConfig: {
-		CONTENTFUL_SPACE_ID: nconf.get('CONTENTFUL_SPACE_ID'),
-		CONTENTFUL_ACCESS_TOKEN: nconf.get('CONTENTFUL_ACCESS_TOKEN'),
-		CONTENTFUL_MANAGEMENT_TOKEN: nconf.get('CONTENTFUL_MANAGEMENT_TOKEN'),
 	},
 	webpack: function (config) {
 		config.module.rules.push({

@@ -4,7 +4,7 @@
 /out
 
 .DS_Store
-.env
+.env.local
 *.log
 
 /config/*.json
