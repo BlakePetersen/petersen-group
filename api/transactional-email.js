@@ -25,7 +25,7 @@ const allowCors = fn => async (req, res) => {
 }
 
 const handler = (req, res) => {
-    const { body, headers } = req
+    const { query, headers } = req
 
     // const _referer = new URL(headers.referer)
     // if (!_referer || domainWhitelist.includes(_referer.hostname)) {
@@ -33,22 +33,22 @@ const handler = (req, res) => {
     // }
 
     const msg = {
-        to: body.to,
-        from: body.from,
-        subject: body.subject,
-        text: htmlToText(body.body, { wordwrap: 130 }),
-        html: body.body,
+        to: query.to,
+        from: query.from,
+        subject: query.subject,
+        text: htmlToText(query.body, { wordwrap: 130 }),
+        html: query.body,
     }
 
     sgMail
         .send(msg)
         .then(() => {
+            console.log('Email Sent')
             res.status(200)
         })
         .catch((error) => {
-            res.status(500).json({
-                error: error
-            })
+            console.error(error)
+            res.status(500)
         })
 }
 
