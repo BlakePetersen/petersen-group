@@ -15,14 +15,14 @@ module.exports = (req, res) => {
         return;
     }
 
+    const _message = JSON.parse(req.body)
+
     const msg = {
-        to: req.query.to, // Change to your recipient
-        from: req.query.from, // Change to your verified sender
-        subject: req.query.subject,
-        text: htmlToText(req.query.body, {
-            wordwrap: 130
-            }),
-        html: req.query.body,
+        to: _message.to,
+        from: _message.from,
+        subject: _message.subject,
+        text: htmlToText(_message.body, { wordwrap: 130 }),
+        html: _message.body,
     }
 
     sgMail
