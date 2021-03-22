@@ -24,7 +24,7 @@ const allowCors = fn => async (req, res) => {
     return await fn(req, res)
 }
 
-const handler = (req, res) => {
+const handler = async (req, res) => {
     const { query, headers } = req
 
     // const _referer = new URL(headers.referer)
@@ -40,7 +40,7 @@ const handler = (req, res) => {
         html: query.body,
     }
 
-    sgMail
+    await sgMail
         .send(msg)
         .then(() => {
             console.log('Email Sent')
