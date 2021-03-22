@@ -26,7 +26,6 @@ const allowCors = fn => async (req, res) => {
 
 const handler = async (req, res) => {
     const { body } = req
-    console.log(body);
 
     // const _referer = new URL(headers.referer)
     // if (!_referer || domainWhitelist.includes(_referer.hostname)) {
@@ -44,12 +43,15 @@ const handler = async (req, res) => {
     await sgMail
         .send(msg)
         .then(() => {
-            console.log('Email Sent')
-            res.status(200)
+            return res.status(200).json({
+                message: "Email Sent!"
+            })
         })
         .catch((error) => {
             console.error(error)
-            res.status(500)
+            return res.status(500).json({
+                message: "Email Not Sent: " + error
+            })
         })
 }
 
