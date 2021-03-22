@@ -27,6 +27,9 @@ const allowCors = fn => async (req, res) => {
 const handler = async (req, res) => {
     const { query, headers } = req
 
+
+    console.log(req);
+
     // const _referer = new URL(headers.referer)
     // if (!_referer || domainWhitelist.includes(_referer.hostname)) {
     //     return;
