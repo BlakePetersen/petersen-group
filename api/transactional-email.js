@@ -25,9 +25,8 @@ const allowCors = fn => async (req, res) => {
 }
 
 const handler = async (req, res) => {
-    const { query, headers } = req
-
-
+    const { body, headers } = req
+    
     console.log(req);
 
     // const _referer = new URL(headers.referer)
@@ -36,11 +35,11 @@ const handler = async (req, res) => {
     // }
 
     const msg = {
-        to: query.to,
-        from: query.from,
-        subject: query.subject,
-        text: htmlToText(query.body, { wordwrap: 130 }),
-        html: query.body,
+        to: body.to,
+        from: body.from,
+        subject: body.subject,
+        text: htmlToText(body.body, { wordwrap: 130 }),
+        html: body.body,
     }
 
     await sgMail
