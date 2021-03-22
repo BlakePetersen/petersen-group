@@ -1,4 +1,3 @@
-const { getPersons, getPosts } = require('./api/contentful');
 const withManifest = require('next-manifest');
 const withOffline = require('next-offline');
 
