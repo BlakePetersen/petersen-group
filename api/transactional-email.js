@@ -1,31 +1,42 @@
 const sgMail = require('@sendgrid/mail')
+const { htmlToText } = require('html-to-text');
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
+const domainWhitelist = [
+    'blakepetersen.io',
+    'dalebridges.com',
+    'kirbyelectriccompany.com'
+]
+
 module.exports = (req, res) => {
-    if (req.query.lock !== 'ding') {
+    const _referer = new URL(req.headers.referer)
+    if (!_referer || domainWhitelist.includes(_referer.hostname)) {
         return;
     }
 
     const msg = {
-        to: 'blakepetersen@gmail.com', // Change to your recipient
-        from: req.query.sender, // Change to your verified sender
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        to: req.query.to, // Change to your recipient
+        from: req.query.from, // Change to your verified sender
+        subject: req.query.subject,
+        text: htmlToText(req.query.body, {
+            wordwrap: 130
+            }),
+        html: req.query.body,
     }
 
     sgMail
         .send(msg)
         .then(() => {
             res.json({
-                body: 'success!',
+                body: 'success',
                 status: 200
             })
         })
         .catch((error) => {
             res.json({
                 body: `error: ${error}`,
-                status: 200
+                status: 500
             })
         })
 }
