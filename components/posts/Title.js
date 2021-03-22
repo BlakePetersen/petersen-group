@@ -12,7 +12,7 @@ const _TitleLink = styled.h1`
 `;
 
 const Title = ({ title, slug }) =>
-	<Link as={ `/posts/${slug}.html`	 } href={ `/post?slug=` + slug } key={ slug }>
+	<Link as={ `/posts/${slug}`	 } href={ `/post?slug=` + slug } key={ slug }>
 		<a>
 			<_TitleLink>
 				{ title }
