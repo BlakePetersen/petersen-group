@@ -7,4 +7,4 @@ const Colors = {
 	onyx: '#111111'
 };
 
- export default Colors
+export default Colors

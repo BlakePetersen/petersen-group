@@ -1,15 +1,16 @@
+const path = require('path')
+
 const withManifest = require('next-manifest');
 const withOffline = require('next-offline');
 
-const nconf = require('./config/nconf');
 const { getRoutes } = require('./lib/routes');
 
 module.exports = withManifest(withOffline({
 	exportPathMap: getRoutes,
 	env: {
-		CONTENTFUL_SPACE_ID: nconf.get('CONTENTFUL_SPACE_ID'),
-		CONTENTFUL_ACCESS_TOKEN: nconf.get('CONTENTFUL_ACCESS_TOKEN'),
-		CONTENTFUL_MANAGEMENT_TOKEN: nconf.get('CONTENTFUL_MANAGEMENT_TOKEN'),
+		CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+		CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
+		CONTENTFUL_MANAGEMENT_TOKEN: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
 	},
 	async headers() {
 		return [
@@ -25,9 +26,12 @@ module.exports = withManifest(withOffline({
 			}
 		]
 	},
+	sassOptions: {
+		includePaths: [path.join(__dirname, 'styles')],
+	},
 	webpack: function (config) {
 		config.module.rules.push({
-			test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+			test: /\.(eot|woff|woff2|ttf)$/,
 			use: {
 				loader: 'url-loader',
 				options: {

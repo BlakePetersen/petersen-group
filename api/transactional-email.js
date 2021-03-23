@@ -3,12 +3,6 @@ const { htmlToText } = require('html-to-text');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-const domainWhitelist = [
-    'blakepetersen.io',
-    'dalebridges.com',
-    'kirbyelectriccompany.com'
-]
-
 const allowCors = fn => async (req, res) => {
     res.setHeader('Access-Control-Allow-Credentials', true)
     res.setHeader('Access-Control-Allow-Origin', '*')
@@ -26,11 +20,6 @@ const allowCors = fn => async (req, res) => {
 
 const handler = async (req, res) => {
     const { body } = req
-
-    // const _referer = new URL(headers.referer)
-    // if (!_referer || domainWhitelist.includes(_referer.hostname)) {
-    //     return;
-    // }
 
     const msg = {
         to: body.to,
