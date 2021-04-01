@@ -11,22 +11,18 @@ export default class SiteDocument extends Document {
 		return (
 			<Html lang={`en`}>
 				<Head>
-					<div dangerouslySetInnerHTML={{ __html: Gtm() }} />
 					{/* Meta */}
-					{/* Favicon */}
+					{/* Favicon */}	
 					{/* OpenGraph */}
 					{/* Twitter */}
 					{/* PWA */}
 					{/* Fonts */}
 					{ styleTags }
 				</Head>
-
 				<body>
-					<div dangerouslySetInnerHTML={{ __html: GtmLegacy() }} />
 					{ main }
 					<NextScript />
 				</body>
-
 			</Html>
 		)
 	}
