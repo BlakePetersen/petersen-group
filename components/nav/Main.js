@@ -162,7 +162,7 @@ class MainNav extends React.Component {
         <_Logo>
           <Link href={`/`} as={`/`}>
             <a>
-              <_Title isTop={this.props.isTop}>ʙ ʟ Λ ĸ ᴇ </_Title>
+              <_Title isTop={this.props.isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
               <_Subtitle isTop={this.props.isTop}>Good Times in Web Development</_Subtitle>
             </a>
           </Link>
