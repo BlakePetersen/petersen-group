@@ -88,16 +88,16 @@ const _Title = styled.div`
 `;
 
 const _Subtitle = styled.div`
-  font-size: .6rem;
+  font-size: .5rem;
   text-transform: uppercase;
   display: block;
   letter-spacing: 5px;
-  font-weight: 300;
+  font-weight: 400;
   transition: font-size 300ms ease;
   line-height: 1.5rem;
 
   ${({ isTop }) => !isTop && `
-     font-size: .9rem;
+     font-size: .7rem;
   `}
 `;
 
