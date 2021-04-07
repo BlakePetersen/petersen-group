@@ -38,7 +38,7 @@ const _Tag = styled.div`
 const Tags = ({ tags }) =>
 	<_Tags>
 		{ tags && tags.map((tag, i) =>
-			<Link as={ `/tags/${tag}.html` } href={ `/tag?tag=` + tag } key={ i }>
+			<Link as={ `/tags/${tag}` } href={ `/tag?tag=` + tag } key={ i }>
 				<a>
 					<_Tag>
 						{ tag }

@@ -9,23 +9,23 @@ const _MainNav = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;    
+  width: 100%;
   overflow: hidden;
-  
+
   a {
     display: inline-block;
     text-decoration: none;
     color: rgba(255, 255, 255, .95);
     text-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
     transition: color 150ms ease 150ms, text-shadow 300ms ease-out, transform 300ms ease;
-    
+
     &:hover {
-        transform: translateY(-4px);
-        color: rgb(255, 255, 255);
-        text-shadow: 0 11px 1px rgba(0, 0, 0, 0.15);
+      transform: translateY(-4px);
+      color: rgb(255, 255, 255);
+      text-shadow: 0 11px 1px rgba(0, 0, 0, 0.15);
     }
   }
-  
+
   a,
   svg {
     display: block;
@@ -33,7 +33,7 @@ const _MainNav = styled.div`
     z-index: 2;
     cursor: pointer;
   }
-  
+
   svg {
     fill: rgba(255, 255, 255, .95);
     width: 30px;
@@ -41,7 +41,7 @@ const _MainNav = styled.div`
     transition: filter 300ms ease, transform 300ms ease;
     flex-shrink: 0;
 
-    &:hover { 
+    &:hover {
       transform: translateY(-4px);
       fill: rgb(255, 255, 255);
       filter: drop-shadow(0 11px 1px rgba(0, 0, 0, 0.15));
@@ -70,7 +70,7 @@ const _Logo = styled.h1`
     opacity: 0;
     transform: translateY(-100px);
   }
-  
+
   .full.is-post & {
     opacity: 1;
     transform: translateY(0);
@@ -79,32 +79,44 @@ const _Logo = styled.h1`
 
 const _Title = styled.div`
   padding: 0 0 .5rem;
+  opacity: 1;
+  transition: opacity 300ms ease;
+
+  ${({ isTop }) => !isTop && `
+    opacity: 0;
+  `}
 `;
 
 const _Subtitle = styled.div`
-    font-size: 10px;
-    text-transform: uppercase;
-    display: block;
-    letter-spacing: 5px;
-    font-weight: 400;
+  font-size: .6rem;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 5px;
+  font-weight: 300;
+  transition: font-size 300ms ease;
+  line-height: 1.5rem;
+
+  ${({ isTop }) => !isTop && `
+     font-size: .9rem;
+  `}
 `;
 
 const _PageTitle = styled.h2`
-    max-width: 1000px;
-    width: calc(50vw + 300px);
-    min-width: 300px;
-    opacity: 0;
-    font-size: 3rem; 
-    font-weight: bold;
-    transform: scale(.8) translateY(-400px);
-    transition: opacity 150ms ease, transform 300ms ease, font-size 300ms ease-out;
-  
+  max-width: 1000px;
+  width: calc(50vw + 300px);
+  min-width: 300px;
+  opacity: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  transform: scale(.8) translateY(-400px);
+  transition: opacity 150ms ease, transform 300ms ease, font-size 300ms ease-out;
+
   .is-post & {
     margin: -5rem 0 -4rem;
     transform: scale(.6) translateY(0);
     opacity: 1;
   }
-  
+
   .full.is-post & {
     margin: 0;
     transform: scale(1) translateY(0);
@@ -118,7 +130,7 @@ const _Meta = styled.div`
     opacity: 0;
     transform: translateY(100px);
   }
-  
+
   .full.is-post & {
     opacity: 1;
     transform: translateY(0);
@@ -140,7 +152,7 @@ class MainNav extends React.Component {
 
   render() {
     return <_MainNav
-      className={ `main-nav full ${ this.props.isPost ? 'is-post' : '' }` }
+        className={ `main-nav full ${ this.props.isPost ? 'is-post' : '' }` }
     >
       {/*<svg viewBox="0 0 8 8" id="menu" className="icon" onClick={this.toggleNavMenu}>*/}
       {/*<path d="M0 1v1h8v-1h-8zm0 2.969v1h8v-1h-8zm0 3v1h8v-1h-8z" id="menu"></path>*/}
@@ -150,8 +162,8 @@ class MainNav extends React.Component {
         <_Logo>
           <Link href={`/`} as={`/`}>
             <a>
-              <_Title>ʙ ʟ Λ ĸ ᴇ </_Title>
-              <_Subtitle>Good Times in Web Development</_Subtitle>
+              <_Title isTop={this.props.isTop}>ʙ ʟ Λ ĸ ᴇ </_Title>
+              <_Subtitle isTop={this.props.isTop}>Good Times in Web Development</_Subtitle>
             </a>
           </Link>
         </_Logo>

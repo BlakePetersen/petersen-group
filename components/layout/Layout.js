@@ -22,7 +22,7 @@ const Layout = ({ children, title, pathname }) => {
 			monkeyPatchScrolling={ true }
 		>
 			<UseGTMHookProvider>
-				<Content children={ children } key={ pathname } />	
+				<Content children={ children } key={ pathname } />
 			</UseGTMHookProvider>
 		</PageTransition>
 		<Footer />
