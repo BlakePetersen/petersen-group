@@ -5,6 +5,7 @@
   "author": "Blake Petersen",
   "license": "MIT",
   "dependencies": {
+    "@elgorditosalsero/react-gtm-hook": "^2.0.3",
     "@sendgrid/mail": "^7.4.2",
     "@wordbots/trianglify-no-canvas": "^1.3.0",
     "apollo-boost": "^0.4.9",

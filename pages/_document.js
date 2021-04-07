@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { Gtm, GtmLegacy } from './../components/Gtm'
 
 export default class SiteDocument extends Document {
 	render () {
@@ -12,7 +11,7 @@ export default class SiteDocument extends Document {
 			<Html lang={`en`}>
 				<Head>
 					{/* Meta */}
-					{/* Favicon */}	
+					{/* Favicon */}
 					{/* OpenGraph */}
 					{/* Twitter */}
 					{/* PWA */}
