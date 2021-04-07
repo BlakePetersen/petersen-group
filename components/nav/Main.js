@@ -89,6 +89,11 @@ const _Title = styled.div`
 
 const _Subtitle = styled.div`
   font-size: .5rem;
+
+  ${({ isTop }) => !isTop && `
+     font-size: .7rem;
+  `}
+    
   text-transform: uppercase;
   display: block;
   letter-spacing: 5px;
@@ -96,9 +101,6 @@ const _Subtitle = styled.div`
   transition: font-size 300ms ease;
   line-height: 1.5rem;
 
-  ${({ isTop }) => !isTop && `
-     font-size: .7rem;
-  `}
 `;
 
 const _PageTitle = styled.h2`
