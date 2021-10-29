@@ -1,0 +1,10 @@
+{
+	"name": "blakepetersen.io",
+	"short_name": "blakepeterse",
+	"icons": false,
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "natural",
+	"background_color": "#111111",
+	"theme_color": "#111111"
+}

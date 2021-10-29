@@ -1,11 +1,8 @@
 const path = require('path')
 
-const withManifest = require('next-manifest');
-const withOffline = require('next-offline');
-
 const { getRoutes } = require('./lib/routes');
 
-module.exports = withManifest(withOffline({
+module.exports = {
 	exportPathMap: getRoutes,
 	env: {
 		CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
@@ -67,4 +64,4 @@ module.exports = withManifest(withOffline({
 			}
 		]
 	}
-}));
+};
