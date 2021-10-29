@@ -900,85 +900,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"BlakePetersen.io@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "BlakePetersen.io@workspace:."
-  dependencies:
-    "@elgorditosalsero/react-gtm-hook": ^2.0.3
-    "@n8tb1t/use-scroll-position": ^2.0.3
-    "@sendgrid/mail": ^7.4.2
-    "@types/prop-types": ^15
-    "@types/react-is": ^17
-    "@wordbots/trianglify-no-canvas": ^1.3.0
-    apollo-boost: ^0.4.9
-    autoprefixer: ^10.2.5
-    babel-plugin-inline-import: ^3.0.0
-    babel-plugin-styled-components: ^1.12.0
-    babel-preset-env: ^1.7.0
-    babel-preset-es2015: ^6.24.1
-    cf-graphql: ^0.5.0
-    colorbrewer: ^1.5.0
-    contentful: ^9.1.4
-    disqus-react: ^1.0.11
-    dotenv: ^10.0.0
-    eslint: <8.0.0
-    eslint-config-next: 12.0.1
-    express: ^4.17.1
-    express-graphql: ^0.12.0
-    extract-text-webpack-plugin: ^3.0.2
-    highlight.js: ^10.7.1
-    html-to-text: ^7.0.0
-    isomorphic-unfetch: ^3.1.0
-    jquery: ^3.6.0
-    jsdom: ^16.5.1
-    lodash: ^4.17.21
-    moment: ^2.29.1
-    next: ^12.0.1
-    next-page-transitions: ^1.0.0-beta.2
-    next-routes: ^1.4.2
-    node-sass: ^6.0.1
-    polished: ^4.1.1
-    postcss: ^8.3.11
-    postcss-loader: ^5.2.0
-    prismjs: ^1.25.0
-    prop-types: ^15.7.2
-    raw-loader: ^4.0.2
-    react: ^17.0.1
-    react-apollo: ^3.1.5
-    react-dom: ^17.0.1
-    react-is: ^17.0.2
-    react-markdown: ^5.0.3
-    react-moment: ^1.1.1
-    react-prism: ^4.3.2
-    react-redux: ^7.2.2
-    react-trianglify: ^3.0.3
-    redux: ^4.0.5
-    redux-devtools-extension: ^2.13.9
-    redux-thunk: ^2.3.0
-    regenerator-runtime: ^0.13.9
-    remark: ^13.0.0
-    remark-emoji: ^2.1.0
-    remark-highlight.js: ^6.0.0
-    remark-images: ^2.0.0
-    remark-parse: ^9.0.0
-    remark-react: ^8.0.0
-    remark-react-lowlight: ^0.7.0
-    rucksack-css: ^1.0.2
-    server: ^1.0.32
-    showdown: ^1.9.1
-    sort-by: ^1.2.0
-    styled-components: ^5.2.1
-    styled-normalize: ^8.0.7
-    sw-precache-webpack-plugin: ^1.0.0
-    tailwindcss: ^2.0.4
-    unfetch: ^4.2.0
-    unified: ^9.2.1
-    update-check: ^1.5.4
-    url-loader: ^4.1.1
-    xmldom: ^0.5.0
-  languageName: unknown
-  linkType: soft
-
 "abab@npm:^1.0.0":
   version: 1.0.4
   resolution: "abab@npm:1.0.4"
@@ -2426,6 +2347,85 @@ __metadata:
   checksum: ccd267956c58d2315f5d3ea6757cf09863c5fc703e50fbeb13a7dc849b812ef76e3cf9ca8f35a0c48498776a7478d7b4a0418e1e2b8cb9cb9731f2922aaad7f8
   languageName: node
   linkType: hard
+
+"blakepetersen.io@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "blakepetersen.io@workspace:."
+  dependencies:
+    "@elgorditosalsero/react-gtm-hook": ^2.0.3
+    "@n8tb1t/use-scroll-position": ^2.0.3
+    "@sendgrid/mail": ^7.4.2
+    "@types/prop-types": ^15
+    "@types/react-is": ^17
+    "@wordbots/trianglify-no-canvas": ^1.3.0
+    apollo-boost: ^0.4.9
+    autoprefixer: ^10.2.5
+    babel-plugin-inline-import: ^3.0.0
+    babel-plugin-styled-components: ^1.12.0
+    babel-preset-env: ^1.7.0
+    babel-preset-es2015: ^6.24.1
+    cf-graphql: ^0.5.0
+    colorbrewer: ^1.5.0
+    contentful: ^9.1.4
+    disqus-react: ^1.0.11
+    dotenv: ^10.0.0
+    eslint: <8.0.0
+    eslint-config-next: 12.0.1
+    express: ^4.17.1
+    express-graphql: ^0.12.0
+    extract-text-webpack-plugin: ^3.0.2
+    highlight.js: ^10.7.1
+    html-to-text: ^7.0.0
+    isomorphic-unfetch: ^3.1.0
+    jquery: ^3.6.0
+    jsdom: ^16.5.1
+    lodash: ^4.17.21
+    moment: ^2.29.1
+    next: ^12.0.1
+    next-page-transitions: ^1.0.0-beta.2
+    next-routes: ^1.4.2
+    node-sass: ^6.0.1
+    polished: ^4.1.1
+    postcss: ^8.3.11
+    postcss-loader: ^5.2.0
+    prismjs: ^1.25.0
+    prop-types: ^15.7.2
+    raw-loader: ^4.0.2
+    react: ^17.0.1
+    react-apollo: ^3.1.5
+    react-dom: ^17.0.1
+    react-is: ^17.0.2
+    react-markdown: ^5.0.3
+    react-moment: ^1.1.1
+    react-prism: ^4.3.2
+    react-redux: ^7.2.2
+    react-trianglify: ^3.0.3
+    redux: ^4.0.5
+    redux-devtools-extension: ^2.13.9
+    redux-thunk: ^2.3.0
+    regenerator-runtime: ^0.13.9
+    remark: ^13.0.0
+    remark-emoji: ^2.1.0
+    remark-highlight.js: ^6.0.0
+    remark-images: ^2.0.0
+    remark-parse: ^9.0.0
+    remark-react: ^8.0.0
+    remark-react-lowlight: ^0.7.0
+    rucksack-css: ^1.0.2
+    server: ^1.0.32
+    showdown: ^1.9.1
+    sort-by: ^1.2.0
+    styled-components: ^5.2.1
+    styled-normalize: ^8.0.7
+    sw-precache-webpack-plugin: ^1.0.0
+    tailwindcss: ^2.0.4
+    unfetch: ^4.2.0
+    unified: ^9.2.1
+    update-check: ^1.5.4
+    url-loader: ^4.1.1
+    xmldom: ^0.6.0
+  languageName: unknown
+  linkType: soft
 
 "blob@npm:0.0.5":
   version: 0.0.5
@@ -12377,10 +12377,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xmldom@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "xmldom@npm:0.5.0"
-  checksum: 6afbfc9f4de847d1e12a3a95e393750a55f6b074881cd3c6192c99421a8548b0687b7851113d6318ff0121615674d3b064924f1c478da1c840757626bdfe4c18
+"xmldom@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "xmldom@npm:0.6.0"
+  checksum: 710f64f5b2ba8ac1cbcf62c2e35b095a2f9ccbd596062efe037a5ca85d3ee077b691c4d74952ff476e4bab0dd82727604262899f25dddbb02f89ddeea4cca7f9
   languageName: node
   linkType: hard
 
