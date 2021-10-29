@@ -84,6 +84,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux", "npm:4.0.5"],
             ["redux-devtools-extension", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.13.9"],
             ["redux-thunk", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.3.0"],
+            ["regenerator-runtime", "npm:0.13.9"],
             ["remark", "npm:13.0.0"],
             ["remark-emoji", "npm:2.1.0"],
             ["remark-highlight.js", "npm:6.0.0"],
@@ -1154,6 +1155,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["redux", "npm:4.0.5"],
             ["redux-devtools-extension", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.13.9"],
             ["redux-thunk", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.3.0"],
+            ["regenerator-runtime", "npm:0.13.9"],
             ["remark", "npm:13.0.0"],
             ["remark-emoji", "npm:2.1.0"],
             ["remark-highlight.js", "npm:6.0.0"],
@@ -1896,7 +1898,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["autoprefixer", "npm:7.2.6"],
             ["browserslist", "npm:2.11.3"],
-            ["caniuse-lite", "npm:1.0.30001203"],
+            ["caniuse-lite", "npm:1.0.30001272"],
             ["normalize-range", "npm:0.1.2"],
             ["num2fraction", "npm:1.2.2"],
             ["postcss", "npm:6.0.23"],
@@ -1910,7 +1912,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:10.2.5"],
             ["@types/postcss", null],
             ["browserslist", "npm:4.16.3"],
-            ["caniuse-lite", "npm:1.0.30001203"],
+            ["caniuse-lite", "npm:1.0.30001272"],
             ["colorette", "npm:1.2.2"],
             ["fraction.js", "npm:4.0.13"],
             ["normalize-range", "npm:0.1.2"],
@@ -2949,7 +2951,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-2.11.3-cfa3de4e74-2ff9081626.zip/node_modules/browserslist/",
           "packageDependencies": [
             ["browserslist", "npm:2.11.3"],
-            ["caniuse-lite", "npm:1.0.30001203"],
+            ["caniuse-lite", "npm:1.0.30001272"],
             ["electron-to-chromium", "npm:1.3.693"]
           ],
           "linkType": "HARD",
@@ -2958,7 +2960,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-3.2.8-a4a77e08ac-74d9ab1089.zip/node_modules/browserslist/",
           "packageDependencies": [
             ["browserslist", "npm:3.2.8"],
-            ["caniuse-lite", "npm:1.0.30001203"],
+            ["caniuse-lite", "npm:1.0.30001272"],
             ["electron-to-chromium", "npm:1.3.693"]
           ],
           "linkType": "HARD",
@@ -2967,7 +2969,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/browserslist-npm-4.16.3-e6f20ea590-8016901f6d.zip/node_modules/browserslist/",
           "packageDependencies": [
             ["browserslist", "npm:4.16.3"],
-            ["caniuse-lite", "npm:1.0.30001203"],
+            ["caniuse-lite", "npm:1.0.30001272"],
             ["colorette", "npm:1.2.2"],
             ["electron-to-chromium", "npm:1.3.693"],
             ["escalade", "npm:3.1.1"],
@@ -3133,13 +3135,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["caniuse-lite", [
-        ["npm:1.0.30001203", {
-          "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001203-ffb99f3a0e-47e1c7f59e.zip/node_modules/caniuse-lite/",
-          "packageDependencies": [
-            ["caniuse-lite", "npm:1.0.30001203"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:1.0.30001272", {
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001272-e89c95f6f8-5a08fc35ae.zip/node_modules/caniuse-lite/",
           "packageDependencies": [
@@ -10378,6 +10373,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.7-41bcbe64ea-52b66e6669.zip/node_modules/regenerator-runtime/",
           "packageDependencies": [
             ["regenerator-runtime", "npm:0.13.7"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:0.13.9", {
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.9-6d02340eec-65ed455fe5.zip/node_modules/regenerator-runtime/",
+          "packageDependencies": [
+            ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
         }]
