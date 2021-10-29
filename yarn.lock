@@ -2397,7 +2397,7 @@ __metadata:
     babel-preset-env: ^1.7.0
     babel-preset-es2015: ^6.24.1
     cf-graphql: ^0.5.0
-    colorbrewer: ^1.5.0
+    colorbrewer: ^1.5.1
     contentful: ^9.1.4
     disqus-react: ^1.0.11
     dotenv: ^10.0.0
@@ -3086,10 +3086,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorbrewer@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "colorbrewer@npm:1.5.0"
-  checksum: f5823e7a58e5d15e1ed73dc7f43a81e56244c54a95eb6b6dc3364254b078d5f684737eb40fe0739dff6a8c7575442061d41e55dafe37d1aa742ced07c70812e0
+"colorbrewer@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "colorbrewer@npm:1.5.1"
+  checksum: 42846e73ea439937b2851f1272e28e5473f828632509c571859582b4872531b3d989a0254adc7b5fe8f09625e6e07c4cbdedb3ef504872c98eb64b184c8a6e19
   languageName: node
   linkType: hard
 

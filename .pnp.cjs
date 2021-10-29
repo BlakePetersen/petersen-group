@@ -48,7 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-env", "npm:1.7.0"],
             ["babel-preset-es2015", "npm:6.24.1"],
             ["cf-graphql", "npm:0.5.0"],
-            ["colorbrewer", "npm:1.5.0"],
+            ["colorbrewer", "npm:1.5.1"],
             ["contentful", "npm:9.1.4"],
             ["disqus-react", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:1.0.11"],
             ["dotenv", "npm:10.0.0"],
@@ -3110,7 +3110,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-env", "npm:1.7.0"],
             ["babel-preset-es2015", "npm:6.24.1"],
             ["cf-graphql", "npm:0.5.0"],
-            ["colorbrewer", "npm:1.5.0"],
+            ["colorbrewer", "npm:1.5.1"],
             ["contentful", "npm:9.1.4"],
             ["disqus-react", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:1.0.11"],
             ["dotenv", "npm:10.0.0"],
@@ -3859,10 +3859,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["colorbrewer", [
-        ["npm:1.5.0", {
-          "packageLocation": "./.yarn/cache/colorbrewer-npm-1.5.0-06ee13e8a5-f5823e7a58.zip/node_modules/colorbrewer/",
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/colorbrewer-npm-1.5.1-0cff176792-42846e73ea.zip/node_modules/colorbrewer/",
           "packageDependencies": [
-            ["colorbrewer", "npm:1.5.0"]
+            ["colorbrewer", "npm:1.5.1"]
           ],
           "linkType": "HARD",
         }]
