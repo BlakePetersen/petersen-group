@@ -51,7 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorbrewer", "npm:1.5.0"],
             ["contentful", "npm:9.1.4"],
             ["disqus-react", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.0.11"],
-            ["dotenv", "npm:8.2.0"],
+            ["dotenv", "npm:10.0.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-next", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:12.0.1"],
             ["express", "npm:4.17.1"],
@@ -1323,7 +1323,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["colorbrewer", "npm:1.5.0"],
             ["contentful", "npm:9.1.4"],
             ["disqus-react", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.0.11"],
-            ["dotenv", "npm:8.2.0"],
+            ["dotenv", "npm:10.0.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-next", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:12.0.1"],
             ["express", "npm:4.17.1"],
@@ -4943,6 +4943,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dotenv", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-10.0.0-36b272df25-f412c5fe8c.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:10.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:8.2.0", {
           "packageLocation": "./.yarn/cache/dotenv-npm-8.2.0-6b21df4d37-ad4c8e0df3.zip/node_modules/dotenv/",
           "packageDependencies": [
