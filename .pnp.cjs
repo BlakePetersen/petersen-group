@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@elgorditosalsero/react-gtm-hook", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@n8tb1t/use-scroll-position", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@sendgrid/mail", "npm:7.4.2"],
+            ["@types/react-is", "npm:17.0.3"],
             ["@wordbots/trianglify-no-canvas", "npm:1.3.0"],
             ["apollo-boost", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:0.4.9"],
             ["autoprefixer", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:10.2.5"],
@@ -72,6 +73,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.1"],
             ["react-apollo", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:3.1.5"],
             ["react-dom", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:17.0.1"],
+            ["react-is", "npm:17.0.2"],
             ["react-markdown", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:5.0.3"],
             ["react-moment", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.1.1"],
             ["react-prism", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:4.3.2"],
@@ -859,12 +861,52 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/prop-types", [
+        ["npm:15.7.4", {
+          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip/node_modules/@types/prop-types/",
+          "packageDependencies": [
+            ["@types/prop-types", "npm:15.7.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/react", [
+        ["npm:17.0.33", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.33-27bb07477e-5f53f3dae0.zip/node_modules/@types/react/",
+          "packageDependencies": [
+            ["@types/react", "npm:17.0.33"],
+            ["@types/prop-types", "npm:15.7.4"],
+            ["@types/scheduler", "npm:0.16.2"],
+            ["csstype", "npm:3.0.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/react-is", [
+        ["npm:17.0.3", {
+          "packageLocation": "./.yarn/cache/@types-react-is-npm-17.0.3-1deb53884e-6abb7c47d5.zip/node_modules/@types/react-is/",
+          "packageDependencies": [
+            ["@types/react-is", "npm:17.0.3"],
+            ["@types/react", "npm:17.0.33"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/responselike", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/@types-responselike-npm-1.0.0-85dd08af42-e99fc7cc62.zip/node_modules/@types/responselike/",
           "packageDependencies": [
             ["@types/responselike", "npm:1.0.0"],
             ["@types/node", "npm:14.14.35"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/scheduler", [
+        ["npm:0.16.2", {
+          "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.16.2-ba3a7d8c68-b6b4dcfeae.zip/node_modules/@types/scheduler/",
+          "packageDependencies": [
+            ["@types/scheduler", "npm:0.16.2"]
           ],
           "linkType": "HARD",
         }]
@@ -930,6 +972,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@elgorditosalsero/react-gtm-hook", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@n8tb1t/use-scroll-position", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@sendgrid/mail", "npm:7.4.2"],
+            ["@types/react-is", "npm:17.0.3"],
             ["@wordbots/trianglify-no-canvas", "npm:1.3.0"],
             ["apollo-boost", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:0.4.9"],
             ["autoprefixer", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:10.2.5"],
@@ -964,6 +1007,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.1"],
             ["react-apollo", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:3.1.5"],
             ["react-dom", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:17.0.1"],
+            ["react-is", "npm:17.0.2"],
             ["react-markdown", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:5.0.3"],
             ["react-moment", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.1.1"],
             ["react-prism", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:4.3.2"],
@@ -3797,6 +3841,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cssstyle", "npm:2.3.0"],
             ["cssom", "npm:0.3.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["csstype", [
+        ["npm:3.0.9", {
+          "packageLocation": "./.yarn/cache/csstype-npm-3.0.9-0801c4a6d7-199f9af7e6.zip/node_modules/csstype/",
+          "packageDependencies": [
+            ["csstype", "npm:3.0.9"]
           ],
           "linkType": "HARD",
         }]
@@ -9360,6 +9413,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-is", "npm:16.13.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:17.0.2", {
+          "packageLocation": "./.yarn/cache/react-is-npm-17.0.2-091bbb8db6-9d6d111d89.zip/node_modules/react-is/",
+          "packageDependencies": [
+            ["react-is", "npm:17.0.2"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["react-lifecycles-compat", [
@@ -11147,13 +11207,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/unitless", "npm:0.7.5"],
             ["@types/react", null],
             ["@types/react-dom", null],
-            ["@types/react-is", null],
+            ["@types/react-is", "npm:17.0.3"],
             ["babel-plugin-styled-components", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.12.0"],
             ["css-to-react-native", "npm:3.0.0"],
             ["hoist-non-react-statics", "npm:3.3.2"],
             ["react", "npm:17.0.1"],
             ["react-dom", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:17.0.1"],
-            ["react-is", null],
+            ["react-is", "npm:17.0.2"],
             ["shallowequal", "npm:1.1.0"],
             ["supports-color", "npm:5.5.0"]
           ],

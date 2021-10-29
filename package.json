@@ -42,6 +42,7 @@
     "react": "^17.0.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^17.0.1",
+    "react-is": "^17.0.2",
     "react-markdown": "^5.0.3",
     "react-moment": "^1.1.1",
     "react-prism": "^4.3.2",
@@ -78,5 +79,8 @@
     "prod": "yarn build && yarn export",
     "start": "NODE_ENV=production node server.js"
   },
-  "packageManager": "yarn@3.1.0"
+  "packageManager": "yarn@3.1.0",
+  "devDependencies": {
+    "@types/react-is": "^17"
+  }
 }
