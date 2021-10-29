@@ -3,12 +3,15 @@ const path = require('path')
 const { getRoutes } = require('./lib/routes');
 
 module.exports = {
-	exportPathMap: getRoutes,
 	env: {
 		CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
 		CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
 		CONTENTFUL_MANAGEMENT_TOKEN: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
 	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	exportPathMap: getRoutes,
 	async headers() {
 		return [
 			{
