@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@elgorditosalsero/react-gtm-hook", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@n8tb1t/use-scroll-position", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@sendgrid/mail", "npm:7.4.2"],
+            ["@types/prop-types", "npm:15.7.4"],
             ["@types/react-is", "npm:17.0.3"],
             ["@wordbots/trianglify-no-canvas", "npm:1.3.0"],
             ["apollo-boost", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:0.4.9"],
@@ -48,7 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-es2015", "npm:6.24.1"],
             ["cf-graphql", "npm:0.5.0"],
             ["colorbrewer", "npm:1.5.0"],
-            ["contentful", "npm:8.2.0"],
+            ["contentful", "npm:9.1.4"],
             ["disqus-react", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.0.11"],
             ["dotenv", "npm:8.2.0"],
             ["express", "npm:4.17.1"],
@@ -69,6 +70,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.11"],
             ["postcss-loader", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:5.2.0"],
             ["prismjs", "npm:1.23.0"],
+            ["prop-types", "npm:15.7.2"],
             ["raw-loader", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:4.0.2"],
             ["react", "npm:17.0.1"],
             ["react-apollo", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:3.1.5"],
@@ -972,6 +974,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@elgorditosalsero/react-gtm-hook", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@n8tb1t/use-scroll-position", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:2.0.3"],
             ["@sendgrid/mail", "npm:7.4.2"],
+            ["@types/prop-types", "npm:15.7.4"],
             ["@types/react-is", "npm:17.0.3"],
             ["@wordbots/trianglify-no-canvas", "npm:1.3.0"],
             ["apollo-boost", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:0.4.9"],
@@ -982,7 +985,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-es2015", "npm:6.24.1"],
             ["cf-graphql", "npm:0.5.0"],
             ["colorbrewer", "npm:1.5.0"],
-            ["contentful", "npm:8.2.0"],
+            ["contentful", "npm:9.1.4"],
             ["disqus-react", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.0.11"],
             ["dotenv", "npm:8.2.0"],
             ["express", "npm:4.17.1"],
@@ -1003,6 +1006,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.11"],
             ["postcss-loader", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:5.2.0"],
             ["prismjs", "npm:1.23.0"],
+            ["prop-types", "npm:15.7.2"],
             ["raw-loader", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:4.0.2"],
             ["react", "npm:17.0.1"],
             ["react-apollo", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:3.1.5"],
@@ -1803,6 +1807,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["axios", "npm:0.21.1"],
             ["follow-redirects", "virtual:d192f6b3b31cd5d11a443145a3883a70c04cbd7c813c53085dbaf50263735f1162f10fdbddd53c24e162ec3bc37b90966413084323739b7cf942b8bfb4da8831#npm:1.13.3"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:0.24.0", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.24.0-39e5c1e79e-468cf496c0.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.24.0"],
+            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.4"]
           ],
           "linkType": "HARD",
         }]
@@ -3516,13 +3528,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["contentful", [
-        ["npm:8.2.0", {
-          "packageLocation": "./.yarn/cache/contentful-npm-8.2.0-5e29df7f3e-79f1fb4538.zip/node_modules/contentful/",
+        ["npm:9.1.4", {
+          "packageLocation": "./.yarn/cache/contentful-npm-9.1.4-9fa4b6f877-6182d2b0e1.zip/node_modules/contentful/",
           "packageDependencies": [
-            ["contentful", "npm:8.2.0"],
-            ["axios", "npm:0.21.1"],
+            ["contentful", "npm:9.1.4"],
+            ["axios", "npm:0.24.0"],
             ["contentful-resolve-response", "npm:1.3.0"],
-            ["contentful-sdk-core", "npm:6.7.0"],
+            ["contentful-sdk-core", "npm:6.10.3"],
             ["fast-copy", "npm:2.1.1"],
             ["json-stringify-safe", "npm:5.0.1"]
           ],
@@ -3540,11 +3552,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["contentful-sdk-core", [
-        ["npm:6.7.0", {
-          "packageLocation": "./.yarn/cache/contentful-sdk-core-npm-6.7.0-3646e05977-571f652703.zip/node_modules/contentful-sdk-core/",
+        ["npm:6.10.3", {
+          "packageLocation": "./.yarn/cache/contentful-sdk-core-npm-6.10.3-d78d37e4ac-471142ff94.zip/node_modules/contentful-sdk-core/",
           "packageDependencies": [
-            ["contentful-sdk-core", "npm:6.7.0"],
+            ["contentful-sdk-core", "npm:6.10.3"],
             ["fast-copy", "npm:2.1.1"],
+            ["lodash.isplainobject", "npm:4.0.6"],
+            ["lodash.isstring", "npm:4.0.1"],
+            ["p-throttle", "npm:4.1.1"],
             ["qs", "npm:6.10.0"]
           ],
           "linkType": "HARD",
@@ -4982,6 +4997,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["follow-redirects", "npm:1.13.3"]
           ],
           "linkType": "SOFT",
+        }],
+        ["npm:1.14.4", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.4-19eb02e590-d4ce74cf5c.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "npm:1.14.4"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.4", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-85215bccf9/0/cache/follow-redirects-npm-1.14.4-19eb02e590-d4ce74cf5c.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.4"],
+            ["@types/debug", null],
+            ["debug", null]
+          ],
+          "packagePeers": [
+            "@types/debug",
+            "debug"
+          ],
+          "linkType": "HARD",
         }],
         ["virtual:d192f6b3b31cd5d11a443145a3883a70c04cbd7c813c53085dbaf50263735f1162f10fdbddd53c24e162ec3bc37b90966413084323739b7cf942b8bfb4da8831#npm:1.13.3", {
           "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-355f55dffb/0/cache/follow-redirects-npm-1.13.3-bc35dfad3e-4b5aaa91a0.zip/node_modules/follow-redirects/",
@@ -6876,6 +6911,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lodash.isplainobject", [
+        ["npm:4.0.6", {
+          "packageLocation": "./.yarn/cache/lodash.isplainobject-npm-4.0.6-d73937742f-29c6351f28.zip/node_modules/lodash.isplainobject/",
+          "packageDependencies": [
+            ["lodash.isplainobject", "npm:4.0.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.isstring", [
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/lodash.isstring-npm-4.0.1-721fee791c-eaac87ae96.zip/node_modules/lodash.isstring/",
+          "packageDependencies": [
+            ["lodash.isstring", "npm:4.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lodash.sortby", [
         ["npm:4.7.0", {
           "packageLocation": "./.yarn/cache/lodash.sortby-npm-4.7.0-fda8ab950d-db170c9396.zip/node_modules/lodash.sortby/",
@@ -8082,6 +8135,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["p-map", "npm:4.0.0"],
             ["aggregate-error", "npm:3.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["p-throttle", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/p-throttle-npm-4.1.1-06a4c85c51-fe8709f3c3.zip/node_modules/p-throttle/",
+          "packageDependencies": [
+            ["p-throttle", "npm:4.1.1"]
           ],
           "linkType": "HARD",
         }]
@@ -9504,10 +9566,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["react-moment", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:1.1.1"],
             ["@types/moment", null],
-            ["@types/prop-types", null],
+            ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", null],
             ["moment", "npm:2.29.1"],
-            ["prop-types", null],
+            ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.1"]
           ],
           "packagePeers": [
@@ -9533,9 +9595,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-prism-virtual-c76444c346/0/cache/react-prism-npm-4.3.2-9393d8ae54-17cfa61528.zip/node_modules/react-prism/",
           "packageDependencies": [
             ["react-prism", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:4.3.2"],
-            ["@types/prop-types", null],
+            ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", null],
-            ["prop-types", null],
+            ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.1"]
           ],
           "packagePeers": [
@@ -10036,9 +10098,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/remark-react-lowlight-virtual-0e384ba935/0/cache/remark-react-lowlight-npm-0.7.0-dc0f9bca8f-a77e5d889a.zip/node_modules/remark-react-lowlight/",
           "packageDependencies": [
             ["remark-react-lowlight", "virtual:3f804b710b0d30f0dd1f5e823c8b51ab1b69b2f9887ec89811624b95ef42f6f08f8987a58ad39902c9a8f6410e19101158343a605eb4cc2411475b0b5ecf8cea#npm:0.7.0"],
-            ["@types/prop-types", null],
+            ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", null],
-            ["prop-types", null],
+            ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.1"],
             ["react-lowlight", "virtual:0e384ba935017e54e36c5382a64d8ad307d63d5f27a09ac2d7bcb8bd117c7426c779b9dd8e5791f00b4606272210817d573c73671abcce84638d255d907f394f#npm:1.1.1"]
           ],

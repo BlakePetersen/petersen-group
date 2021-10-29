@@ -542,7 +542,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
+"@types/prop-types@npm:*, @types/prop-types@npm:^15":
   version: 15.7.4
   resolution: "@types/prop-types@npm:15.7.4"
   checksum: ef6e1899e59b876c273811b1bd845022fc66d5a3d11cb38a25b6c566b30514ae38fe20a40f67622f362a4f4f7f9224e22d8da101cff3d6e97e11d7b4c307cfc1
@@ -638,6 +638,7 @@ __metadata:
     "@elgorditosalsero/react-gtm-hook": ^2.0.3
     "@n8tb1t/use-scroll-position": ^2.0.3
     "@sendgrid/mail": ^7.4.2
+    "@types/prop-types": ^15
     "@types/react-is": ^17
     "@wordbots/trianglify-no-canvas": ^1.3.0
     apollo-boost: ^0.4.9
@@ -648,7 +649,7 @@ __metadata:
     babel-preset-es2015: ^6.24.1
     cf-graphql: ^0.5.0
     colorbrewer: ^1.5.0
-    contentful: ^8.2.0
+    contentful: ^9.1.4
     disqus-react: ^1.0.11
     dotenv: ^8.2.0
     express: ^4.17.1
@@ -669,6 +670,7 @@ __metadata:
     postcss: ^8.3.11
     postcss-loader: ^5.2.0
     prismjs: ^1.23.0
+    prop-types: ^15.7.2
     raw-loader: ^4.0.2
     react: ^17.0.1
     react-apollo: ^3.1.5
@@ -1296,6 +1298,15 @@ __metadata:
   dependencies:
     follow-redirects: ^1.10.0
   checksum: c87915fa0b18c15c63350112b6b3563a3e2ae524d7707de0a73d2e065e0d30c5d3da8563037bc29d4cc1b7424b5a350cb7274fa52525c6c04a615fe561c6ab11
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "axios@npm:0.24.0"
+  dependencies:
+    follow-redirects: ^1.14.4
+  checksum: 468cf496c08a6aadfb7e699bebdac02851e3043d4e7d282350804ea8900e30d368daa6e3cd4ab83b8ddb5a3b1e17a5a21ada13fc9cebd27b74828f47a4236316
   languageName: node
   linkType: hard
 
@@ -2832,26 +2843,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"contentful-sdk-core@npm:^6.5.0":
-  version: 6.7.0
-  resolution: "contentful-sdk-core@npm:6.7.0"
+"contentful-sdk-core@npm:^6.9.0":
+  version: 6.10.3
+  resolution: "contentful-sdk-core@npm:6.10.3"
   dependencies:
     fast-copy: ^2.1.0
+    lodash.isplainobject: ^4.0.6
+    lodash.isstring: ^4.0.1
+    p-throttle: ^4.1.1
     qs: ^6.9.4
-  checksum: 571f652703e99bd402a184e2e55958cc41ef3750ba66113834fcb38bd914d6e5415c50edc20eb9e8da7bec77c90faaf0e5aa2f02997edd32f271acb8ec255429
+  checksum: 471142ff941e42cdb7f2448980453dd7ea3e154d4e44dbff3cc910bdb6b957e352e0f480e26f4bda4088896b2130282be452b96c388494977688ce6720fa0999
   languageName: node
   linkType: hard
 
-"contentful@npm:^8.2.0":
-  version: 8.2.0
-  resolution: "contentful@npm:8.2.0"
+"contentful@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "contentful@npm:9.1.4"
   dependencies:
-    axios: ^0.21.1
+    axios: ^0.24.0
     contentful-resolve-response: ^1.3.0
-    contentful-sdk-core: ^6.5.0
+    contentful-sdk-core: ^6.9.0
     fast-copy: ^2.1.0
     json-stringify-safe: ^5.0.1
-  checksum: 79f1fb4538b8518b3e4f37a1c4a0797ece7e8dfa74bca5c84f9e2759f1ac5769d2c0cfc055e96d6de0b5dc7a0b4ef8d1988876752e97a0cfdcf43eff27f2ac4a
+  checksum: 6182d2b0e1647618c7d99dabf51a87ff2842424e9e1a15c5834cf0bbab4f52d0bf7a7632f57f62d84388291eb3be6cc60747cf1a36fa79370c893d222fe74ce5
   languageName: node
   linkType: hard
 
@@ -4051,6 +4065,16 @@ __metadata:
     debug:
       optional: true
   checksum: 4b5aaa91a0f938547a083d001a572da4d6b7586b699f330da8794ae2cf8b0d8628bcde794f9b205fbe6c6dcab30272454e723aed8f5540bf47a41fa8c7e36441
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.14.4":
+  version: 1.14.4
+  resolution: "follow-redirects@npm:1.14.4"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: d4ce74cf5c6f363168b97e706b914eb9ffb6bf4d4c6d8f8330b93088d9b90e566611ddbcf0e42c8ed5fd17598dfeda1d19230d3e9d6d6c6b4d1c10ec3a0b99be
   languageName: node
   linkType: hard
 
@@ -5695,6 +5719,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.isplainobject@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "lodash.isplainobject@npm:4.0.6"
+  checksum: 29c6351f281e0d9a1d58f1a4c8f4400924b4c79f18dfc4613624d7d54784df07efaff97c1ff2659f3e085ecf4fff493300adc4837553104cef2634110b0d5337
+  languageName: node
+  linkType: hard
+
+"lodash.isstring@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.isstring@npm:4.0.1"
+  checksum: eaac87ae9636848af08021083d796e2eea3d02e80082ab8a9955309569cb3a463ce97fd281d7dc119e402b2e7d8c54a23914b15d2fc7fff56461511dc8937ba0
+  languageName: node
+  linkType: hard
+
 "lodash.sortby@npm:^4.7.0":
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
@@ -6764,6 +6802,13 @@ __metadata:
   dependencies:
     aggregate-error: ^3.0.0
   checksum: cb0ab21ec0f32ddffd31dfc250e3afa61e103ef43d957cc45497afe37513634589316de4eb88abdfd969fe6410c22c0b93ab24328833b8eb1ccc087fc0442a1c
+  languageName: node
+  linkType: hard
+
+"p-throttle@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "p-throttle@npm:4.1.1"
+  checksum: fe8709f3c3b1da7c033479375c2c302e80c1a5d86449013afa7cd46d1dc210bc824a7e4a9d088e66d31987d00878c2b5491bb2fe76246d4d2fc9a1636f5f8298
   languageName: node
   linkType: hard
 
