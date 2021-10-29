@@ -61,7 +61,7 @@
     "remark-react": "^8.0.0",
     "remark-react-lowlight": "^0.7.0",
     "rucksack-css": "^1.0.2",
-    "server": "^1.0.32",
+    "server": "^1.0.36",
     "showdown": "^1.9.1",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.3",

@@ -2392,7 +2392,7 @@ __metadata:
     remark-react: ^8.0.0
     remark-react-lowlight: ^0.7.0
     rucksack-css: ^1.0.2
-    server: ^1.0.32
+    server: ^1.0.36
     showdown: ^1.9.1
     sort-by: ^1.2.0
     styled-components: ^5.3.3
@@ -10153,9 +10153,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"server@npm:^1.0.32":
-  version: 1.0.32
-  resolution: "server@npm:1.0.32"
+"server@npm:^1.0.36":
+  version: 1.0.36
+  resolution: "server@npm:1.0.36"
   dependencies:
     body-parser: ^1.15.2
     compression: ^1.6.2
@@ -10179,7 +10179,7 @@ __metadata:
     serve-favicon: ^2.3.2
     serve-index: ^1.8.0
     socket.io: ^2.0.3
-  checksum: 025cfe0415bfad65a2d0cf720be40830a2ccabcd4c60a32e19f824a8c95f441205220f1be0e327aa7596fc4d44fc6692d4df5bb15dc20643569791e97faba89b
+  checksum: cf42487a1d55992444abc9fe30e84a8da9ada69fda94ccf83086ebad2720bfe0900102eba5f9e778257c59893cdd03020b722516611cf54f58834486e77e3537
   languageName: node
   linkType: hard
 

@@ -95,7 +95,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["remark-react", "npm:8.0.0"],
             ["remark-react-lowlight", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:0.7.0"],
             ["rucksack-css", "npm:1.0.2"],
-            ["server", "npm:1.0.32"],
+            ["server", "npm:1.0.36"],
             ["showdown", "npm:1.9.1"],
             ["sort-by", "npm:1.2.0"],
             ["styled-components", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:5.3.3"],
@@ -3080,7 +3080,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["remark-react", "npm:8.0.0"],
             ["remark-react-lowlight", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:0.7.0"],
             ["rucksack-css", "npm:1.0.2"],
-            ["server", "npm:1.0.32"],
+            ["server", "npm:1.0.36"],
             ["showdown", "npm:1.9.1"],
             ["sort-by", "npm:1.2.0"],
             ["styled-components", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:5.3.3"],
@@ -12112,10 +12112,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["server", [
-        ["npm:1.0.32", {
-          "packageLocation": "./.yarn/cache/server-npm-1.0.32-0a97f9112c-025cfe0415.zip/node_modules/server/",
+        ["npm:1.0.36", {
+          "packageLocation": "./.yarn/cache/server-npm-1.0.36-6a2883959f-cf42487a1d.zip/node_modules/server/",
           "packageDependencies": [
-            ["server", "npm:1.0.32"],
+            ["server", "npm:1.0.36"],
             ["body-parser", "npm:1.19.0"],
             ["compression", "npm:1.7.4"],
             ["connect-redis", "npm:3.4.2"],
