@@ -67,7 +67,6 @@
     "styled-components": "^5.2.1",
     "styled-normalize": "^8.0.7",
     "sw-precache-webpack-plugin": "^1.0.0",
-    "tailwindcss": "^2.0.4",
     "unfetch": "^4.2.0",
     "unified": "^9.2.1",
     "update-check": "^1.5.4",
