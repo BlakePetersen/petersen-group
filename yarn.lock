@@ -653,32 +653,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sendgrid/client@npm:^7.4.2":
-  version: 7.4.2
-  resolution: "@sendgrid/client@npm:7.4.2"
+"@sendgrid/client@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "@sendgrid/client@npm:7.5.0"
   dependencies:
-    "@sendgrid/helpers": ^7.4.2
-    axios: ^0.21.1
-  checksum: 34b0024201d15edd200bb2097c87178e72e16b6efc3261423ea2afbf084872eb438f2e98f6293205230cfb6ed0767b84a8dc51a478c37368f45e2c189bfe815e
+    "@sendgrid/helpers": ^7.5.0
+    axios: ^0.21.4
+  checksum: 8212dcfe3fe9f4afc629a62f654de7373add2174b08dc9024674bd14000db70d4d920c6ffce43f4dfca451b152d32c92343e14294f471bafeaff48d579119e66
   languageName: node
   linkType: hard
 
-"@sendgrid/helpers@npm:^7.4.2":
-  version: 7.4.2
-  resolution: "@sendgrid/helpers@npm:7.4.2"
+"@sendgrid/helpers@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "@sendgrid/helpers@npm:7.5.0"
   dependencies:
     deepmerge: ^4.2.2
-  checksum: d236cebeffde662c4e509a19aa5c9f9644fd9dff2b46a0a63423bfa1ed4da37fe729342bb9c2c83568cdd3396fe2b7832788288319ddcf49aca322e0a5bb2bc6
+  checksum: 37210b59d49024fca0f50feb612ab3aeb67bae01234807bfe079f6f6e793cf4f45ed436ab0942a1ae223a0eb3c1de0ca5618cc0ee135f3b875c67bc25ad9bd1d
   languageName: node
   linkType: hard
 
-"@sendgrid/mail@npm:^7.4.2":
-  version: 7.4.2
-  resolution: "@sendgrid/mail@npm:7.4.2"
+"@sendgrid/mail@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "@sendgrid/mail@npm:7.5.0"
   dependencies:
-    "@sendgrid/client": ^7.4.2
-    "@sendgrid/helpers": ^7.4.2
-  checksum: 8dcb0ad454e517432af7dcc69e9ea599a09c7e5485c88595f157b078c1ff98d804d4cf47e0ae0e48257d8ae260003be8b73d98332657643a54499c0ab163056f
+    "@sendgrid/client": ^7.5.0
+    "@sendgrid/helpers": ^7.5.0
+  checksum: 0a49c7f3745baefd2d1a68ccdd057e71ea9b6c6f8b8cbd9d99736e228c69eddc2119a5790dbc6cce3a8fa33cd36cadd4d5ed0423d362b2a36b541fbeb7ae77a3
   languageName: node
   linkType: hard
 
@@ -1622,12 +1622,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
-  version: 0.21.1
-  resolution: "axios@npm:0.21.1"
+"axios@npm:^0.21.4":
+  version: 0.21.4
+  resolution: "axios@npm:0.21.4"
   dependencies:
-    follow-redirects: ^1.10.0
-  checksum: c87915fa0b18c15c63350112b6b3563a3e2ae524d7707de0a73d2e065e0d30c5d3da8563037bc29d4cc1b7424b5a350cb7274fa52525c6c04a615fe561c6ab11
+    follow-redirects: ^1.14.0
+  checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
   languageName: node
   linkType: hard
 
@@ -2354,7 +2354,7 @@ __metadata:
   dependencies:
     "@elgorditosalsero/react-gtm-hook": ^2.0.3
     "@n8tb1t/use-scroll-position": ^2.0.3
-    "@sendgrid/mail": ^7.4.2
+    "@sendgrid/mail": ^7.5.0
     "@types/prop-types": ^15
     "@types/react-is": ^17
     "@wordbots/trianglify-no-canvas": ^1.3.0
@@ -4944,17 +4944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.10.0":
-  version: 1.13.3
-  resolution: "follow-redirects@npm:1.13.3"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: 4b5aaa91a0f938547a083d001a572da4d6b7586b699f330da8794ae2cf8b0d8628bcde794f9b205fbe6c6dcab30272454e723aed8f5540bf47a41fa8c7e36441
-  languageName: node
-  linkType: hard
-
-"follow-redirects@npm:^1.14.4":
+"follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.14.4":
   version: 1.14.4
   resolution: "follow-redirects@npm:1.14.4"
   peerDependenciesMeta:

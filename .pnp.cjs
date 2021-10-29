@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@elgorditosalsero/react-gtm-hook", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:2.0.3"],
             ["@n8tb1t/use-scroll-position", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:2.0.3"],
-            ["@sendgrid/mail", "npm:7.4.2"],
+            ["@sendgrid/mail", "npm:7.5.0"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react-is", "npm:17.0.3"],
             ["@wordbots/trianglify-no-canvas", "npm:1.3.0"],
@@ -1013,33 +1013,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@sendgrid/client", [
-        ["npm:7.4.2", {
-          "packageLocation": "./.yarn/cache/@sendgrid-client-npm-7.4.2-90b5c20b98-34b0024201.zip/node_modules/@sendgrid/client/",
+        ["npm:7.5.0", {
+          "packageLocation": "./.yarn/cache/@sendgrid-client-npm-7.5.0-f063cd7d41-8212dcfe3f.zip/node_modules/@sendgrid/client/",
           "packageDependencies": [
-            ["@sendgrid/client", "npm:7.4.2"],
-            ["@sendgrid/helpers", "npm:7.4.2"],
-            ["axios", "npm:0.21.1"]
+            ["@sendgrid/client", "npm:7.5.0"],
+            ["@sendgrid/helpers", "npm:7.5.0"],
+            ["axios", "npm:0.21.4"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@sendgrid/helpers", [
-        ["npm:7.4.2", {
-          "packageLocation": "./.yarn/cache/@sendgrid-helpers-npm-7.4.2-be48d88b3e-d236cebeff.zip/node_modules/@sendgrid/helpers/",
+        ["npm:7.5.0", {
+          "packageLocation": "./.yarn/cache/@sendgrid-helpers-npm-7.5.0-3d1d65bdae-37210b59d4.zip/node_modules/@sendgrid/helpers/",
           "packageDependencies": [
-            ["@sendgrid/helpers", "npm:7.4.2"],
+            ["@sendgrid/helpers", "npm:7.5.0"],
             ["deepmerge", "npm:4.2.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@sendgrid/mail", [
-        ["npm:7.4.2", {
-          "packageLocation": "./.yarn/cache/@sendgrid-mail-npm-7.4.2-f85cb23a5a-8dcb0ad454.zip/node_modules/@sendgrid/mail/",
+        ["npm:7.5.0", {
+          "packageLocation": "./.yarn/cache/@sendgrid-mail-npm-7.5.0-d07903b075-0a49c7f374.zip/node_modules/@sendgrid/mail/",
           "packageDependencies": [
-            ["@sendgrid/mail", "npm:7.4.2"],
-            ["@sendgrid/client", "npm:7.4.2"],
-            ["@sendgrid/helpers", "npm:7.4.2"]
+            ["@sendgrid/mail", "npm:7.5.0"],
+            ["@sendgrid/client", "npm:7.5.0"],
+            ["@sendgrid/helpers", "npm:7.5.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2238,11 +2238,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["axios", [
-        ["npm:0.21.1", {
-          "packageLocation": "./.yarn/cache/axios-npm-0.21.1-d192f6b3b3-c87915fa0b.zip/node_modules/axios/",
+        ["npm:0.21.4", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.21.4-e278873748-44245f24ac.zip/node_modules/axios/",
           "packageDependencies": [
-            ["axios", "npm:0.21.1"],
-            ["follow-redirects", "virtual:d192f6b3b31cd5d11a443145a3883a70c04cbd7c813c53085dbaf50263735f1162f10fdbddd53c24e162ec3bc37b90966413084323739b7cf942b8bfb4da8831#npm:1.13.3"]
+            ["axios", "npm:0.21.4"],
+            ["follow-redirects", "virtual:e278873748b4e9d158db595d2f6cb0351c74052f52b53924aec4d9299e7b6babfb62aead374cf2f6e453bc8bea3b052380dc6b1137a162bbfc102bbb1c8cac42#npm:1.14.4"]
           ],
           "linkType": "HARD",
         }],
@@ -2250,7 +2250,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/axios-npm-0.24.0-39e5c1e79e-468cf496c0.zip/node_modules/axios/",
           "packageDependencies": [
             ["axios", "npm:0.24.0"],
-            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.4"]
+            ["follow-redirects", "virtual:e278873748b4e9d158db595d2f6cb0351c74052f52b53924aec4d9299e7b6babfb62aead374cf2f6e453bc8bea3b052380dc6b1137a162bbfc102bbb1c8cac42#npm:1.14.4"]
           ],
           "linkType": "HARD",
         }]
@@ -3059,7 +3059,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["blakepetersen.io", "workspace:."],
             ["@elgorditosalsero/react-gtm-hook", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:2.0.3"],
             ["@n8tb1t/use-scroll-position", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:2.0.3"],
-            ["@sendgrid/mail", "npm:7.4.2"],
+            ["@sendgrid/mail", "npm:7.5.0"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react-is", "npm:17.0.3"],
             ["@wordbots/trianglify-no-canvas", "npm:1.3.0"],
@@ -6116,13 +6116,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["follow-redirects", [
-        ["npm:1.13.3", {
-          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.13.3-bc35dfad3e-4b5aaa91a0.zip/node_modules/follow-redirects/",
-          "packageDependencies": [
-            ["follow-redirects", "npm:1.13.3"]
-          ],
-          "linkType": "SOFT",
-        }],
         ["npm:1.14.4", {
           "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.4-19eb02e590-d4ce74cf5c.zip/node_modules/follow-redirects/",
           "packageDependencies": [
@@ -6130,23 +6123,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.4", {
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-85215bccf9/0/cache/follow-redirects-npm-1.14.4-19eb02e590-d4ce74cf5c.zip/node_modules/follow-redirects/",
+        ["virtual:e278873748b4e9d158db595d2f6cb0351c74052f52b53924aec4d9299e7b6babfb62aead374cf2f6e453bc8bea3b052380dc6b1137a162bbfc102bbb1c8cac42#npm:1.14.4", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-60ab585f0d/0/cache/follow-redirects-npm-1.14.4-19eb02e590-d4ce74cf5c.zip/node_modules/follow-redirects/",
           "packageDependencies": [
-            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.4"],
-            ["@types/debug", null],
-            ["debug", null]
-          ],
-          "packagePeers": [
-            "@types/debug",
-            "debug"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:d192f6b3b31cd5d11a443145a3883a70c04cbd7c813c53085dbaf50263735f1162f10fdbddd53c24e162ec3bc37b90966413084323739b7cf942b8bfb4da8831#npm:1.13.3", {
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-355f55dffb/0/cache/follow-redirects-npm-1.13.3-bc35dfad3e-4b5aaa91a0.zip/node_modules/follow-redirects/",
-          "packageDependencies": [
-            ["follow-redirects", "virtual:d192f6b3b31cd5d11a443145a3883a70c04cbd7c813c53085dbaf50263735f1162f10fdbddd53c24e162ec3bc37b90966413084323739b7cf942b8bfb4da8831#npm:1.13.3"],
+            ["follow-redirects", "virtual:e278873748b4e9d158db595d2f6cb0351c74052f52b53924aec4d9299e7b6babfb62aead374cf2f6e453bc8bea3b052380dc6b1137a162bbfc102bbb1c8cac42#npm:1.14.4"],
             ["@types/debug", null],
             ["debug", null]
           ],
