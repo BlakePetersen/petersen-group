@@ -68,7 +68,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-page-transitions", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:1.0.0-canary.1"],
             ["next-routes", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:1.4.2"],
             ["node-sass", "npm:6.0.1"],
-            ["polished", "npm:4.1.1"],
+            ["polished", "npm:4.1.3"],
             ["postcss", "npm:8.3.11"],
             ["postcss-loader", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:5.2.0"],
             ["prismjs", "npm:1.25.0"],
@@ -3053,7 +3053,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-page-transitions", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:1.0.0-canary.1"],
             ["next-routes", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:1.4.2"],
             ["node-sass", "npm:6.0.1"],
-            ["polished", "npm:4.1.1"],
+            ["polished", "npm:4.1.3"],
             ["postcss", "npm:8.3.11"],
             ["postcss-loader", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:5.2.0"],
             ["prismjs", "npm:1.25.0"],
@@ -10053,11 +10053,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["polished", [
-        ["npm:4.1.1", {
-          "packageLocation": "./.yarn/cache/polished-npm-4.1.1-0006e0719a-fff832a50d.zip/node_modules/polished/",
+        ["npm:4.1.3", {
+          "packageLocation": "./.yarn/cache/polished-npm-4.1.3-c4e3156e78-3865f569f1.zip/node_modules/polished/",
           "packageDependencies": [
-            ["polished", "npm:4.1.1"],
-            ["@babel/runtime", "npm:7.13.10"]
+            ["polished", "npm:4.1.3"],
+            ["@babel/runtime", "npm:7.15.4"]
           ],
           "linkType": "HARD",
         }]
