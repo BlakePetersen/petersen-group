@@ -53,6 +53,7 @@ module.exports = {
 		"theme_color": "#111111",
 		icons: false
 	},
+	swcFileReading: false,
 	workboxOpts: {
 		runtimeCaching: [
 			{
