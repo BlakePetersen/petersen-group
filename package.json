@@ -82,7 +82,7 @@
     "prod": "yarn build && yarn export",
     "start": "NODE_ENV=production node server.js"
   },
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@3.1.1",
   "devDependencies": {
     "@types/prop-types": "^15.7.4",
     "@types/react-is": "^17.0.3",
