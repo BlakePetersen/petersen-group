@@ -65,6 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["extract-text-webpack-plugin", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:3.0.2"],
             ["highlight.js", "npm:10.7.1"],
             ["html-to-text", "npm:7.0.0"],
+            ["husky", "npm:7.0.4"],
             ["isomorphic-unfetch", "npm:3.1.0"],
             ["jquery", "npm:3.6.0"],
             ["jsdom", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:18.0.0"],
@@ -3240,6 +3241,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["extract-text-webpack-plugin", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:3.0.2"],
             ["highlight.js", "npm:10.7.1"],
             ["html-to-text", "npm:7.0.0"],
+            ["husky", "npm:7.0.4"],
             ["isomorphic-unfetch", "npm:3.1.0"],
             ["jquery", "npm:3.6.0"],
             ["jsdom", "virtual:8e350aba8b2607914ebd06fb674d4e4a4b8c8efb0464b0fa3c73e9d79257c6346829e9915b6a142fe18fc1db45907ca331487d17df05cb6b73f99c82baa72a69#npm:18.0.0"],
@@ -7236,6 +7238,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["humanize-ms", "npm:1.2.1"],
             ["ms", "npm:2.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["husky", [
+        ["npm:7.0.4", {
+          "packageLocation": "./.yarn/cache/husky-npm-7.0.4-917ba035c6-c6ec4af63d.zip/node_modules/husky/",
+          "packageDependencies": [
+            ["husky", "npm:7.0.4"]
           ],
           "linkType": "HARD",
         }]
