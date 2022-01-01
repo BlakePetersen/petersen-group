@@ -84,6 +84,8 @@
   },
   "packageManager": "yarn@3.1.1",
   "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
     "@types/node": "^17.0.5",
     "@types/prettier": "^2",
     "@types/prop-types": "^15.7.4",
