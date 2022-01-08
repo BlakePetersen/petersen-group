@@ -79,7 +79,6 @@
     "dev": "next",
     "export": "next export",
     "lint": "next lint",
-    "postinstall": "husky install",
     "prod": "yarn build && yarn export",
     "start": "NODE_ENV=production node server.js"
   },
