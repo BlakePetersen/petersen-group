@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import useGTM from '@elgorditosalsero/react-gtm-hook'
+import { GTMProvider } from '@elgorditosalsero/react-gtm-hook'
 import { PageTransition } from 'next-page-transitions'
 
 import Head from '../Head'
@@ -10,8 +9,7 @@ import Footer from '../footer/Footer'
 import C from '../../config/constants'
 
 const Layout = ({ children, title, pathname }) => {
-  const { init, UseGTMHookProvider } = useGTM()
-  useEffect(() => init({ id: C.GTM_ID }), [init])
+    const gtmParams = { id: C.GTM_ID }
 
   return (
     <>
@@ -22,9 +20,9 @@ const Layout = ({ children, title, pathname }) => {
         classNames="page-transition"
         monkeyPatchScrolling={true}
       >
-        <UseGTMHookProvider>
+        <GTMProvider state={ gtmParams }>
           <Content key={pathname}>{children}</Content>
-        </UseGTMHookProvider>
+        </GTMProvider>
       </PageTransition>
       <Footer />
     </>
