@@ -11,12 +11,3 @@
 !/config/sample.json
 
 .vercel
-
-# Yarn 2 w/ Zero-Installs
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
