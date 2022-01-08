@@ -1,0 +1,57 @@
+{
+  "name": "petersen-group",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**",
+          ".next/**"
+        ]
+      },
+      "test": {},
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
