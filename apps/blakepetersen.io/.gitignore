@@ -1,0 +1,22 @@
+/.idea
+/.next
+/node_modules
+/out
+
+.DS_Store
+.env.local
+*.log
+
+/config/*.json
+!/config/sample.json
+
+.vercel
+
+# Yarn 2 w/ Zero-Installs
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
