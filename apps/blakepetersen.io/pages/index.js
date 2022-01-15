@@ -7,10 +7,10 @@ import Hr from '../components/layout/Hr'
 import Grid from "../components/layout/Grid";
 
 const Index = ({ items }) => <Grid>
-	{ items.map((item, index) => <>
-		<PostPreview item={ item } key={ index } />
-		{ index !== (items.length - 1) && <Hr /> }
-	</>) }
+	{ items.map((item, index) => <div key={ index }>
+		<PostPreview item={ item }  />
+		{ index !== (items.length - 1) && <Hr  key={ index } /> }
+	</div>) }
 </Grid>;
 
 Index.getInitialProps = async () => {
