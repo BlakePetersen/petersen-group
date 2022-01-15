@@ -77,10 +77,8 @@
     "build": "next build",
     "clean": "rm -rf .next",
     "dev": "next",
-    "export": "next export",
     "lint": "next lint",
-    "prod": "yarn build && yarn export",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.0.1",
