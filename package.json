@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "clean": "turbo run clean",
     "dev": "turbo run dev --parallel",
     "test": "turbo run test",
     "lint": "turbo run lint",
@@ -34,13 +35,12 @@
           ".next/**"
         ]
       },
-      "test": {},
-      "lint": {
-        "outputs": []
-      },
+      "clean": {},
       "dev": {
         "cache": false
-      }
+      },
+      "lint": {},
+      "test": {}
     }
   },
   "lint-staged": {
