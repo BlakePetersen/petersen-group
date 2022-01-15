@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Head from 'next/head'
 
-import { getPost } from '../../api/contentful'
+import { getPost } from '../api/contentful'
 
 import Body from '../../components/posts/Body'
 import Tags from '../../components/posts/Tags'
@@ -29,14 +29,14 @@ const Post = ({ post }) => (
   </>
 )
 
-export async function getServerSideProps({ slug }) {
-    const _post = await getPost(slug)
+export async function getServerSideProps({ query }) {
+  const _post = await getPost(query.slug)
 
-    return {
-        props: {
-            post: _post.items[0],
-        }
-    }
+  return {
+    props: {
+      post: _post.items[0],
+    },
+  }
 }
 
 export default Post
