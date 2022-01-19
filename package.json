@@ -13,6 +13,7 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "start": "turbo run start --parallel",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -40,6 +41,11 @@
         "cache": false
       },
       "lint": {},
+      "start": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
       "test": {}
     }
   },

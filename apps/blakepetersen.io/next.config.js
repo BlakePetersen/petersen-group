@@ -4,6 +4,9 @@ module.exports = {
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     CONTENTFUL_MANAGEMENT_TOKEN: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
   },
+  experimental: {
+    styledComponents: true,
+  },
   async headers() {
     return [
       {
