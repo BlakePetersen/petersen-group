@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import styled from 'styled-components'
 import { rgba } from 'polished'
 
 import Colors from '@/styles/colors'
+import ArtaxLink from '@/components/primitives/link'
 
 const _Footer = styled.footer`
   display: flex;
@@ -49,10 +49,8 @@ const _Footer = styled.footer`
 const Footer = () => (
   <_Footer>
     <p>
-      <Link as="/" href="/">
-        <a>BlakePetersen.io</a>
-      </Link>{' '}
-      • {new Date().getFullYear()}
+      <ArtaxLink href="/">BlakePetersen.io</ArtaxLink> •{' '}
+      {new Date().getFullYear()}
     </p>
 
     <p>

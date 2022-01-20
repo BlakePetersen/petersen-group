@@ -38,7 +38,7 @@ const Tags = ({ tags }) => (
   <_Tags>
     {tags &&
       tags.map((tag, i) => (
-        <Link as={`/tags/${tag}`} href={`/tag?tag=` + tag} key={i}>
+        <Link href={`/tags/${tag}`} key={i}>
           <a>
             <_Tag>{tag}</_Tag>
           </a>

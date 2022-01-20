@@ -152,7 +152,7 @@ const MainNav = ({ isTop = true }) => {
 
       <_Content>
         <_Logo>
-          <Link href={`/`} as={`/`}>
+          <Link href={`/`}>
             <a>
               <_Title isTop={isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
               <_Subtitle isTop={isTop}>Good Times in Web Development</_Subtitle>
