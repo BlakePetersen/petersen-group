@@ -63,7 +63,6 @@ const _Logo = styled.h1`
   margin: 1.5rem;
   position: relative;
   letter-spacing: -1px;
-  transition: font-size 300ms ease-out;
   white-space: nowrap;
 
   .is-post & {
