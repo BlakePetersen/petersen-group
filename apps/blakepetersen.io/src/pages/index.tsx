@@ -3,16 +3,12 @@ import sortBy from 'sort-by'
 import { getPosts } from '@/pages/api/contentful'
 
 import PostPreview from '@/components/primitives/post-preview'
-import Hr from '@/components/primitives/hr'
 import Grid from '@/components/primitives/grid'
 
 const Index = ({ posts }) => (
   <Grid>
     {posts.map((post, index) => (
-      <div key={index}>
-        <PostPreview post={post} />
-        {index !== posts.length - 1 && <Hr />}
-      </div>
+      <PostPreview post={post} key={index} />
     ))}
   </Grid>
 )
