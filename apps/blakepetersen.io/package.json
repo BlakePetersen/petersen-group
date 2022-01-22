@@ -1,7 +1,6 @@
 {
   "name": "blakepetersen.io",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Blake Petersen",
   "license": "MIT",
   "dependencies": {
