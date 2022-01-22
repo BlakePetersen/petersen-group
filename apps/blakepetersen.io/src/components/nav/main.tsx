@@ -91,19 +91,11 @@ const _Title = styled.div`
 `
 
 const _Subtitle = styled.div`
-  font-size: 0.5rem;
-
-  ${({ isTop }) =>
-    !isTop &&
-    `
-     font-size: .7rem;
-  `}
-
+  font-size: 0.7rem;
   text-transform: uppercase;
   display: block;
   letter-spacing: 5px;
   font-weight: 400;
-  transition: font-size 300ms ease;
   line-height: 1.5rem;
 `
 
