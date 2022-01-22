@@ -8,10 +8,12 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "clean": "turbo run clean",
     "dev": "turbo run dev --parallel",
     "test": "turbo run test",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "start": "turbo run start --parallel",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -34,13 +36,17 @@
           ".next/**"
         ]
       },
-      "test": {},
-      "lint": {
-        "outputs": []
-      },
+      "clean": {},
       "dev": {
         "cache": false
-      }
+      },
+      "lint": {},
+      "start": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test": {}
     }
   },
   "lint-staged": {
