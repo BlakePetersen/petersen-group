@@ -1,19 +1,14 @@
-import styled from 'styled-components'
+import { styled } from '@stitches/react'
 import Copyright from '@/components/copyright'
 
-const _Footer = styled.footer`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.8rem;
-  background: rgba(255, 255, 255, 0.8);
-
-  > * + * {
-    margin-top: 1rem;
-  }
-`
+const _Footer = styled('footer', {
+  position: 'fixed',
+  bottom: 0,
+  width: '100%',
+  textAlign: 'center',
+  padding: '2rem',
+  fontSize: '0.8rem',
+})
 
 function Footer() {
   return (
