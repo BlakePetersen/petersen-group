@@ -1,14 +1,9 @@
-import Link from "next/link";
-import styled from "styled-components";
-
-const _Logo = styled.a`
-    font-size: 24px;
-`;
+import Link from 'next/link'
 
 export default function Logo() {
-    return (
-        <Link href="/" passHref>
-            <_Logo>Ashley Petersen Photography</_Logo>
-        </Link>
-    );
+  return (
+    <Link href="/" passHref>
+      <a>Ashley Petersen Photography</a>
+    </Link>
+  )
 }

@@ -13,13 +13,9 @@ const StyledContent = styled(DropdownMenu.Content, {
 
 const Navigation = () => (
   <DropdownMenu.Root>
-    <DropdownMenu.Trigger>click</DropdownMenu.Trigger>
+    <DropdownMenu.Trigger>Menu</DropdownMenu.Trigger>
 
     <StyledContent>
-      <DropdownMenu.Label>ding</DropdownMenu.Label>
-
-      <DropdownMenu.Item>dong</DropdownMenu.Item>
-
       <DropdownMenu.Separator />
       <DropdownMenu.Arrow />
     </StyledContent>

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import Copyright from '@/components/copyright'
-import Navigation from '@/components/navigation'
-import SocialLinks from '@/components/social-links'
 
 const _Footer = styled.footer`
   position: fixed;
@@ -21,8 +19,8 @@ function Footer() {
   return (
     <_Footer>
       <Copyright />
-      <Navigation />
-      <SocialLinks />
+      {/*<Navigation />*/}
+      {/*<SocialLinks />*/}
     </_Footer>
   )
 }
