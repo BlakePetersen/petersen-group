@@ -1,36 +1,29 @@
-import Link from "next/link";
-import styled from "styled-components";
+import { keyframes, styled } from '@stitches/react'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
-const _Link = styled.a`
-    margin: 1rem;
-`;
+const scaleIn = keyframes({
+  '0%': { opacity: 0, transform: 'scale(0)' },
+  '100%': { opacity: 1, transform: 'scale(1)' },
+})
 
-export default function Navigation() {
-    return (
-        <nav>
-            <Link href="/portfolio" passHref>
-                <_Link>Portfolio</_Link>
-            </Link>
+const StyledContent = styled(DropdownMenu.Content, {
+  transformOrigin: 'var(--radix-dropdown-menu-content-transform-origin)',
+  animation: `${scaleIn} 0.5s ease-out`,
+})
 
-            <Link href="/categories" passHref>
-                <_Link>Categories</_Link>
-            </Link>
+const Navigation = () => (
+  <DropdownMenu.Root>
+    <DropdownMenu.Trigger>click</DropdownMenu.Trigger>
 
-            <Link href="/projects" passHref>
-                <_Link>Projects</_Link>
-            </Link>
+    <StyledContent>
+      <DropdownMenu.Label>ding</DropdownMenu.Label>
 
-            <Link href="/blog" passHref>
-                <_Link>Blog</_Link>
-            </Link>
+      <DropdownMenu.Item>dong</DropdownMenu.Item>
 
-            <Link href="/contact" passHref>
-                <_Link>Contact</_Link>
-            </Link>
+      <DropdownMenu.Separator />
+      <DropdownMenu.Arrow />
+    </StyledContent>
+  </DropdownMenu.Root>
+)
 
-            <Link href="/client-login" passHref>
-                <_Link>Client Login</_Link>
-            </Link>
-        </nav>
-    );
-}
+export default Navigation

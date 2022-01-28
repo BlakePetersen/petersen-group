@@ -17,8 +17,8 @@ const _Header = styled.header`
 function Header() {
   return (
     <_Header>
-      <Logo />
       <Navigation />
+      <Logo />
     </_Header>
   )
 }
