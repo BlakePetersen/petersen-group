@@ -8,12 +8,18 @@ const WalletConnector = () => {
 
   console.log(connectData)
 
+  const dedupeConnectorsByName = Array.from(
+    new Set(connectData.connectors.map(connector => connector.name)),
+  ).map(name => {
+    return connectData.connectors.find(connector => connector.name === name)
+  })
+
   return (
     <Root>
       <Trigger>Connect Wallet</Trigger>
 
       <Content>
-        {connectData.connectors.map((connector, i) => (
+        {dedupeConnectorsByName.map((connector, i) => (
           <Item key={i} onClick={() => connect(connector)}>
             {connector.name}
           </Item>
