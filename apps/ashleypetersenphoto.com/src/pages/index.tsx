@@ -1,6 +1,8 @@
+import type { NextPage } from 'next'
+
 import Head from '@/components/head'
 
-function Index() {
+const Index: NextPage = () => {
   return (
     <>
       <Head
