@@ -28,7 +28,7 @@ const connectors = ({ chainId }: { chainId?: number }): Connector[] => {
     }),
     new WalletLinkConnector({
       options: {
-        appName: 'NextJS-wagmi',
+        appName: 'ashleypetersenphoto.com',
         jsonRpcUrl: `${rpcUrl}/${infuraId}`,
       },
     }),
