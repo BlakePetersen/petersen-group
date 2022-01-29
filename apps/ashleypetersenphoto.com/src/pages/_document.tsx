@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import C from '@/config/constants'
 
 export default class SiteDocument extends Document {
   render() {
@@ -6,16 +7,9 @@ export default class SiteDocument extends Document {
       <Html lang={`en`}>
         <Head>
           {/* Meta */}
-          {/* Favicon */}
-          {/* OpenGraph */}
-          {/* Twitter */}
-          {/* PWA */}
+          <title>{C.DEFAULT.PAGE_TITLE}</title>
+
           {/* Fonts */}
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
           <link
             href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
             rel="stylesheet"
