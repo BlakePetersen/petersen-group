@@ -1,17 +1,18 @@
 import { styled } from '@stitches/react'
 
 import Logo from '@/components/logo'
+import WalletConnector from '@/components/connect-wallet'
 
 const _Header = styled('header', {
   display: 'flex',
   gap: '2rem',
 })
 
-function Header() {
+const Header = () => {
   return (
     <_Header>
       <Logo />
-      <a>Connect Wallet</a>
+      <WalletConnector />
     </_Header>
   )
 }
