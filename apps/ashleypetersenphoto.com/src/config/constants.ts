@@ -1,6 +1,6 @@
 const C = {
   DEFAULT: {
-    PAGE_TITLE: `Ashley Petersen Photography`,
+    PAGE_TITLE: 'Ashley Petersen Photography',
   },
 }
 
