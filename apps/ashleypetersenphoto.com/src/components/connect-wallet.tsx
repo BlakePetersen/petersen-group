@@ -1,5 +1,5 @@
 import { useAccount, useConnect } from 'wagmi'
-import { Content, Item, Root, Trigger } from '@radix-ui/react-dropdown-menu'
+import { Item } from '@radix-ui/react-dropdown-menu'
 import Image from 'next/image'
 
 const WalletConnector = () => {
@@ -14,23 +14,19 @@ const WalletConnector = () => {
   })
 
   return (
-    <Root>
-      <Trigger>Connect Wallet</Trigger>
+    <>
+      {dedupeConnectorsByName.map((connector, i) => (
+        <Item key={i} onClick={() => connect(connector)}>
+          <Image
+            src={`/assets/${connector.name.replace(' ', '-')}.svg`}
+            height={20}
+            width={20}
+          />
 
-      <Content>
-        {dedupeConnectorsByName.map((connector, i) => (
-          <Item key={i} onClick={() => connect(connector)}>
-            <Image
-              src={`/assets/${connector.name.replace(' ', '-')}.svg`}
-              height={20}
-              width={20}
-            />
-
-            {connector.name}
-          </Item>
-        ))}
-      </Content>
-    </Root>
+          {connector.name}
+        </Item>
+      ))}
+    </>
   )
 }
 

@@ -7,7 +7,9 @@ const Index = ({ children }) => {
   return (
     <_Body>
       <Header />
+
       {children}
+
       <Footer />
     </_Body>
   )

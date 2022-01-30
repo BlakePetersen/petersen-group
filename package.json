@@ -14,15 +14,16 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "start": "turbo run start --parallel",
+    "studio:ashleypetersenphoto": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "turbo": "^1.0.28",
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.4",
-    "@commitlint/cli": "^16.1.0",
-    "@commitlint/config-conventional": "^16.0.0"
+    "prettier": "^2.5.1",
+    "turbo": "^1.0.28"
   },
   "turbo": {
     "baseBranch": "origin/main",
@@ -46,6 +47,7 @@
           "^build"
         ]
       },
+      "sanity": {},
       "test": {}
     }
   },
