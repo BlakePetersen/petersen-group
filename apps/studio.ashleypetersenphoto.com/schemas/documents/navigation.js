@@ -1,23 +1,30 @@
 //File name: navigation.js
 //File location: schemas/documents
 
-import { Globe } from '@radix-ui/react-icons/Globe'
+import { GlobeIcon } from '@radix-ui/react-icons'
 
+// navigation.js
 export default {
   name: 'navigation',
-  title: 'Navigation',
   type: 'document',
-  icon: Globe,
+  title: 'Navigation',
+  icon: GlobeIcon,
   fields: [
     {
-      name: 'title',
+      name: 'navId',
+      type: 'slug',
+      title: 'Navigation Id',
+    },
+    {
       type: 'string',
+      name: 'title',
       title: 'Title',
     },
     {
-      name: 'slug',
-      type: 'slug',
-      title: 'Slug',
+      type: 'array',
+      name: 'sections',
+      title: 'Sections',
+      of: [{ type: 'navigation.link' }],
     },
   ],
 }
