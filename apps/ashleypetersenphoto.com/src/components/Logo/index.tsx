@@ -1,7 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
 
-function Index() {
-  return (
+const Logo = () => (
     <Link href="/" passHref>
       <a>
         Ashley Petersen
@@ -10,6 +10,5 @@ function Index() {
       </a>
     </Link>
   )
-}
 
-export default Index
+export default Logo
