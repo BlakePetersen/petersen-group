@@ -11,7 +11,7 @@ const StyledContent = styled(DropdownMenu.Content, {
   animation: `${scaleIn} 0.5s ease-out`,
 })
 
-const Navigation = () => (
+const Index = () => (
   <DropdownMenu.Root>
     <DropdownMenu.Trigger>Menu</DropdownMenu.Trigger>
 
@@ -22,4 +22,4 @@ const Navigation = () => (
   </DropdownMenu.Root>
 )
 
-export default Navigation
+export default Index

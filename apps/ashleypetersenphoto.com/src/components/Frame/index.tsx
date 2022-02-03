@@ -1,17 +1,17 @@
-import Header from '@/components/header'
-import Footer from '@/components/footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
-import { _Body } from './styles'
+import { _Frame } from './styles'
 
 const Index = ({ children }) => {
   return (
-    <_Body>
+    <_Frame>
       <Header />
 
       {children}
 
       <Footer />
-    </_Body>
+    </_Frame>
   )
 }
 

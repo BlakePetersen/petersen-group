@@ -1,6 +1,8 @@
 import { useAccount, useConnect } from 'wagmi'
-import { Item } from '@radix-ui/react-dropdown-menu'
+import * as Avatar from '@radix-ui/react-avatar'
 import Image from 'next/image'
+
+import { _Item } from '@/components/Menu/styles'
 
 const WalletConnector = () => {
   const [{ data: connectData, loading: connectDataLoading, error }, connect] =
@@ -13,10 +15,20 @@ const WalletConnector = () => {
     return connectData.connectors.find(connector => connector.name === name)
   })
 
-  return (
+  return connectData.connected ? (
+    <_Item>
+      <Avatar.Root asChild>
+        {!!accountData?.ens?.avatar ? (
+          <Avatar.Image src={accountData?.ens?.avatar} />
+        ) : (
+          <Avatar.Fallback>{accountData?.ens?.name}ding</Avatar.Fallback>
+        )}
+      </Avatar.Root>
+    </_Item>
+  ) : (
     <>
       {dedupeConnectorsByName.map((connector, i) => (
-        <Item key={i} onClick={() => connect(connector)}>
+        <_Item key={i} onClick={() => connect(connector)}>
           <Image
             src={`/assets/${connector.name.replace(' ', '-')}.svg`}
             height={20}
@@ -24,7 +36,7 @@ const WalletConnector = () => {
           />
 
           {connector.name}
-        </Item>
+        </_Item>
       ))}
     </>
   )

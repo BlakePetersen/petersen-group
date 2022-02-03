@@ -6,7 +6,7 @@ const _Link = styled('a', {
   margin: '0.5rem',
 })
 
-export default function SocialLinks() {
+export default function Index() {
   return (
     <nav>
       <Link href="https://www.facebook.com/ashleypetersenphoto" passHref>

@@ -1,5 +1,5 @@
 import { styled } from '@stitches/react'
-import Copyright from '@/components/copyright'
+import Copyright from '@/components/Copyright'
 
 const _Footer = styled('footer', {
   position: 'fixed',
@@ -10,7 +10,7 @@ const _Footer = styled('footer', {
   fontSize: '0.8rem',
 })
 
-function Footer() {
+function Index() {
   return (
     <_Footer>
       <Copyright />
@@ -20,4 +20,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Index

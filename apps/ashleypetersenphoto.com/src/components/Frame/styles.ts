@@ -1,6 +1,6 @@
 import { styled } from '@stitches/react'
 
-export const _Body = styled('div', {
+export const _Frame = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
