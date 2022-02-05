@@ -5,6 +5,7 @@ import siteSettings from './site-settings'
 
 import navigationLink from './objects/navigation/link'
 import navigation from './documents/navigation'
+import page from './documents/page'
 import post from './post'
 import author from './author'
 import blockContent from './block-content'
@@ -25,6 +26,7 @@ export default createSchema({
     category,
     navigation,
     navigationLink,
+    page,
     post,
   ]),
 })

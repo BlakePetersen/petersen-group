@@ -1,4 +1,4 @@
-import { useAccount, useConnect } from 'wagmi'
+import { useConnect } from 'wagmi'
 import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import useSWR from '@zeit/swr'
@@ -18,16 +18,29 @@ import {
   _TriggerIcon,
   _TriggerItem,
 } from '@/components/Menu/styles'
-import { Wrap } from '@/lib/Wrap'
+import Wrap from '@/lib/Wrap'
 
 const Menu = () => {
-  const [{ data: connectData }] = useConnect(),
-    [{ data: accountData }] = useAccount({
-      fetchEns: true,
-    })
+  const [{ data: connectData }] = useConnect()
 
-  const { data, error } = useSWR(groq`*[_type == "navigation"][0]`, query =>
-    SanityClient.fetch(query),
+  const { data } = useSWR(
+    groq`*[_type == "navigation"][0]{...,
+    sections[] { ... ,
+      _type == "navigation.link" => {
+      ...,
+      internalLink {
+        ...,
+        "slug": @->slug
+      },
+      links[] {
+        ...,
+        internalLink {
+          ...,
+          "slug": @->slug
+        },
+      }
+     }}}`,
+    query => SanityClient.fetch(query),
   )
 
   return (
@@ -44,32 +57,42 @@ const Menu = () => {
             console.log(section)
 
             return (
-              <Wrap if={!!section.links} with={ch => <Root key={i}>{ch}</Root>}>
-                <Link href={`section.url`}>
-                  <a>
-                    {section.links ? (
-                      <_TriggerItem>{section.title}</_TriggerItem>
-                    ) : (
-                      <_Item>{section.title}</_Item>
-                    )}
-                  </a>
-                </Link>
+              section?.internalLink?.slug?.current && (
+                <Wrap
+                  if={!!section.links}
+                  with={ch => <Root key={i}>{ch}</Root>}
+                >
+                  <Link href={section?.internalLink?.slug?.current || `ding`}>
+                    <a>
+                      {section.links ? (
+                        <_TriggerItem>{section.title}</_TriggerItem>
+                      ) : (
+                        <_Item>{section.title}</_Item>
+                      )}
+                    </a>
+                  </Link>
 
-                {!!section.links && (
-                  <_Content>
-                    {section.links.map((link, i) => {
-                      return (
-                        <Link href={`section.url`} key={i}>
-                          <a>
-                            <_Item>{link.title}</_Item>
-                          </a>
-                        </Link>
-                      )
-                    })}
-                    <_Arrow />
-                  </_Content>
-                )}
-              </Wrap>
+                  {!!section?.links && (
+                    <_Content>
+                      {section.links.map((link, i) => {
+                        return (
+                          link?.internalLink?.slug?.current && (
+                            <Link
+                              href={link.internalLink.slug.current || `ding`}
+                              key={i}
+                            >
+                              <a>
+                                <_Item>{link.title}</_Item>
+                              </a>
+                            </Link>
+                          )
+                        )
+                      })}
+                      <_Arrow />
+                    </_Content>
+                  )}
+                </Wrap>
+              )
             )
           })}
 
