@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
 
-interface WrapProps {
+type WrapProps = {
   if: boolean
-  with: (children: React.ReactNode) => JSX.Element
+  with: (children: React.ReactNode) => React.ReactNode
 }
 
-export const Wrap: FC<WrapProps> = ({
+const Wrap: FC<WrapProps> = ({
   if: condition,
   with: wrapper,
   children,
-}) => {
-  return condition ? wrapper(children) : children
-}
+}): React.ReactNode => condition ? wrapper(children) : children
+
+export default Wrap
