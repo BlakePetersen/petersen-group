@@ -7,7 +7,9 @@ import { _Item } from '@/components/Menu/styles'
 const WalletConnector = () => {
   const [{ data: connectData, loading: connectDataLoading, error }, connect] =
     useConnect()
-  const [{ data: accountData }] = useAccount()
+  const [{ data: accountData }] = useAccount({
+    fetchEns: true,
+  })
 
   const dedupeConnectorsByName = Array.from(
     new Set(connectData.connectors.map(connector => connector.name)),
@@ -19,9 +21,11 @@ const WalletConnector = () => {
     <_Item>
       <Avatar.Root asChild>
         {!!accountData?.ens?.avatar ? (
-          <Avatar.Image src={accountData?.ens?.avatar} />
+          <Avatar.Image>
+            <Image src={accountData?.ens?.avatar} />
+          </Avatar.Image>
         ) : (
-          <Avatar.Fallback>{accountData?.ens?.name}ding</Avatar.Fallback>
+          <Avatar.Fallback>{accountData?.ens?.name}</Avatar.Fallback>
         )}
       </Avatar.Root>
     </_Item>

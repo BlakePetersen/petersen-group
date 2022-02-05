@@ -1,6 +1,9 @@
 import { useAccount, useConnect } from 'wagmi'
 import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import useSWR from '@zeit/swr'
+import groq from 'groq'
+import { SanityClient } from 'ui/src/SanityClient'
 
 import { ThemeSelector } from '@/components/ThemeSelector'
 import WalletConnector from '@/components/ConnectWallet'
@@ -15,6 +18,7 @@ import {
   _TriggerIcon,
   _TriggerItem,
 } from '@/components/Menu/styles'
+import { Wrap } from '@/lib/Wrap'
 
 const Menu = () => {
   const [{ data: connectData }] = useConnect(),
@@ -22,7 +26,9 @@ const Menu = () => {
       fetchEns: true,
     })
 
-  console.log('accountData', accountData)
+  const { data, error } = useSWR(groq`*[_type == "navigation"][0]`, query =>
+    SanityClient.fetch(query),
+  )
 
   return (
     <Root>
@@ -33,59 +39,39 @@ const Menu = () => {
       </Trigger>
 
       <_Content>
-        <Link href={`/`}>
-          <a>
-            <_Item>Home</_Item>
-          </a>
-        </Link>
+        {data?.sections &&
+          data?.sections.map((section, i) => {
+            console.log(section)
 
-        <Link href={`/portfolio`}>
-          <a>
-            <_Item>Portfolio</_Item>
-          </a>
-        </Link>
+            return (
+              <Wrap if={!!section.links} with={ch => <Root key={i}>{ch}</Root>}>
+                <Link href={`section.url`}>
+                  <a>
+                    {section.links ? (
+                      <_TriggerItem>{section.title}</_TriggerItem>
+                    ) : (
+                      <_Item>{section.title}</_Item>
+                    )}
+                  </a>
+                </Link>
 
-        <Root>
-          <Link href={`/services`}>
-            <a>
-              <_TriggerItem>Services</_TriggerItem>
-            </a>
-          </Link>
-
-          <_Content>
-            <Link href={`/services/photography/portraits`}>
-              <a>
-                <_Item>Portraits</_Item>
-              </a>
-            </Link>
-
-            <Link href={`/services/photography/underwater`}>
-              <a>
-                <_Item>Underwater</_Item>
-              </a>
-            </Link>
-
-            <Link href={`/services/photography/fine-art`}>
-              <a>
-                <_Item>Conceptual Fine-Art</_Item>
-              </a>
-            </Link>
-
-            <Link href={`/services/retouching`}>
-              <a>
-                <_Item>Retouching</_Item>
-              </a>
-            </Link>
-
-            <Link href={`/services`}>
-              <a>
-                <_Item>See All</_Item>
-              </a>
-            </Link>
-
-            <_Arrow />
-          </_Content>
-        </Root>
+                {!!section.links && (
+                  <_Content>
+                    {section.links.map((link, i) => {
+                      return (
+                        <Link href={`section.url`} key={i}>
+                          <a>
+                            <_Item>{link.title}</_Item>
+                          </a>
+                        </Link>
+                      )
+                    })}
+                    <_Arrow />
+                  </_Content>
+                )}
+              </Wrap>
+            )
+          })}
 
         <_Separator />
         <_Label>

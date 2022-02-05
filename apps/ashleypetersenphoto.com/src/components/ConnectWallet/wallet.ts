@@ -3,7 +3,7 @@ import { InjectedConnector } from 'wagmi/connectors/injected'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { WalletLinkConnector } from 'wagmi/connectors/walletLink'
 
-const infuraId = process.env.NEXT_PUBLIC_INFURA_ID
+const infuraId = process.env.NEXT_PUBLIC_ALCHEMY_ID
 
 const chains = defaultChains
 
@@ -12,7 +12,7 @@ type Connector =
   | WalletConnectConnector
   | WalletLinkConnector
 
-export const connectors = ({ chainId }: { chainId?: number }): Connector[] => {
+const connectors = ({ chainId }: { chainId?: number }): Connector[] => {
   const rpcUrl =
     chains.find(x => x.id === chainId)?.rpcUrls?.[0] ?? chain.mainnet.rpcUrls[0]
   return [
@@ -31,3 +31,5 @@ export const connectors = ({ chainId }: { chainId?: number }): Connector[] => {
     }),
   ]
 }
+
+export default connectors

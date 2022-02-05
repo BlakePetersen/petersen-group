@@ -1,19 +1,8 @@
-import { styled } from '@stitches/react'
-
 import Logo from '@/components/Logo'
 import Menu from '@/components/Menu'
+import { _Header } from './styles'
 
-const _Header = styled('header', {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '1rem',
-  background: 'rgba(255,255,255,.25)',
-  borderBottom: '2px solid #ccc',
-  width: '100%',
-  padding: '1rem',
-})
-
-const Index = () => {
+const Header = () => {
   return (
     <_Header>
       <Menu />
@@ -22,4 +11,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Header
