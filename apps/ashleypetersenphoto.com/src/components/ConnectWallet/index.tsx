@@ -1,4 +1,4 @@
-import { useAccount, useConnect } from 'wagmi'
+import { useAccount, useConnect, useEnsAvatar } from 'wagmi'
 import * as Avatar from '@radix-ui/react-avatar'
 import Image from 'next/image'
 
@@ -17,12 +17,16 @@ const WalletConnector = () => {
     return connectData.connectors.find(connector => connector.name === name)
   })
 
+  const [{ data: avatarData }] = useEnsAvatar({
+    addressOrName: accountData?.ens?.name,
+  })
+
   return connectData.connected ? (
     <_Item>
       <Avatar.Root asChild>
-        {!!accountData?.ens?.avatar ? (
+        {!!avatarData ? (
           <Avatar.Image>
-            <Image src={accountData?.ens?.avatar} />
+            <Image src={avatarData} crossOrigin={'anonymous'} />
           </Avatar.Image>
         ) : (
           <Avatar.Fallback>{accountData?.ens?.name}</Avatar.Fallback>

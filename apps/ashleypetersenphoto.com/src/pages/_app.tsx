@@ -7,7 +7,10 @@ import connectors from '@/components/ConnectWallet/wallet'
 import '@/styles/global-styles.scss'
 
 const provider = ({ chainId }) => {
-  new providers.AlchemyProvider(chainId, 'k_Si9c0kXGTWh-ko8ZNlpiX829Qu8rqq')
+  return new providers.AlchemyProvider(
+    chainId,
+    'k_Si9c0kXGTWh-ko8ZNlpiX829Qu8rqq',
+  )
 }
 
 function App({ Component, pageProps }) {
