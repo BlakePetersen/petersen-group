@@ -38,6 +38,13 @@ const Menu = () => {
           ...,
           "slug": @->slug
         },
+        links[] {
+          ...,
+          internalLink {
+            ...,
+            "slug": @->slug
+          },
+        }
       }
      }}}`,
     query => SanityClient.fetch(query),
