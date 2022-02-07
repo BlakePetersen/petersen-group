@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-function Index() {
+const Copyright = () => {
   return (
     <div>
       <Link href="/" passHref>
@@ -12,4 +12,4 @@ function Index() {
   )
 }
 
-export default Index
+export default Copyright

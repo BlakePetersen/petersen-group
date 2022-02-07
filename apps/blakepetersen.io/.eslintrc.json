@@ -1,8 +1,6 @@
 {
   "extends": "../../packages/config/eslint-next.js",
   "parserOptions": {
-    "project": [
-      "tsconfig.json"
-    ]
+    "project": ["./apps/blakepetersen.io/tsconfig.json"]
   }
 }

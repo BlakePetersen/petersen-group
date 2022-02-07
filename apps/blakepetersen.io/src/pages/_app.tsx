@@ -5,7 +5,7 @@ import Layout from '@/components/layout'
 
 import '@/styles/_global-styles.scss'
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
   return (
     <Layout>
       <AnimatePresence
