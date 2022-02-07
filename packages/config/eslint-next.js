@@ -52,7 +52,6 @@ module.exports = {
   },
   overrides: [
     {
-      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
       env: {
         jest: true,
       },

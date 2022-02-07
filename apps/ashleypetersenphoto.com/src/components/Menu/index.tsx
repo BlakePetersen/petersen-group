@@ -21,7 +21,8 @@ import {
 import Wrap from '@/lib/Wrap'
 
 const Menu = () => {
-  const [{ data: connectData }] = useConnect()
+  const [{ data: connectData, error: connectError, loading: connectLoading }] =
+    useConnect()
 
   const { data } = useSWR(
     groq`*[_type == "navigation"][0]{...,
