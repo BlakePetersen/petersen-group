@@ -4,9 +4,13 @@ export const _Header = styled('header', {
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
-  background: 'rgba(255,255,255,.25)',
-  borderBottom: '2px solid #ccc',
+  borderBottom: '1px solid rgba(255,255,255,.1)',
+  backgroundColor: 'rgba(0,0,0,.25)',
+  boxShadow:
+    '0px 10px 50px -10px rgba(0, 0, 0, 0.5), 0px 10px 30px -15px rgba(0, 0, 0, 0.25)',
   width: '100%',
   padding: '1rem',
   zIndex: 2,
+  top: '0',
+  backdropFilter: 'blur(.5rem)',
 })

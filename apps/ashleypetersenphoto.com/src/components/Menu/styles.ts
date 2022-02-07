@@ -23,8 +23,10 @@ export const _Arrow = styled(Arrow, {
 export const _Content = styled(Content, {
   minWidth: 200,
   fontFamily: '"Public Sans", sans-serif;',
-  fontSize: '.75rem',
-  backgroundColor: 'white',
+  fontSize: '.85rem',
+  backdropFilter: 'blur(.5rem)',
+  position: 'relative',
+  border: '1px solid rgba(255,255,255,.1)',
   borderRadius: '.25rem',
   padding: '.5rem',
   boxShadow:
@@ -32,7 +34,6 @@ export const _Content = styled(Content, {
   '@media (prefers-reduced-motion: no-preference)': {
     animationDuration: '400ms',
     animationTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
-    willChange: 'transform, opacity',
     '&[data-state="open"]': {
       '&[data-side="top"]': { animationName: slideDownAndFade },
       '&[data-side="right"]': { animationName: slideLeftAndFade },
@@ -44,7 +45,7 @@ export const _Content = styled(Content, {
 
 export const _Separator = styled(Separator, {
   height: 1,
-  backgroundColor: violet.violet6,
+  backgroundColor: `rgba(255, 255, 255, .1)`,
   margin: `.5rem`,
 })
 
@@ -58,7 +59,8 @@ export const _TriggerIcon = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   color: violet.violet11,
-  backgroundColor: 'white',
+  backdropFilter: 'blur(.5rem)',
+  border: '1px solid rgba(255,255,255,.1)',
   boxShadow: `0 1px 5px ${blackA.blackA7}, 0 2px 10px ${blackA.blackA7}`,
   transition: `box-shadow 200ms ease`,
   '&:hover': {

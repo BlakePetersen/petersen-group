@@ -10,7 +10,6 @@ import WalletConnector from '@/components/ConnectWallet'
 import Link from 'next/link'
 
 import {
-  _Arrow,
   _Content,
   _Item,
   _Label,
@@ -96,7 +95,6 @@ const Menu = () => {
                           )
                         )
                       })}
-                      <_Arrow />
                     </_Content>
                   )}
                 </Wrap>
@@ -113,7 +111,6 @@ const Menu = () => {
         <_Separator />
         <_Label>Theme Selection</_Label>
         <ThemeSelector />
-        <_Arrow />
       </_Content>
     </Root>
   )

@@ -1,10 +1,13 @@
-const path = require("path");
+const path = require('path')
 
 module.exports = {
-    future: {
-        webpack5: true,
-    },
-    sassOptions: {
-        includePaths: [path.join(__dirname, "styles")],
-    },
-};
+  future: {
+    webpack5: true,
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+  images: {
+    domains: ['mint.sacredskullsnft.io'],
+  },
+}

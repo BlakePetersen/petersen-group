@@ -18,16 +18,26 @@ const Index: NextPage = () => {
       <Page>
         <Carousel>
           <CarouselItem>
-            <Image src={`/images/_DSC0958.jpg`} layout={'fill'} />
+            <Image
+              src={`/images/homepage/_DSC0958.jpg`}
+              layout={'fill'}
+              objectFit={`cover`}
+            />
           </CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
-          <CarouselItem></CarouselItem>
+          <CarouselItem>
+            <Image
+              src={`/images/homepage/_DSC8983.jpg`}
+              layout={'fill'}
+              objectFit={`cover`}
+            />
+          </CarouselItem>
+          <CarouselItem>
+            <Image
+              src={`/images/homepage/DSC_1264.jpg`}
+              layout={'fill'}
+              objectFit={`cover`}
+            />
+          </CarouselItem>
         </Carousel>
       </Page>
     </>
