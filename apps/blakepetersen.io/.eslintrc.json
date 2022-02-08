@@ -1,13 +1,6 @@
 {
-  "plugins": ["@typescript-eslint"],
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier" // prettier should come last. This disables eslint rules set above that might conflict with prettier.
-  ],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-var-requires": "off"
+  "extends": "../../packages/config/eslint-next.js",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
   }
 }

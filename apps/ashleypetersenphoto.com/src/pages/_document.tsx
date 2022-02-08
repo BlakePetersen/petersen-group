@@ -1,22 +1,26 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import React from 'react'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { getCssText } from 'config/stitches.config'
 
 export default class SiteDocument extends Document {
-    render() {
-        return (
-            <Html lang={`en`}>
-                <Head>
-                    {/* Meta */}
-                    {/* Favicon */}
-                    {/* OpenGraph */}
-                    {/* Twitter */}
-                    {/* PWA */}
-                    {/* Fonts */}
-                </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        );
-    }
+  render() {
+    return (
+      <Html lang={`en`}>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lora&family=Public+Sans&display=swap"
+            rel="stylesheet"
+          />
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }
