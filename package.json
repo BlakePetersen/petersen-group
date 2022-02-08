@@ -52,11 +52,9 @@
     }
   },
   "lint-staged": {
-    "apps/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix"
-    ],
-    "packages/ui/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix"
+    "{apps,packages}/ui/**/*.{js,ts,jsx,tsx}": [
+      "yarn eslint --quiet --fix",
+      "bash -c tsc --noEmit"
     ],
     "*.{json,md}": [
       "prettier --write"

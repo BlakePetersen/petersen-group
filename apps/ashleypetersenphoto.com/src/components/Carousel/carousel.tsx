@@ -2,18 +2,14 @@ import { _Carousel, _CarouselItem, _Track } from './carousel.styles'
 import * as React from 'react'
 import { JSXElementConstructor, ReactElement } from 'react'
 
-export const CarouselItem: React.FC = ({ children }) => {
-  return <_CarouselItem>{children}</_CarouselItem>
-}
-
-const Carousel: React.FC = ({ children }) => {
+const Carousel: React.FC = ({ children }): ReactElement => {
   return (
     <_Carousel>
       <_Track>
         {React.Children.map(
           children,
           (child: ReactElement<JSXElementConstructor<any>>) => {
-            return React.cloneElement(child)
+            return React.cloneElement(<_CarouselItem>{child}</_CarouselItem>)
           },
         )}
       </_Track>
