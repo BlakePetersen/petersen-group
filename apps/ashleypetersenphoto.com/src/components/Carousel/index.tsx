@@ -1,4 +1,4 @@
-import { _Carousel, _CarouselItem, _Track } from './styles'
+import { _Carousel, _CarouselItem, _Track } from './carousel.styles'
 import * as React from 'react'
 import { JSXElementConstructor, ReactElement } from 'react'
 
