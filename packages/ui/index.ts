@@ -1,3 +1,4 @@
 export * from './Animations'
-export * from './ConditionalWrapper'
+export * from './ConditionalWrap'
 export * from './SanityClient'
+export * from './Wallet'

@@ -2,7 +2,7 @@ import { useAccount, useConnect, useEnsAvatar } from 'wagmi'
 import * as Avatar from '@radix-ui/react-avatar'
 import Image from 'next/image'
 
-import { _Item } from '@/components/Menu/styles'
+import { _Item } from '@/components/Menu/menu.styles'
 
 const WalletConnector = () => {
   const [{ data: connectData, loading: connectDataLoading, error }, connect] =

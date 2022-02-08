@@ -14,7 +14,7 @@ type WrapProps = {
   ) => React.ReactElement
 }
 
-const Wrap: FC<WrapProps> = ({
+const ConditionalWrap: FC<WrapProps> = ({
   if: condition,
   with: wrapper,
   children,
@@ -24,4 +24,4 @@ const Wrap: FC<WrapProps> = ({
     string | React.JSXElementConstructor<any>
   >
 
-export default Wrap
+export default ConditionalWrap

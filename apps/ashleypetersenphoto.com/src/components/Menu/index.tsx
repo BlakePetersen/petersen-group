@@ -3,10 +3,10 @@ import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import useSWR from '@zeit/swr'
 import groq from 'groq'
-import { SanityClient } from 'ui/src/SanityClient'
+import { SanityClient } from 'ui/SanityClient'
 
 import { ThemeSelector } from '@/components/ThemeSelector'
-import WalletConnector from '@/components/ConnectWallet'
+import WalletConnector from '@/components/WalletConnector'
 import Link from 'next/link'
 
 import {
@@ -16,8 +16,8 @@ import {
   _Separator,
   _TriggerIcon,
   _TriggerItem,
-} from '@/components/Menu/styles'
-import Wrap from '@/lib/Wrap'
+} from '@/components/Menu/menu.styles'
+import ConditionalWrap from 'ui/ConditionalWrap'
 
 const Menu = () => {
   const [{ data: connectData, error: connectError, loading: connectLoading }] =
@@ -65,7 +65,7 @@ const Menu = () => {
 
             return (
               section?.internalLink?.slug?.current && (
-                <Wrap
+                <ConditionalWrap
                   if={!!section.links}
                   with={ch => <Root key={i}>{ch}</Root>}
                 >
@@ -97,7 +97,7 @@ const Menu = () => {
                       })}
                     </_Content>
                   )}
-                </Wrap>
+                </ConditionalWrap>
               )
             )
           })}

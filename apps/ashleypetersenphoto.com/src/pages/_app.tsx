@@ -5,7 +5,7 @@ import { Provider } from 'wagmi'
 import { ThemeProvider } from 'next-themes'
 
 import Frame from '@/components/Frame'
-import connectors from '@/components/ConnectWallet/wallet'
+import Connectors from 'ui/Wallet'
 import '@/styles/global-styles.scss'
 
 const provider = ({ chainId }) => {
@@ -17,7 +17,7 @@ const provider = ({ chainId }) => {
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <Provider autoConnect connectors={connectors} provider={provider}>
+    <Provider autoConnect connectors={Connectors} provider={provider}>
       <ThemeProvider>
         <Frame>
           <Component {...pageProps} />

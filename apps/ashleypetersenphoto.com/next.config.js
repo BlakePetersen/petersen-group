@@ -1,6 +1,8 @@
 const path = require('path')
+const withPlugins = require('next-compose-plugins')
+const withTM = require('next-transpile-modules')(['ui'])
 
-module.exports = {
+const nextConfig = {
   future: {
     webpack5: true,
   },
@@ -11,3 +13,5 @@ module.exports = {
     domains: ['mint.sacredskullsnft.io'],
   },
 }
+
+module.exports = withPlugins([withTM], nextConfig)

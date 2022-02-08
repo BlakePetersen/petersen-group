@@ -1,4 +1,4 @@
-import { SanityClient } from 'ui/src/SanityClient'
+import { SanityClient } from 'ui/SanityClient'
 
 const Post = ({ post }) => {
   return (

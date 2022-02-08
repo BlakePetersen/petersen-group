@@ -13,7 +13,7 @@ import {
   slideLeftAndFade,
   slideRightAndFade,
   slideUpAndFade,
-} from 'ui/src/Animations'
+} from 'ui/Animations'
 
 export const _Arrow = styled(Arrow, {
   fill: 'white',
