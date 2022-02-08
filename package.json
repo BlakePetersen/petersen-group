@@ -52,7 +52,11 @@
     }
   },
   "lint-staged": {
-    "{apps,packages}/ui/**/*.{js,ts,jsx,tsx}": [
+    "apps/ui/**/*.{js,ts,jsx,tsx}": [
+      "yarn eslint --quiet --fix",
+      "bash -c tsc --noEmit"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
       "yarn eslint --quiet --fix",
       "bash -c tsc --noEmit"
     ],
