@@ -5,7 +5,7 @@ import { Provider } from 'wagmi'
 import { ThemeProvider } from 'next-themes'
 
 import Frame from '@/components/Frame'
-import Connectors from 'ui/Wallet'
+import Connectors from 'artax-ui/Wallet'
 import '@/styles/global-styles.scss'
 
 const provider = ({ chainId }) => {
