@@ -1,5 +1,5 @@
 const Constants = {
-  SITE_TITLE: 'Ashley Petersen Photography',
+  SITE_TITLE: 'blakepetersen.io',
 }
 
 export default Constants

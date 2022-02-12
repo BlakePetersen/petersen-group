@@ -10,7 +10,7 @@ const variants = {
   exit: { opacity: 0 },
 }
 
-const Layout = ({ children }) => {
+const Page = ({ children }) => {
   return (
     <>
       <Header />
@@ -29,4 +29,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default Page
