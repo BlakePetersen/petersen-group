@@ -10,12 +10,9 @@ const Index: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          Conceptual Portraiture, Underwater Photography - Ashley Petersen
-          Photography
-        </title>
+        <title>- Ashley Petersen Photography</title>
       </Head>
-      <Page>
+      <Page title={`Conceptual Portraiture, Underwater Photography`}>
         <Carousel>
           <Image
             src={`/images/homepage/_DSC0958.jpg`}
