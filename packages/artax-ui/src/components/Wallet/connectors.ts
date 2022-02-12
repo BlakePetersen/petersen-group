@@ -4,8 +4,6 @@ import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { WalletLinkConnector } from 'wagmi/connectors/walletLink'
 import { ConnectorsType, ConnectorType } from './connectors.types'
 
-const infuraId = process.env.NEXT_PUBLIC_ALCHEMY_ID
-
 const chains = defaultChains
 
 const Connectors = ({
