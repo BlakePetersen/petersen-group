@@ -1,20 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-type WrapProps = {
-  if: boolean
-  with: (
-    children:
-      | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-      | string
-      | number
-      | Record<string, unknown>
-      | Iterable<React.ReactNode>
-      | React.ReactPortal
-      | boolean,
-  ) => React.ReactElement
-}
+import { WrapProps } from './conditional-wrap.types'
 
-const ConditionalWrap: FC<WrapProps> = ({
+const ConditionalWrap: WrapProps = ({
   if: condition,
   with: wrapper,
   children,
