@@ -13,7 +13,7 @@ import {
   slideLeftAndFade,
   slideRightAndFade,
   slideUpAndFade,
-} from 'artax-ui/Animations'
+} from 'artax-ui'
 
 export const _Arrow = styled(Arrow, {
   fill: 'white',
