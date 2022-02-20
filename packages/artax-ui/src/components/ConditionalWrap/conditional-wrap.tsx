@@ -2,7 +2,7 @@ import React from 'react'
 
 import { WrapProps } from './conditional-wrap.types'
 
-const ConditionalWrap: WrapProps = ({
+export const ConditionalWrap: WrapProps = ({
   if: condition,
   with: wrapper,
   children,
@@ -11,5 +11,3 @@ const ConditionalWrap: WrapProps = ({
     any,
     string | React.JSXElementConstructor<any>
   >
-
-export default ConditionalWrap
