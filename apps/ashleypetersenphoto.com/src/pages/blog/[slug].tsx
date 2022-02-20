@@ -1,4 +1,4 @@
-import { SanityClient } from 'artax-ui/SanityClient'
+import { SanityClient } from 'artax-ui'
 
 const Post = ({ post }) => {
   return (
