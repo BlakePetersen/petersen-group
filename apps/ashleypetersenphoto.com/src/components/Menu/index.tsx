@@ -3,7 +3,7 @@ import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import useSWR from '@zeit/swr'
 import groq from 'groq'
-import { SanityClient } from 'artax-ui/SanityClient'
+import { ConditionalWrap, SanityClient } from 'artax-ui'
 
 import { ThemeSelector } from '@/components/ThemeSelector'
 import WalletConnector from '@/components/WalletConnector'
@@ -17,7 +17,6 @@ import {
   _TriggerIcon,
   _TriggerItem,
 } from '@/components/Menu/menu.styles'
-import ConditionalWrap from 'artax-ui/ConditionalWrap'
 
 const Menu = () => {
   const [{ data: connectData, error: connectError, loading: connectLoading }] =
