@@ -6,7 +6,7 @@ import { ConnectorsType, ConnectorType } from './connectors.types'
 
 const chains = defaultChains
 
-const Connectors = ({
+export const Connectors = ({
   chainId,
   appName,
   infuraId,
@@ -29,5 +29,3 @@ const Connectors = ({
     }),
   ]
 }
-
-export default Connectors
