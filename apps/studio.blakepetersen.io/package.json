@@ -1,19 +1,14 @@
 {
-  "name": "blakepetersenio",
+  "name": "studio.blakepetersen.io",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
   "main": "package.json",
-  "author": "Blake Petersen <blakepetersen@gmail.com>",
-  "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"
   },
-  "keywords": [
-    "sanity"
-  ],
   "dependencies": {
+    "@radix-ui/react-icons": "^1.0.3",
     "@sanity/base": "^2.27.0",
     "@sanity/code-input": "^2.27.0",
     "@sanity/core": "^2.27.0",

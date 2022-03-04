@@ -7,9 +7,6 @@
     "start": "sanity start",
     "build": "sanity build"
   },
-  "keywords": [
-    "sanity"
-  ],
   "dependencies": {
     "@radix-ui/react-icons": "^1.0.3",
     "@sanity/base": "^2.25.4",
