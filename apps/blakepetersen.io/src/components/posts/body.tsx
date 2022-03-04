@@ -1,11 +1,4 @@
 import React from 'react'
-import unified from 'unified'
-import parse from 'remark-parse'
-import reactRenderer from 'remark-react'
-import RemarkLowlight from 'remark-react-lowlight'
-
-import bash from 'highlight.js/lib/languages/bash'
-import js from 'highlight.js/lib/languages/javascript'
 
 import styled from 'styled-components'
 import { darken } from 'polished'
@@ -124,17 +117,18 @@ const _Body = styled.div`
 const Body = ({ body }) => (
   <_Body>
     {
-      unified()
-        .use(parse)
-        .use(reactRenderer, {
-          remarkReactComponents: {
-            code: RemarkLowlight({
-              js,
-              bash,
-            }),
-          },
-        })
-        .processSync(body).result
+      body
+      // unified()
+      //   .use(parse)
+      //   .use(reactRenderer, {
+      //     remarkReactComponents: {
+      //       code: RemarkLowlight({
+      //         js,
+      //         bash,
+      //       }),
+      //     },
+      //   })
+      //   .processSync(body).result
     }
   </_Body>
 )
