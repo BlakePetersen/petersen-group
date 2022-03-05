@@ -6,8 +6,9 @@ export const ConditionalWrap: WrapProps = ({
   if: condition,
   with: wrapper,
   children,
-}): React.ReactElement =>
-  (condition ? wrapper(children) : children) as React.ReactElement<
+}): React.ReactElement => {
+  return (condition ? wrapper(children) : children) as React.ReactElement<
     any,
     string | React.JSXElementConstructor<any>
   >
+}

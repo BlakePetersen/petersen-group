@@ -3,9 +3,7 @@ import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import useSWR from '@zeit/swr'
 import groq from 'groq'
-import { ConditionalWrap, SanityClient } from 'artax-ui'
-
-import { ThemeSelector } from '@/components/ThemeSelector'
+import { ConditionalWrap, SanityClient, ThemeSelector } from 'artax-ui'
 import WalletConnector from '@/components/WalletConnector'
 import Link from 'next/link'
 
