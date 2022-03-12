@@ -7,7 +7,6 @@ export default class SiteDocument extends Document {
     return (
       <Html lang={`en`}>
         <Head>
-          <title>0xbp.io</title>
           <link
             href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
             rel="stylesheet"

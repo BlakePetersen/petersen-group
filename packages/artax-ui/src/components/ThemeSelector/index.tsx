@@ -1,9 +1,7 @@
-import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
-
 import { _ButtonIcon, _Flex, _Switch, _Thumb } from './styles'
 
-export const ThemeSelector = () => {
+export const ThemeSelector = ({ useTheme }) => {
   const { theme, setTheme } = useTheme()
 
   const toggleTheme = (): void => {

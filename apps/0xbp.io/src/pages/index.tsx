@@ -1,25 +1,38 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Image from 'next/image'
+import { Page } from 'artax-ui'
+import useSWR from 'swr'
+import { useAccount } from 'wagmi'
+
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 const Home: NextPage = () => {
+  const [{ data: accountData }] = useAccount()
+
+  const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}/getNFTs/`
+  const fetchURL = `${baseURL}?owner=${accountData?.address}`
+  const { data } = useSWR(fetchURL, fetcher)
+
   return (
-    <div>
-      {/* Head */}
-      <Head>
-        <title>Wallet Visualizer</title>
-        <meta name="description" content="Wallet Visualizer -- 0xbp.io" />
-      </Head>
-
-      {/* Header */}
-      <Header />
-
-      {/* Body */}
-
-      {/* Footer */}
-      <Footer />
-    </div>
+    <Page
+      title={`Ethereum Wallet Visualizer`}
+      description={`Ethereum Wallet Visualizer`}
+    >
+      {data?.ownedNfts?.map(ownedNft => {
+        return (
+          !!ownedNft.media &&
+          ownedNft.media.map((image, i) => {
+            return (
+              <>
+                {!!image.gateway && (
+                  <Image src={image.gateway} width={200} height={200} key={i} />
+                )}
+              </>
+            )
+          })
+        )
+      })}
+    </Page>
   )
 }
 

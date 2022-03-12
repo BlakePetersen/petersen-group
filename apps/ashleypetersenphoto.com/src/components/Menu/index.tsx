@@ -6,6 +6,7 @@ import groq from 'groq'
 import { ConditionalWrap, SanityClient, ThemeSelector } from 'artax-ui'
 import WalletConnector from '@/components/WalletConnector'
 import Link from 'next/link'
+import { useTheme } from 'next-themes'
 
 import {
   _Content,
@@ -107,7 +108,7 @@ const Menu = () => {
         <WalletConnector />
         <_Separator />
         <_Label>Theme Selection</_Label>
-        <ThemeSelector />
+        <ThemeSelector useTheme={useTheme} />
       </_Content>
     </Root>
   )

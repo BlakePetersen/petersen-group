@@ -11,7 +11,7 @@ import '@/styles/global-styles.scss'
 const provider = ({ chainId }) => {
   return new providers.AlchemyProvider(
     chainId,
-    'k_Si9c0kXGTWh-ko8ZNlpiX829Qu8rqq',
+    process.env.NEXT_PUBLIC_ALCHEMY_ID,
   )
 }
 

@@ -7,27 +7,30 @@ import { Page } from 'artax-ui'
 
 const Index: NextPage = () => {
   return (
-    <Page title={`Conceptual Portraiture, Underwater Photography`}>
-        <Carousel>
-          <Image
-            src={`/images/homepage/_DSC0958.jpg`}
-            layout={'fill'}
-            objectFit={`cover`}
-          />
+    <Page
+      title={`Conceptual Portraiture, Underwater Photography`}
+      description={`Ashley Petersen Photography`}
+    >
+      <Carousel>
+        <Image
+          src={`/images/homepage/_DSC0958.jpg`}
+          layout={'fill'}
+          objectFit={`cover`}
+        />
 
-          <Image
-            src={`/images/homepage/_DSC8983.jpg`}
-            layout={'fill'}
-            objectFit={`cover`}
-          />
+        <Image
+          src={`/images/homepage/_DSC8983.jpg`}
+          layout={'fill'}
+          objectFit={`cover`}
+        />
 
-          <Image
-            src={`/images/homepage/DSC_1264.jpg`}
-            layout={'fill'}
-            objectFit={`cover`}
-          />
-        </Carousel>
-      </Page>
+        <Image
+          src={`/images/homepage/DSC_1264.jpg`}
+          layout={'fill'}
+          objectFit={`cover`}
+        />
+      </Carousel>
+    </Page>
   )
 }
 
