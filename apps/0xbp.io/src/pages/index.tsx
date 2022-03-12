@@ -4,7 +4,7 @@ import { Page } from 'artax-ui'
 import useSWR from 'swr'
 import { useAccount } from 'wagmi'
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+const fetcher = url => fetch(url).then(res => res.json())
 
 const Home: NextPage = () => {
   const [{ data: accountData }] = useAccount()
