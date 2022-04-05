@@ -33,32 +33,6 @@
     "prettier": "^2.6.2",
     "turbo": "^1.1.10"
   },
-  "turbo": {
-    "baseBranch": "origin/main",
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "dist/**",
-          ".next/**"
-        ]
-      },
-      "clean": {},
-      "dev": {
-        "cache": false
-      },
-      "lint": {},
-      "start": {
-        "dependsOn": [
-          "^build"
-        ]
-      },
-      "sanity": {},
-      "test": {}
-    }
-  },
   "lint-staged": {
     "apps/**/*.{js,jsx,ts,tsx}": [
       "yarn eslint --quiet --fix"
