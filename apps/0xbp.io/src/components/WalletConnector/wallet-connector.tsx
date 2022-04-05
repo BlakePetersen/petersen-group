@@ -1,6 +1,6 @@
 import { useAccount, useConnect, useEnsAvatar } from 'wagmi'
-import * as Avatar from '@radix-ui/react-avatar'
-import Image from 'next/image'
+import { Avatar, AvatarFallback } from '@radix-ui/react-avatar'
+import { ArtaxImage } from 'artax-ui'
 
 const WalletConnector = () => {
   const [{ data: connectData, loading: connectDataLoading, error }, connect] =
@@ -20,28 +20,23 @@ const WalletConnector = () => {
   })
 
   return connectData.connected ? (
-    <div>
-      <Avatar.Root asChild>
-        {!!avatarData ? (
-          <Avatar.Image>
-            <Image src={avatarData} crossOrigin={'anonymous'} />
-          </Avatar.Image>
-        ) : (
-          <Avatar.Fallback>{accountData?.ens?.name}</Avatar.Fallback>
-        )}
-      </Avatar.Root>
-    </div>
+    <Avatar>
+      {avatarData ? (
+        <ArtaxImage src={avatarData} width={48} height={48} />
+      ) : (
+        <AvatarFallback delayMs={500}>{accountData?.ens?.name}</AvatarFallback>
+      )}
+    </Avatar>
   ) : (
     <>
       {dedupeConnectorsByName.map((connector, i) => (
         <div key={i} onClick={() => connect(connector)}>
-          <Image
+          <ArtaxImage
             src={`/assets/${connector.name.replace(' ', '-')}.svg`}
             height={20}
             width={20}
           />
-
-          {connector.name}
+          Sign In
         </div>
       ))}
     </>
