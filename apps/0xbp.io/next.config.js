@@ -18,6 +18,9 @@ const nextConfig = {
       'ipfs.io',
       'lh3.googleusercontent.com',
       'mint.sacredskullsnft.io',
+      'toonsquad-public-prereveal.s3.amazonaws.com',
+      'mint.womenfromvenus.io',
+      'gateway.ipfs.io',
     ],
   },
 }
