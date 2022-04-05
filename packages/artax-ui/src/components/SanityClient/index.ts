@@ -1,9 +1,4 @@
-import sanityClient from '@sanity/client'
-import C from 'config/constants'
+import { SanityClient } from './sanity-client'
 
-export const SanityClient = sanityClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: 'production',
-  apiVersion: C.SANITY.API.VERSION,
-  useCdn: process.env.NODE_ENV === 'production',
-})
+export * from './sanity-client'
+export default SanityClient
