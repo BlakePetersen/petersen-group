@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
-import { Page } from 'artax-ui'
+import { ArtaxImage, Card, Grid, Page } from 'artax-ui'
 import useSWR from 'swr'
 import { useAccount } from 'wagmi'
 
@@ -18,20 +17,22 @@ const Home: NextPage = () => {
       title={`Ethereum Wallet Visualizer`}
       description={`Ethereum Wallet Visualizer`}
     >
-      {data?.ownedNfts?.map(ownedNft => {
-        return (
-          !!ownedNft.media &&
-          ownedNft.media.map((image, i) => {
-            return (
-              <>
-                {!!image.gateway && (
-                  <Image src={image.gateway} width={200} height={200} key={i} />
-                )}
-              </>
-            )
-          })
-        )
-      })}
+      <Grid>
+        {data?.ownedNfts?.map(ownedNft => {
+          return (
+            ownedNft.media &&
+            ownedNft.media.map((image, i) => {
+              return (
+                image.gateway && (
+                  <Card>
+                    <ArtaxImage src={image.gateway} layout="fill" key={i} />
+                  </Card>
+                )
+              )
+            })
+          )
+        })}
+      </Grid>
     </Page>
   )
 }
