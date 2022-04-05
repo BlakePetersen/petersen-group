@@ -25,7 +25,7 @@ export const _Logo = styled('div', {
 })
 
 export const _H1 = styled('h1', {
-  fontSize: '2rem',
+  fontSize: '1.5rem',
   margin: `0`,
 })
 
