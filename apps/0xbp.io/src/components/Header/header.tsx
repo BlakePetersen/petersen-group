@@ -1,7 +1,7 @@
 import { _H1, _H2, _Header, _Logo } from './header.styles'
 import WalletConnector from '@/components/WalletConnector'
 
-const Header = () => {
+export const Header = () => {
   return (
     <_Header>
       <div>MENU</div>
@@ -15,5 +15,3 @@ const Header = () => {
     </_Header>
   )
 }
-
-export default Header
