@@ -1,6 +1,6 @@
 import Logo from '@/components/Logo'
 import Menu from '@/components/Menu'
-import { _Header } from './styles'
+import { _Header } from './header.styles'
 
 const Header = () => {
   return (
