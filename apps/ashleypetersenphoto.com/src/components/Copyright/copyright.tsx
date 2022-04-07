@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Copyright = () => {
+export const Copyright = () => {
   return (
     <div>
       <Link href="/" passHref>
@@ -11,5 +11,3 @@ const Copyright = () => {
     </div>
   )
 }
-
-export default Copyright
