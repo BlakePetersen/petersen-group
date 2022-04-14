@@ -1,6 +1,7 @@
 export * from './src/components/Animations'
 export * from './src/components/Card'
 export * from './src/components/ConditionalWrap'
+export * from './src/components/Copyright'
 export * from './src/components/Grid'
 export * from './src/components/Image'
 export * from './src/components/Page'
