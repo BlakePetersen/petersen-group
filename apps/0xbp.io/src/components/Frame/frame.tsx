@@ -7,9 +7,7 @@ export const Frame = ({ children }) => {
   return (
     <_Frame>
       <Header />
-
       {children}
-
       <Footer />
     </_Frame>
   )

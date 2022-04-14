@@ -16,6 +16,7 @@ export default class SiteDocument extends Document {
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
         </Head>
+
         <body>
           <Main />
           <NextScript />
