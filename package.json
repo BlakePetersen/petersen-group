@@ -13,6 +13,7 @@
     "dev:0xbp": "turbo run dev --scope=0xbp.io",
     "dev:app": "turbo run dev --scope=ashleypetersenphoto.com",
     "dev:bpio": "turbo run dev --scope=blakepetersen.io",
+    "dev:igg": "turbo run dev --scope=iriganggang.com",
     "test": "turbo run test",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -20,9 +21,11 @@
     "start:0xbp": "turbo run start --scope=0xbp.io",
     "start:app": "turbo run start --scope=ashleypetersenphoto.com",
     "start:bpio": "turbo run start --scope=blakepetersen.io",
+    "start:igg": "turbo run start --scope=iriganggang.com",
     "studio:0xbp": "turbo run sanity start --scope=studio.0xbp.io",
     "studio:app": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
     "studio:bpio": "turbo run sanity start --scope=studio.blakepetersen.io",
+    "studio:igg": "turbo run sanity start --scope=studio.iriganggang.com",
     "prepare": "husky install"
   },
   "devDependencies": {
