@@ -1,38 +1,18 @@
 import type { NextPage } from 'next'
-import { ArtaxImage, Card, Grid, Page } from 'artax-ui'
-import useSWR from 'swr'
-import { useAccount } from 'wagmi'
-
-const fetcher = url => fetch(url).then(res => res.json())
+import { Hero, Page } from 'artax-ui'
+import Wordmark from '@/components/Wordmark'
+import Iggbg from '../../public/igg-bg.jpg'
 
 const Home: NextPage = () => {
-  const [{ data: accountData }] = useAccount()
-
-  const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}/getNFTs/`
-  const fetchURL = `${baseURL}?owner=${accountData?.address}`
-  const { data } = useSWR(fetchURL, fetcher)
-
   return (
-    <Page
-      title={`Ethereum Wallet Visualizer`}
-      description={`Ethereum Wallet Visualizer`}
-    >
-      <Grid>
-        {data?.ownedNfts?.map(ownedNft => {
-          return (
-            ownedNft.media &&
-            ownedNft.media.map((image, i) => {
-              return (
-                image.gateway && (
-                  <Card>
-                    <ArtaxImage src={image.gateway} layout="fill" key={i} />
-                  </Card>
-                )
-              )
-            })
-          )
-        })}
-      </Grid>
+    <Page title={`HASHTAG IRIGANGGANG 💎🌈`}>
+      <Hero
+        h1={<Wordmark />}
+        background={Iggbg}
+        css={{
+          height: `100vh`,
+        }}
+      />
     </Page>
   )
 }
