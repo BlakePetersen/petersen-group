@@ -5,7 +5,10 @@ import Iggbg from '../../public/igg-bg.jpg'
 
 const Home: NextPage = () => {
   return (
-    <Page title={`HASHTAG IRIGANGGANG 💎🌈`}>
+    <Page
+      title={`HASHTAG IRIGANGGANG 💎🌈`}
+      description={`wikka-wikka ruuurrrurriirrriiirrrriiiirrrrriiiiganggang`}
+    >
       <Hero
         h1={<Wordmark />}
         background={Iggbg}
