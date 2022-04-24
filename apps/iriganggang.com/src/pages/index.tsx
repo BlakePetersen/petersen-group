@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { Hero, Page } from 'artax-ui'
 import Wordmark from '@/components/Wordmark'
 import Iggbg from '../../public/igg-bg.jpg'
+import Footer from '@/components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
           height: `100vh`,
         }}
       />
+      <Footer />
     </Page>
   )
 }
