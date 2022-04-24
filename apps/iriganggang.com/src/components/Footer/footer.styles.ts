@@ -7,4 +7,5 @@ export const _Footer = styled('footer', {
   textAlign: 'center',
   padding: '2rem',
   fontSize: '0.8rem',
+  opacity: `.85`,
 })

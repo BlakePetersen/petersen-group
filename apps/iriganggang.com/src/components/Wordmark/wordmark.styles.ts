@@ -16,6 +16,7 @@ export const _H1 = styled(H1, {
 
 export const _Wordmark = styled('a', {
   color: `black`,
+  textDecoration: `none`,
   transition: `text-shadow 300ms ease-in-out`,
   textShadow: `0 8px 0 rgba(255,255,255,1), 
   -1px -1px 0 rgba(255,255,255,1),
