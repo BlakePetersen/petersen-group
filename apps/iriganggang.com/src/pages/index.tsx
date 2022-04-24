@@ -14,7 +14,8 @@ const Home: NextPage = () => {
         h1={<Wordmark />}
         background={Iggbg}
         css={{
-          height: `100%`,
+          height: `100vh`,
+          maxHeight: `100%`,
         }}
       />
       <Footer />
