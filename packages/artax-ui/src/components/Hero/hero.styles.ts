@@ -5,7 +5,9 @@ export const _Hero = styled('div', {
   flexDirection: `column`,
   alignItems: 'center',
   justifyContent: 'center',
+  backgroundPosition: 'center',
   width: `100vw`,
+  padding: `2rem`,
 })
 
 export const _Lead = styled('div', {
@@ -14,6 +16,7 @@ export const _Lead = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   gap: '1rem',
+  textAlign: `center`,
 })
 
 export const _Copy = styled('div', {
