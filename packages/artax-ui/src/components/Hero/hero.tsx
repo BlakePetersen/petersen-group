@@ -1,4 +1,4 @@
-import { _Copy, _H1, _H2, _Hero, _Lead } from './hero.styles'
+import { _Copy, _Hero, _Lead } from './hero.styles'
 import { HeroTypes } from './hero.types'
 
 export const Hero: HeroTypes = ({ css, h1, h2, background, children }) => {
@@ -11,8 +11,8 @@ export const Hero: HeroTypes = ({ css, h1, h2, background, children }) => {
     >
       {(h1 || h2) && (
         <_Lead>
-          {h1 && <_H1>{h1}</_H1>}
-          {h2 && <_H2>{h2}</_H2>}
+          {h1 && h1}
+          {h2 && h2}
         </_Lead>
       )}
       {children && <_Copy>{children}</_Copy>}

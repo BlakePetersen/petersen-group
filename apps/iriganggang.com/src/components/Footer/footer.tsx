@@ -1,7 +1,11 @@
 import useSWR from 'swr'
 import path from 'path'
-import * as Avatar from '@radix-ui/react-avatar'
-import { _Footer } from './footer.styles'
+import {
+  _Avatar,
+  _AvatarFallback,
+  _AvatarImage,
+  _Footer,
+} from './footer.styles'
 
 const fetcher = url => fetch(url).then(res => res.json())
 const baseUrl = 'https://blakepetersen.io'
@@ -18,29 +22,16 @@ export const Footer = () => {
 
   return (
     <_Footer style={{ color: `white`, lineHeight: `1.5` }}>
-      <div>
-        <Avatar.Root>
-          <Avatar.Image />
-          <Avatar.Fallback />
-        </Avatar.Root>
+      <_Avatar>
+        <_AvatarImage src={profile?.pfp} alt={profile?.handle} />
+        <_AvatarFallback delayMs={600}>{profile?.handle}</_AvatarFallback>
+      </_Avatar>
 
-        <div>
-          <div>&copy; {new Date().getFullYear()}</div>
-          <div>
-            🌈 by {` `}
-            <a href={`https://twitter.com/${screenName}`} target={`_blank`}>
-              {profile?.handle}
-            </a>
-          </div>
-          <div>
-            <a
-              href={`https://y.at/%F0%9F%92%BB%F0%9F%A4%93%F0%9F%91%8D`}
-              target={`_blank`}
-            >
-              💻🤓👍
-            </a>
-          </div>
-        </div>
+      <div>
+        by{` `}
+        <a href={`https://twitter.com/${screenName}`} target={`_blank`}>
+          <b>{profile?.handle}</b>
+        </a>
       </div>
     </_Footer>
   )

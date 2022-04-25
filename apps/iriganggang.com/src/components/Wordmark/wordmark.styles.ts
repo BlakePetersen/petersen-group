@@ -2,7 +2,7 @@ import { styled } from '@stitches/react'
 import { _H1 as H1 } from 'artax-ui'
 
 export const _H1 = styled(H1, {
-  fontSize: '8rem',
+  fontSize: '6rem',
   lineHeight: `1`,
   transition: `transform 300ms ease-in-out, text-shadow 300ms ease-in-out`,
   textShadow: `0 .5rem .5rem rgba(0,0,0,.45)`,
@@ -15,6 +15,7 @@ export const _H1 = styled(H1, {
 })
 
 export const _Wordmark = styled('a', {
+  overflow: `visible`,
   color: `black`,
   textDecoration: `none`,
   transition: `text-shadow 300ms ease-in-out`,
