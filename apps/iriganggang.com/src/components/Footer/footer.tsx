@@ -1,6 +1,8 @@
 import useSWR from 'swr'
 import path from 'path'
 import {
+  _Attribution,
+  _AttributionLink,
   _Avatar,
   _AvatarFallback,
   _AvatarImage,
@@ -27,12 +29,19 @@ export const Footer = () => {
         <_AvatarFallback delayMs={600}>{profile?.handle}</_AvatarFallback>
       </_Avatar>
 
-      <div>
-        by{` `}
-        <a href={`https://twitter.com/${screenName}`} target={`_blank`}>
-          <b>{profile?.handle}</b>
-        </a>
-      </div>
+      <_Attribution>
+        <div>
+          by{' '}
+          <_AttributionLink
+            href={`https://twitter.com/${screenName}`}
+            target={`_blank`}
+          >
+            <b>{profile?.handle}</b>
+          </_AttributionLink>
+        </div>
+
+        <div>&copy; {new Date().getFullYear()}</div>
+      </_Attribution>
     </_Footer>
   )
 }
