@@ -1,11 +1,11 @@
 import fetch from 'node-fetch'
 import { NextApiRequest, NextApiResponse } from 'next'
 // import { runMiddleware } from 'artax-ui'
-import Cors from 'cors'
-
-const cors = Cors({
-  methods: ['GET', 'HEAD'],
-})
+// import Cors from 'cors'
+//
+// const cors = Cors({
+//   methods: ['GET', 'HEAD'],
+// })
 
 const handler = async (request: NextApiRequest, response: NextApiResponse) => {
   // await runMiddleware(request, response, cors)
