@@ -1,6 +1,7 @@
 import { styled } from '@stitches/react'
+import { Section } from 'artax-ui'
 
-export const _Hero = styled('div', {
+export const _Hero = styled(Section, {
   display: 'flex',
   flexDirection: `column`,
   alignItems: 'center',
