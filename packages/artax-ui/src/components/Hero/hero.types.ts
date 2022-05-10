@@ -1,15 +1,7 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import type * as Stitches from '@stitches/react'
 import { StaticImageData } from 'next/image'
-
-type KitchenSinkType =
-  | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-  | string
-  | number
-  | Record<string, unknown>
-  | Iterable<React.ReactNode>
-  | React.ReactPortal
-  | boolean
+import { KitchenSinkType } from '../../utilities/Types'
 
 export type HeroTypes = FC<{
   css?: Stitches.CSS
