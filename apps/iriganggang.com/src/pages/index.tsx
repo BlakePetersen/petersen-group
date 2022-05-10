@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const Home: NextPage = () => {
   return (
     <Page
-      title={`HASHTAG IRIGANGGANG 💎🌈`}
+      title={Constants.APP_TITLE}
       description={`wikka-wikka ruuurrrurriirrriiirrrriiiirrrrriiiiganggang`}
     >
       <Hero
