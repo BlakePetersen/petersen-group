@@ -17,7 +17,12 @@ module.exports = {
   plugins: ['import', '@typescript-eslint'],
   settings: {
     next: {
-      rootDir: ['apps/ashleypetersenphoto.com/', 'apps/blakepetersen.io/'],
+      rootDir: [
+        'apps/ashleypetersenphoto.com/',
+        'apps/blakepetersen.io/',
+        'apps/iriganggang.com/',
+        'apps/0xbp.io/',
+      ],
     },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
