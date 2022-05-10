@@ -8,6 +8,7 @@ export const Page: PageTypes = ({ title, description, children }) => {
     <_Page>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={description} />
       </Head>
 
       {children}
