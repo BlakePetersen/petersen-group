@@ -1,7 +1,7 @@
 import { chain, defaultChains } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
-import { WalletLinkConnector } from 'wagmi/connectors/walletLink'
+import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { ConnectorsType, ConnectorType } from './connectors.types'
 
 const chains = defaultChains
@@ -21,7 +21,7 @@ export const Connectors = ({
         qrcode: true,
       },
     }),
-    new WalletLinkConnector({
+    new CoinbaseWalletConnector({
       options: {
         appName,
         jsonRpcUrl: `${rpcUrl}/${infuraId}`,
