@@ -5,4 +5,5 @@ export const _Page = styled('main', {
   flexDirection: 'column',
   alignItems: 'center',
   margin: 0,
+  minHeight: `100vh`,
 })
