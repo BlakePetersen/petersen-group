@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import { Hero, Page } from 'artax-ui'
 import Wordmark from '@/components/Wordmark'
-import Iggbg from '../../public/igg-bg.jpg'
-import Footer from '@/components/Footer'
+import Iggbg from '@/assets/igg-bg.jpg'
+import Constants from '@/config/constants'
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +18,6 @@ const Home: NextPage = () => {
           maxHeight: `100%`,
         }}
       />
-      <Footer />
     </Page>
   )
 }
