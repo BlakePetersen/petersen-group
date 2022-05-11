@@ -45,7 +45,7 @@ const _Arrow = styled(HoverCard.Arrow, {
 })
 
 const fetcher = url => fetch(url).then(res => res.json())
-const baseUrl = 'http://localhost:3003'
+const baseUrl = 'https://blakepetersen.io'
 const apiPath = 'api/twitter/profile'
 const screenName = 'blake_petersen'
 
@@ -63,7 +63,7 @@ export const Footer = () => {
         <>
           <_Attribution>
             {/* _TwitterAttribution */}
-            <HoverCard.Root delayDuration={250}>
+            <HoverCard.Root>
               <HoverCard.Trigger asChild>
                 <div>
                   <_Avatar>
