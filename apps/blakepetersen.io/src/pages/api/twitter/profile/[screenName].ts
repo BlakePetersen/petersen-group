@@ -37,7 +37,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
     tweet: {
       text: data.text,
       time: data.created_at,
-      url: data.entities.urls[0].url,
+      url: data.entities.urls[0]?.url,
     },
   })
 }
