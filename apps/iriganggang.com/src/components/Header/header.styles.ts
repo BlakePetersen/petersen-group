@@ -24,10 +24,9 @@ export const _Header = styled('header', {
     zIndex: -1,
     boxShadow:
       '0px 10px 50px -10px rgba(0, 0, 0, 1), ' +
-      '0px 10px 30px -15px rgba(0, 0, 0, 0.5), ' +
-      '0px 10px 10px -20px rgba(0, 0, 0, 0.25)',
-    mixBlendMode: `soft-light`,
+      '0px 7px 30px -15px rgba(0, 0, 0, 0.5), ' +
+      '0px 4px 10px -20px rgba(0, 0, 0, 1)',
     left: 0,
-    opacity: 0.15,
+    opacity: 0.25,
   },
 })

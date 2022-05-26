@@ -3,8 +3,11 @@ import { Hero, Page } from 'artax-ui'
 import Wordmark from '@/components/Wordmark'
 import Iggbg from '@/assets/igg-bg.jpg'
 import Constants from '@/config/constants'
+import { useAccount } from 'wagmi'
 
 const Home: NextPage = () => {
+  const { data } = useAccount()
+
   return (
     <Page
       title={Constants.APP_TITLE}
@@ -18,6 +21,7 @@ const Home: NextPage = () => {
           maxHeight: `100%`,
         }}
       />
+      {data && data.address}
     </Page>
   )
 }
