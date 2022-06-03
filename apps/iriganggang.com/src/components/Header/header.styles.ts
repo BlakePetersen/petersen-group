@@ -30,3 +30,9 @@ export const _Header = styled('header', {
     opacity: 0.25,
   },
 })
+
+export const _Nav = styled('div', {
+  display: 'flex',
+  gap: `1rem`,
+  alignItems: `center`,
+})

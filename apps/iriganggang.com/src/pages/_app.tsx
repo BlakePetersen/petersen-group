@@ -10,21 +10,29 @@ import Footer from '@/components/Footer'
 
 import Constants from '@/config/constants'
 
+import { UserProvider } from '@/contexts/User'
+// import { darkTheme } from 'stitches.config'
+
 // Wallet SSO Dependencies
 import '@rainbow-me/rainbowkit/styles.css'
 import {
-  apiProvider,
-  configureChains,
   getDefaultWallets,
   RainbowKitProvider,
+  darkTheme,
+  lightTheme,
 } from '@rainbow-me/rainbowkit'
-import { chain, createClient, WagmiProvider } from 'wagmi'
+import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
+
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { infuraProvider } from 'wagmi/providers/infura'
+import { publicProvider } from 'wagmi/providers/public'
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
   [
-    apiProvider.alchemy(process.env.NEXT_PUBLIC_ALCHEMY_ID),
-    apiProvider.fallback(),
+    alchemyProvider({ alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_ID }),
+    infuraProvider({ infuraId: process.env.NEXT_PUBLIC_INFURA_ID }),
+    publicProvider(),
   ],
 )
 const { connectors } = getDefaultWallets({
@@ -40,27 +48,34 @@ const wagmiClient = createClient({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WagmiProvider client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider
+        chains={chains}
+        appInfo={{
+          appName: Constants.APP_TITLE,
+        }}
+      >
         <ThemeProvider>
-          <Frame>
-            <Head>
-              <meta
-                name="viewport"
-                content="initial-scale=1.0, maximum-scale=1.0, width=device-width"
-              />
-              <title>{Constants.APP_TITLE}</title>
-            </Head>
+          <UserProvider>
+            <Frame>
+              <Head>
+                <meta
+                  name="viewport"
+                  content="initial-scale=1.0, maximum-scale=1.0, width=device-width"
+                />
+                <title>{Constants.APP_TITLE}</title>
+              </Head>
 
-            <Header />
+              <Header />
 
-            <Component {...pageProps} />
+              <Component {...pageProps} />
 
-            <Footer />
-          </Frame>
+              <Footer />
+            </Frame>
+          </UserProvider>
         </ThemeProvider>
       </RainbowKitProvider>
-    </WagmiProvider>
+    </WagmiConfig>
   )
 }
 
