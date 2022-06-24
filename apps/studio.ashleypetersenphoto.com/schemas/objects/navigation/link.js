@@ -22,7 +22,7 @@ export default {
       name: 'internalLink',
       description: 'Select pages for navigation',
       type: 'reference',
-      to: [{ type: 'post' }],
+      to: [{ type: 'page' }, { type: 'facet' }],
     },
     {
       name: 'externalUrl',

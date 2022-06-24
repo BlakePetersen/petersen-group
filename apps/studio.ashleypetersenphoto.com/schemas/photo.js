@@ -1,10 +1,10 @@
-import { PersonIcon } from '@radix-ui/react-icons'
+import { ImageIcon } from '@radix-ui/react-icons'
 
 export default {
-  name: 'author',
-  title: 'Author',
+  name: 'photo',
+  title: 'Photo',
   type: 'document',
-  icon: PersonIcon,
+  icon: ImageIcon,
   fields: [
     {
       name: 'name',
@@ -22,15 +22,40 @@ export default {
     },
     {
       name: 'image',
-      title: 'Headshot',
+      title: 'Image',
+      type: 'image',
+      required: true,
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'uneditedImage',
+      title: 'Unedited Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'bio',
-      title: 'Bio',
+      name: 'capturedAt',
+      title: 'Capture Date',
+      type: 'datetime',
+    },
+    {
+      name: 'facets',
+      title: 'Facets',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'facet' } }],
+    },
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'geopoint',
+    },
+    {
+      name: 'description',
+      title: 'Description',
       type: 'array',
       of: [
         {
@@ -40,31 +65,6 @@ export default {
           lists: [],
         },
       ],
-    },
-    {
-      name: 'wallet',
-      title: 'Wallet',
-      type: 'string',
-    },
-    {
-      name: 'instagram',
-      title: 'Instagram',
-      type: 'string',
-    },
-    {
-      name: 'twitter',
-      title: 'Twitter',
-      type: 'string',
-    },
-    {
-      name: 'opensea',
-      title: 'Opensea',
-      type: 'string',
-    },
-    {
-      name: 'ens',
-      title: 'ENS',
-      type: 'string',
     },
   ],
   preview: {

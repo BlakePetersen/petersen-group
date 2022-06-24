@@ -1,7 +1,10 @@
+import { FileTextIcon } from '@radix-ui/react-icons'
+
 export default {
   name: 'post',
-  title: 'Post',
+  title: 'Blog Post',
   type: 'document',
+  icon: FileTextIcon,
   fields: [
     {
       name: 'title',

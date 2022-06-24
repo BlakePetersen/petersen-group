@@ -1,6 +1,5 @@
 import React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
-import { getCssText } from 'config/stitches.config'
 
 export default class SiteDocument extends Document {
   render() {
@@ -10,10 +9,6 @@ export default class SiteDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Lora&family=Public+Sans&display=swap"
             rel="stylesheet"
-          />
-          <style
-            id="stitches"
-            dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
         </Head>
         <body>

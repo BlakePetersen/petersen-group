@@ -12,7 +12,7 @@
     "@radix-ui/react-avatar": "^0.1.4",
     "@radix-ui/react-hover-card": "^0.1.5",
     "@radix-ui/react-tooltip": "^0.1.7",
-    "@rainbow-me/rainbowkit": "^0.2.0",
+    "@rainbow-me/rainbowkit": "^0.3.4",
     "@stitches/react": "1.2.8",
     "ethers": "^5.6.5",
     "framer-motion": "^6.3.1",

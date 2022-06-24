@@ -1,9 +1,5 @@
-//File name: navigation.js
-//File location: schemas/documents
-
 import { GlobeIcon } from '@radix-ui/react-icons'
 
-// navigation.js
 export default {
   name: 'navigation',
   type: 'document',

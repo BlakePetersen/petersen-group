@@ -12,7 +12,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
-    domains: ['mint.sacredskullsnft.io'],
+    domains: ['mint.sacredskullsnft.io', 'cdn.sanity.io'],
   },
 }
 

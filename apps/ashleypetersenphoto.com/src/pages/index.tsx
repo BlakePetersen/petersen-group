@@ -1,4 +1,8 @@
 import React from 'react'
+import useSWR from '@zeit/swr'
+import groq from 'groq'
+import { SanityClient } from 'artax-ui'
+
 import type { NextPage } from 'next'
 import Image from 'next/image'
 
@@ -6,29 +10,23 @@ import Carousel from '@/components/Carousel'
 import { Page } from 'artax-ui'
 
 const Index: NextPage = () => {
+  const { data: featuredImages } = useSWR(
+    groq`*[_type=="photo" && count((facets[]->slug.current)[@ in ["featured"]]) == 1]{"featuredImageUrl": image.asset->url}`,
+    query => SanityClient.fetch(query),
+  )
+
   return (
     <Page
       title={`Conceptual Portraiture, Underwater Photography`}
       description={`Ashley Petersen Photography`}
     >
       <Carousel>
-        <Image
-          src={`/images/homepage/_DSC0958.jpg`}
-          layout={'fill'}
-          objectFit={`cover`}
-        />
-
-        <Image
-          src={`/images/homepage/_DSC8983.jpg`}
-          layout={'fill'}
-          objectFit={`cover`}
-        />
-
-        <Image
-          src={`/images/homepage/DSC_1264.jpg`}
-          layout={'fill'}
-          objectFit={`cover`}
-        />
+        {featuredImages &&
+          featuredImages.map((image, i) => {
+            return (
+              <Image src={image.featuredImageUrl} layout={'fill'} key={i} />
+            )
+          })}
       </Carousel>
     </Page>
   )

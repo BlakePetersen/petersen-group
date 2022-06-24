@@ -1,5 +1,5 @@
 import { Copyright } from 'artax-ui'
-import { _Footer } from './styles'
+import { _Footer } from './footer.styles'
 import C from '@/config/constants'
 
 export const Footer = () => {

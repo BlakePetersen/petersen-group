@@ -1,29 +1,55 @@
 import type { AppProps } from 'next/app'
-
-import { providers } from 'ethers'
-import { Provider } from 'wagmi'
 import { ThemeProvider } from 'next-themes'
-
 import Frame from '@/components/Frame'
-import { Connectors } from 'artax-ui'
 import '@/styles/global-styles.scss'
-
-const provider = ({ chainId }) => {
-  return new providers.AlchemyProvider(
-    chainId,
-    process.env.NEXT_PUBLIC_ALCHEMY_ID,
-  )
-}
+import { darkTheme } from '../../stitches.config'
+import Header from '@/components/Header'
+import useSWR from '@zeit/swr'
+import groq from 'groq'
+import { SanityClient } from 'artax-ui'
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const { data: menuData } = useSWR(
+    groq`*[_type == "navigation"][0]{...,
+    sections[] { ... ,
+      _type == "navigation.link" => {
+      ...,
+      internalLink {
+        ...,
+        "slug": @->slug
+      },
+      links[] {
+        ...,
+        internalLink {
+          ...,
+          "slug": @->slug
+        },
+        links[] {
+          ...,
+          internalLink {
+            ...,
+            "slug": @->slug
+          },
+        }
+      }
+     }}}`,
+    query => SanityClient.fetch(query),
+  )
+
   return (
-    <Provider autoConnect connectors={Connectors} provider={provider}>
-      <ThemeProvider>
-        <Frame>
-          <Component {...pageProps} />
-        </Frame>
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      value={{
+        light: 'light',
+        dark: darkTheme.className,
+      }}
+    >
+      <Header menuData={menuData} />
+      <Frame>
+        <Component {...pageProps} />
+      </Frame>
+    </ThemeProvider>
   )
 }
 
