@@ -8,4 +8,5 @@ export const _Frame = styled('div', {
   backgroundColor: '$gray1',
   gap: `3rem`,
   width: `100vw`,
+  boxSizing: `content-box`,
 })

@@ -136,5 +136,4 @@ const GlobalStyles = globalCss({
   },
 })
 
-//we can declare the styles here or in pages/_app.tsx
 GlobalStyles()

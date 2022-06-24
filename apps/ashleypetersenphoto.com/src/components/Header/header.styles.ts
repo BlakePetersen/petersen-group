@@ -19,4 +19,10 @@ export const _Header = styled('header', {
   },
 })
 
-export const _LogoContainer = styled('div', {})
+export const _LogoContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+})

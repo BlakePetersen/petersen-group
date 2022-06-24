@@ -1,12 +1,14 @@
 import Logo from '@/components/Logo'
 import Menu from '@/components/Menu'
-import { _Header } from './header.styles'
+import { _Header, _LogoContainer } from './header.styles'
 
 export const Header = ({ menuData }) => {
   return (
     <_Header>
       <Menu data={menuData} />
-      <Logo />
+      <_LogoContainer>
+        <Logo />
+      </_LogoContainer>
     </_Header>
   )
 }
