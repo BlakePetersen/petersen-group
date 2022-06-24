@@ -73,7 +73,9 @@ export const Footer = () => {
                     </_AvatarFallback>
                   </_Avatar>
 
-                  <_Handle>{profile.handle}</_Handle>
+                  <_Handle>
+                    &copy; {new Date().getFullYear()} ~ {profile.handle}
+                  </_Handle>
                 </div>
               </HoverCard.Trigger>
 

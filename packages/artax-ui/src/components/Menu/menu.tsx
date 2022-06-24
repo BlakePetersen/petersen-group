@@ -1,10 +1,10 @@
 import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 
-import { _Content, _TriggerIcon } from './menu.styles'
+import { _Content, _Root, _TriggerIcon } from './menu.styles'
 import { MenuTypes } from './menu.types'
 
-export const Menu: MenuTypes = ({ children }) => {
+export const Menu: MenuTypes = ({ css, children }) => {
   return (
     <Root>
       <Trigger asChild>
@@ -13,7 +13,7 @@ export const Menu: MenuTypes = ({ children }) => {
         </_TriggerIcon>
       </Trigger>
 
-      <_Content>{children}</_Content>
+      <_Content css={{ ...css }}>{children}</_Content>
     </Root>
   )
 }

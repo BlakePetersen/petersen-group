@@ -27,7 +27,7 @@ export const Wordmark: WordmarkType = () => {
             },
           }}
         >
-          #IRI
+          IRI
           <wbr />
           GANG
           <wbr />

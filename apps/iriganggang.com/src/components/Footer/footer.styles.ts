@@ -62,6 +62,7 @@ export const _Handle = styled('div', {
   color: blackA.blackA12,
   backgroundColor: whiteA.whiteA12,
   borderRadius: `999999px`,
+  padding: `.25rem .5rem`,
 })
 
 export const _Copyright = styled('div', {})

@@ -5,6 +5,7 @@ import {
   Content,
   Item,
   Label,
+  Root,
   Separator,
   TriggerItem,
 } from '@radix-ui/react-dropdown-menu'
@@ -19,6 +20,8 @@ export const _Arrow = styled(Arrow, {
   fill: 'white',
   transform: 'translateX(-.95rem)',
 })
+
+export const _Root = styled(Root, {})
 
 export const _Content = styled(Content, {
   minWidth: 200,

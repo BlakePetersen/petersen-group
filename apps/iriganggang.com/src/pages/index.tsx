@@ -59,13 +59,13 @@ const Home: NextPage = () => {
       description={`wikka-wikka ruuurrrurriirrriiirrrriiiirrrrriiiiganggang`}
     >
       <Hero
-        h1={<Wordmark />}
+        h1={!userState.loggedIn ? 'Please Sign In' : null}
         background={userState.isIriGangGang ? Iggbg : null}
         css={{
           height: `100vh`,
           maxHeight: `100%`,
         }}
-      ></Hero>
+      />
     </Page>
   )
 }
