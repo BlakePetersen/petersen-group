@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
-import Frame from '@/components/Frame'
 import '@/styles/global-styles.scss'
 import { darkTheme } from '../../stitches.config'
 import Header from '@/components/Header'
@@ -46,9 +45,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       }}
     >
       <Header menuData={menuData} />
-      <Frame>
-        <Component {...pageProps} />
-      </Frame>
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }

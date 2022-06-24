@@ -6,8 +6,9 @@ import { SanityClient } from 'artax-ui'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 
-import Carousel from '@/components/Carousel'
 import { Page } from 'artax-ui'
+import Frame from '@/components/Frame'
+import Gallery from '@/components/Gallery'
 
 const Index: NextPage = () => {
   const { data: featuredImages } = useSWR(
@@ -20,14 +21,16 @@ const Index: NextPage = () => {
       title={`Conceptual Portraiture, Underwater Photography`}
       description={`Ashley Petersen Photography`}
     >
-      <Carousel>
-        {featuredImages &&
-          featuredImages.map((image, i) => {
-            return (
-              <Image src={image.featuredImageUrl} layout={'fill'} key={i} />
-            )
-          })}
-      </Carousel>
+      <Frame>
+        <Gallery>
+          {featuredImages &&
+            featuredImages.map((image, i) => {
+              return (
+                <Image src={image.featuredImageUrl} layout={'fill'} key={i} />
+              )
+            })}
+        </Gallery>
+      </Frame>
     </Page>
   )
 }
