@@ -1,4 +1,4 @@
-import { _Gallery, _GalleryItem } from './gallery.styles'
+import { _Gallery } from './gallery.styles'
 import { GalleryTypes } from './gallery.types'
 
 import {
@@ -14,7 +14,7 @@ const Gallery: GalleryTypes = ({ children }): ReactElement => {
       {Children.map(
         children,
         (child: ReactElement<JSXElementConstructor<any>>) => {
-          return cloneElement(<_GalleryItem>{child}</_GalleryItem>)
+          return cloneElement(child)
         },
       )}
     </_Gallery>

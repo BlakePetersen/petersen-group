@@ -4,9 +4,10 @@ import groq from 'groq'
 import { SanityClient } from 'artax-ui'
 
 import type { NextPage } from 'next'
-import Image from 'next/image'
 
 import { Page } from 'artax-ui'
+import Card from '@/components/Card'
+import CardImage from '@/components/CardImage'
 import Frame from '@/components/Frame'
 import Gallery from '@/components/Gallery'
 
@@ -26,7 +27,9 @@ const Index: NextPage = () => {
           {featuredImages &&
             featuredImages.map((image, i) => {
               return (
-                <Image src={image.featuredImageUrl} layout={'fill'} key={i} />
+                <Card key={i}>
+                  <CardImage src={image.featuredImageUrl} />
+                </Card>
               )
             })}
         </Gallery>
