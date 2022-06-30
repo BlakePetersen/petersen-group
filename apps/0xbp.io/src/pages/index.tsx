@@ -6,10 +6,10 @@ import { useAccount } from 'wagmi'
 const fetcher = url => fetch(url).then(res => res.json())
 
 const Home: NextPage = () => {
-  const [{ data: accountData }] = useAccount()
+  const { data: accountData } = useAccount()
 
   const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${process.env.NEXT_PUBLIC_ALCHEMY_ID}/getNFTs/`
-  const fetchURL = `${baseURL}?owner=${accountData?.address}`
+  const fetchURL = `${baseURL}?owner=${accountData?.address}&filters[]=SPAM`
   const { data } = useSWR(fetchURL, fetcher)
 
   return (

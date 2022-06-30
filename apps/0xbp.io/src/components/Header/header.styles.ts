@@ -1,7 +1,9 @@
 import { styled } from '@stitches/react'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 export const _Header = styled('header', {
-  display: 'flex',
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr 1fr',
   alignItems: 'center',
   justifyContent: 'space-between',
   borderBottom: '1px solid rgba(255,255,255,.01)',
@@ -20,8 +22,9 @@ export const _Header = styled('header', {
 export const _Logo = styled('div', {
   display: 'flex',
   flexDirection: `column`,
-  alignItems: 'flex-start',
+  alignItems: 'center',
   justifyContent: 'center',
+  textAlign: 'center',
 })
 
 export const _H1 = styled('h1', {
@@ -32,4 +35,8 @@ export const _H1 = styled('h1', {
 export const _H2 = styled('h2', {
   fontSize: '1rem',
   margin: `0`,
+})
+
+export const _ConnectButtonWrapper = styled('div', {
+  justifySelf: 'flex-end',
 })
