@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { Hero, Page } from 'artax-ui'
-import Wordmark from '@/components/Wordmark'
 import Iggbg from '@/assets/igg-bg.jpg'
 import Constants from '@/config/constants'
 import { useAccount } from 'wagmi'
@@ -13,22 +12,20 @@ import { UserContext } from '@/contexts/User'
 const fetcher = query => request(Constants.SUBGRAPH_URI, query)
 
 const Home: NextPage = () => {
-  const { data: accountData } = useAccount()
+  const { address } = useAccount()
   const [userState, userDispatch] = React.useContext(UserContext)
   let isIriGangGang
 
   useEffect(() => {
-    accountData && accountData.address
-      ? userDispatch({ type: 'login', data: accountData.address })
+    address
+      ? userDispatch({ type: 'login', data: address })
       : userDispatch({ type: 'logout' })
-  }, [accountData])
-
-  const userId = userState && userState.id && userState.id.toLowerCase()
+  }, [address])
 
   const { data: userData } = useSWR(
-    userId
+    address
       ? `{
-      user(id: "${userId}") {
+      user(id: "${address}") {
           tokens {
             id
             base
