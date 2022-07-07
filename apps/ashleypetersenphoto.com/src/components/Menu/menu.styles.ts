@@ -80,6 +80,7 @@ const itemStyles = {
   borderRadius: 3,
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'space-between',
   padding: '.5rem',
   position: 'relative',
   userSelect: 'none',

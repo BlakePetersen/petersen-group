@@ -14,7 +14,6 @@ const fetcher = query => request(Constants.SUBGRAPH_URI, query)
 const Home: NextPage = () => {
   const { address } = useAccount()
   const [userState, userDispatch] = React.useContext(UserContext)
-  let isIriGangGang
 
   useEffect(() => {
     address
@@ -46,8 +45,6 @@ const Home: NextPage = () => {
             type: 'unsetIriGangGang',
           })
     })
-
-    console.log(userState)
   }, [userData])
 
   return (

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Root, Trigger } from '@radix-ui/react-dropdown-menu'
-import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import { HamburgerMenuIcon, CaretRightIcon } from '@radix-ui/react-icons'
 
 import { ConditionalWrap, SanityClient, ThemeSelector } from 'artax-ui'
 import Link from 'next/link'
@@ -16,6 +16,7 @@ import {
   _TriggerIcon,
   _TriggerItem,
 } from '@/components/Menu/menu.styles'
+import { useRouter } from 'next/router'
 
 export const Menu = ({ data }) => {
   return (
@@ -30,7 +31,7 @@ export const Menu = ({ data }) => {
         {data?.sections &&
           data?.sections.map((section, i) => {
             const _navSectionSlug =
-              section?.internalLink?.slug?.current || section?.externalUrl
+              `/${section?.internalLink?.slug?.current}` || section?.externalUrl
             return (
               _navSectionSlug && (
                 <ConditionalWrap
@@ -41,7 +42,9 @@ export const Menu = ({ data }) => {
                   <Link href={_navSectionSlug}>
                     <a>
                       {section.links ? (
-                        <_TriggerItem>{section.title}</_TriggerItem>
+                        <_TriggerItem>
+                          {section.title} <CaretRightIcon />
+                        </_TriggerItem>
                       ) : (
                         <_Item>{section.title}</_Item>
                       )}
@@ -77,7 +80,6 @@ export const Menu = ({ data }) => {
           })}
 
         <_Separator />
-        <_Label>Theme Selection</_Label>
         <ThemeSelector useTheme={useTheme} />
       </_Content>
     </Root>
