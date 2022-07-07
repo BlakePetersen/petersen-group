@@ -8,6 +8,7 @@ export const _Footer = styled('footer', {
   display: `flex`,
   justifyContent: `center`,
   alignItems: `center`,
+  padding: `2rem`,
   a: {
     color: '$accentTextContrast',
   },

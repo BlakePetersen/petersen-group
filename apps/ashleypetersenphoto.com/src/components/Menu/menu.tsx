@@ -30,8 +30,13 @@ export const Menu = ({ data }) => {
       <_Content>
         {data?.sections &&
           data?.sections.map((section, i) => {
-            const _navSectionSlug =
-              `/${section?.internalLink?.slug?.current}` || section?.externalUrl
+            const _internalLinkSlug =
+              section?.internalLink?.slug === null
+                ? `/`
+                : section?.internalLink?.slug?.current
+            const _navSectionSlug = _internalLinkSlug
+              ? `/${_internalLinkSlug}`
+              : section?.externalUrl
             return (
               _navSectionSlug && (
                 <ConditionalWrap

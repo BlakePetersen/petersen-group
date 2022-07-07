@@ -7,6 +7,7 @@ import { Page, SanityClient } from 'artax-ui'
 import Frame from '@/components/Frame'
 import Gallery from '@/components/Gallery'
 import Card from '@/components/Card'
+import CardOverlay from '@/components/CardOverlay'
 import CardImage from '@/components/CardImage'
 import { useRouter } from 'next/router'
 
@@ -33,14 +34,14 @@ const PortfolioIndexPage: NextPage = () => {
     >
       <Frame>
         <h1>Portfolio {path && ` - ${path.toString()}`}</h1>
-        {featuredImages && <h2>Displaying {featuredImages.length} images</h2>}
+        {featuredImages && <h3>Displaying {featuredImages.length} images</h3>}
 
         <Gallery>
           {featuredImages ? (
             featuredImages.map((image, i) => (
               <Card key={i}>
                 <CardImage src={image.imageSrc} />
-                {image.imageName}
+                <CardOverlay name={image.imageName} />
               </Card>
             ))
           ) : (
