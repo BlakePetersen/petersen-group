@@ -7,7 +7,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --parallel",
+    "build:0xbp": "turbo run build --scope=0xbp.io",
+    "build:app": "turbo run build --scope=ashleypetersenphoto.com",
+    "build:bpio": "turbo run build --scope=blakepetersen.io",
+    "build:igg": "turbo run build --scope=iriganggang.com",
+    "build:studio:0xbp": "turbo run build --scope=studio.0xbp.io",
+    "build:studio:app": "turbo run build --scope=studio.ashleypetersenphoto.com",
+    "build:studio:bpio": "turbo run build --scope=studio.blakepetersen.io",
+    "build:studio:igg": "turbo run build --scope=studio.iriganggang.com",
     "clean": "turbo run clean",
     "dev": "turbo run dev --parallel",
     "dev:0xbp": "turbo run dev --scope=0xbp.io",
@@ -22,10 +30,10 @@
     "start:app": "turbo run start --scope=ashleypetersenphoto.com",
     "start:bpio": "turbo run start --scope=blakepetersen.io",
     "start:igg": "turbo run start --scope=iriganggang.com",
-    "studio:0xbp": "turbo run sanity start --scope=studio.0xbp.io",
-    "studio:app": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
-    "studio:bpio": "turbo run sanity start --scope=studio.blakepetersen.io",
-    "studio:igg": "turbo run sanity start --scope=studio.iriganggang.com",
+    "start:studio:0xbp": "turbo run sanity start --scope=studio.0xbp.io",
+    "start:studio:app": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
+    "start:studio:bpio": "turbo run sanity start --scope=studio.blakepetersen.io",
+    "start:studio:igg": "turbo run sanity start --scope=studio.iriganggang.com",
     "prepare": "husky install"
   },
   "devDependencies": {
