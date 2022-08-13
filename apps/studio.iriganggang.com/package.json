@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Blake Petersen <blakepetersen@gmail.com>",
+  "author": "Blake Petersen <blake@blakepetersen.io>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
