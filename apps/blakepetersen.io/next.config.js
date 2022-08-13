@@ -3,10 +3,9 @@
  */
 
 const nextConfig = {
-  env: {
-    CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
-    CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
-    CONTENTFUL_MANAGEMENT_TOKEN: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true,
   },
   async headers() {
     return [
