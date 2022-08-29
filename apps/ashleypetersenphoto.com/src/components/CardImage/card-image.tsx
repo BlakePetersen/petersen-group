@@ -7,7 +7,7 @@ import React, { ReactElement } from 'react'
 const CardImage: CardImageTypes = ({ src }): ReactElement => {
   return (
     <_CardImage>
-      <Image src={src} layout={'fill'} />
+      <Image src={src} layout={'fill'} alt={``} />
     </_CardImage>
   )
 }

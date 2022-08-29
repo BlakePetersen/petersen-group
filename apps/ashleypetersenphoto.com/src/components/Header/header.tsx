@@ -1,11 +1,20 @@
+import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import Logo from '@/components/Logo'
-import Menu from '@/components/Menu'
 import { _Header, _LogoContainer } from './header.styles'
 
-export const Header = ({ menuData }) => {
+const DynamicMenu = dynamic(() => import('@/components/Menu'), {
+  suspense: true,
+  ssr: false,
+})
+
+export const Header = () => {
   return (
     <_Header>
-      <Menu data={menuData} />
+      <Suspense fallback={null}>
+        <DynamicMenu />
+      </Suspense>
+
       <_LogoContainer>
         <Logo />
       </_LogoContainer>

@@ -7,6 +7,7 @@ export const _Flex = styled('div', {
   justifyContent: 'space-around',
   alignItems: 'center',
   padding: '.5rem;',
+  gap: `.5rem`,
 })
 
 export const _Switch = styled(Root, {

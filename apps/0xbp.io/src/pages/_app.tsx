@@ -10,7 +10,7 @@ import Frame from '@/components/Frame'
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
-  [alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), publicProvider()],
+  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()],
 )
 
 const { connectors } = getDefaultWallets({

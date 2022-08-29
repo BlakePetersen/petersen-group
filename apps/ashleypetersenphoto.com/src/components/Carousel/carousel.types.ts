@@ -1,5 +1,5 @@
 import { FC } from 'react'
 
-export type GalleryTypes = FC<{
+export type CarouselTypes = FC<{
   children: React.ReactNode
 }>

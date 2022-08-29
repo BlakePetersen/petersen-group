@@ -4,7 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={`en`}>
-        <Head />
+        <Head title={``} />
         <body>
           <Main />
           <NextScript />

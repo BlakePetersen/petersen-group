@@ -7,7 +7,7 @@ import {
   Label,
   Root,
   Separator,
-  TriggerItem,
+  Trigger,
 } from '@radix-ui/react-dropdown-menu'
 import {
   slideDownAndFade,
@@ -105,7 +105,7 @@ export const _Label = styled(Label, {
   paddingLeft: '.5rem',
 })
 
-export const _TriggerItem = styled(TriggerItem, {
+export const _TriggerItem = styled(Trigger, {
   '&[data-state="open"]': {
     backgroundColor: violet.violet4,
     color: violet.violet11,

@@ -1,12 +1,11 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import type * as Stitches from '@stitches/react'
 import { StaticImageData } from 'next/image'
-import { KitchenSinkType } from '../../utilities/Types'
 
 export type HeroTypes = FC<{
   css?: Stitches.CSS
-  h1: KitchenSinkType
-  h2?: KitchenSinkType
+  h1: ReactNode
+  h2?: ReactNode
   background?: HTMLImageElement | StaticImageData
-  children?: KitchenSinkType
+  children?: ReactNode
 }>

@@ -1,3 +1,5 @@
 import { FC } from 'react'
 
-export type CardTypes = FC<{}>
+export type CardTypes = FC<{
+  children: React.ReactNode
+}>

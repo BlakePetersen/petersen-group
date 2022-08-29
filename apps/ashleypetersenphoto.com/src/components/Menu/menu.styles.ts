@@ -1,10 +1,11 @@
 import { styled } from '@stitches/react'
 import {
   Content,
+  DropdownMenuPortal,
   Item,
   Label,
   Separator,
-  TriggerItem,
+  SubTrigger,
 } from '@radix-ui/react-dropdown-menu'
 
 import {
@@ -15,15 +16,16 @@ import {
 } from 'artax-ui'
 
 export const _Content = styled(Content, {
-  minWidth: 200,
   fontFamily: '"Public Sans", sans-serif;',
+  display: `flex`,
+  flexDirection: `column`,
   fontSize: '.85rem',
-  backdropFilter: 'blur(.5rem)',
   position: 'relative',
   border: '1px solid $accentBorder',
-  backgroundColor: '$accentBgA',
+  backgroundColor: '$accentBg',
   borderRadius: '.25rem',
-  padding: '.5rem',
+  padding: '1rem',
+  gap: `1rem`,
   boxShadow: '0px 10px 38px -10px $blackA7, 0px 10px 20px -15px $blackA7',
   '@media (prefers-reduced-motion: no-preference)': {
     animationDuration: '400ms',
@@ -43,7 +45,6 @@ export const _Content = styled(Content, {
 export const _Separator = styled(Separator, {
   height: 1,
   backgroundColor: `$accentBorder`,
-  margin: `.5rem`,
 })
 
 export const _TriggerIcon = styled('button', {
@@ -56,15 +57,17 @@ export const _TriggerIcon = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   color: '$accentTextContrast',
-  backdropFilter: 'blur(.5rem)',
+  backgroundColor: '$accentBg',
   border: '1px solid $accentBorder',
   transition: `box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 400ms cubic-bezier(0.16, 1, 0.3, 1)`,
   cursor: 'pointer',
+
   '&:hover': {
     boxShadow: `0 1px 5px $blackA5, 0 3px 15px $blackA5`,
     borderColor: '$accentBorderHover',
     transform: 'translateY(-1px)',
   },
+
   '&:focus, &:active': {
     boxShadow: `0 1px 4px $blackA7, 0 2px 10px $blackA7`,
     borderColor: '$accentSolid',
@@ -81,7 +84,6 @@ const itemStyles = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '.5rem',
   position: 'relative',
   userSelect: 'none',
 
@@ -102,10 +104,9 @@ export const _Item = styled(Item, {
 
 export const _Label = styled(Label, {
   fontSize: 10,
-  paddingLeft: '.5rem',
 })
 
-export const _TriggerItem = styled(TriggerItem, {
+export const _TriggerItem = styled(SubTrigger, {
   '&[data-state="open"]': {
     backgroundColor: '$accentBgA',
     color: '$accentTextContrast',

@@ -4,6 +4,7 @@ import path from 'path'
 import { keyframes, styled } from '@stitches/react'
 import { blackA, whiteA } from '@radix-ui/colors'
 import * as HoverCard from '@radix-ui/react-hover-card'
+import { fetcher } from 'artax-ui'
 
 import {
   _Attribution,
@@ -44,7 +45,6 @@ const _Arrow = styled(HoverCard.Arrow, {
   fill: whiteA.whiteA12,
 })
 
-const fetcher = url => fetch(url).then(res => res.json())
 const baseUrl = 'https://blakepetersen.io'
 const apiPath = 'api/twitter/profile'
 const screenName = 'blake_petersen'

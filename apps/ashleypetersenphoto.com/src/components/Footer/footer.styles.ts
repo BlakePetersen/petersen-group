@@ -6,9 +6,11 @@ export const _Footer = styled('footer', {
   fontSize: '0.8rem',
   backdropFilter: 'blur(.5rem)',
   display: `flex`,
+  flexDirection: `column`,
+  gap: `3rem`,
   justifyContent: `center`,
   alignItems: `center`,
-  padding: `2rem`,
+  margin: `2rem 0`,
   a: {
     color: '$accentTextContrast',
   },

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 
 import Colors from '@/styles/colors'
-import ArtaxLink from '@/components/primitives/link'
+import { Attribution } from 'artax-ui'
 
 const _Footer = styled.footer`
   display: flex;
@@ -48,10 +48,7 @@ const _Footer = styled.footer`
 
 const Footer = () => (
   <_Footer>
-    <p>
-      <ArtaxLink href="/">BlakePetersen.io</ArtaxLink> •{' '}
-      {new Date().getFullYear()}
-    </p>
+    <Attribution />
 
     <p>
       <em>

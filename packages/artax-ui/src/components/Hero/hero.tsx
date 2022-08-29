@@ -12,8 +12,10 @@ export const Hero: HeroTypes = ({ css, h1, h2, background, children }) => {
     >
       {(h1 || h2) && (
         <_Lead>
-          {h1 && h1}
-          {h2 && h2}
+          <>
+            {h1 && h1}
+            {h2 && h2}
+          </>
         </_Lead>
       )}
       {children && <_Copy>{children}</_Copy>}

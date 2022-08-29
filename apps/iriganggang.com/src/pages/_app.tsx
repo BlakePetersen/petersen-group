@@ -30,8 +30,8 @@ import { publicProvider } from 'wagmi/providers/public'
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
   [
-    alchemyProvider({ alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_ID }),
-    infuraProvider({ infuraId: process.env.NEXT_PUBLIC_INFURA_ID }),
+    alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID }),
+    infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_ID }),
     publicProvider(),
   ],
 )
