@@ -8,7 +8,7 @@ const {withAxiom} = require('next-axiom');
 const nextConfig = {
     compiler: {
         // Enables the styled-components SWC transform
-        styledComponents: true,
+        styledComponents: true
     },
     async headers() {
         return [
