@@ -17,12 +17,12 @@ const Head = () => (
         <meta name="theme-color" content={Colors.onyx}/>
 
         {/* Favicons */}
-        <link rel="shortcut icon" href="/assets/favicon.ico" sizes="any" type="image/x-icon"/>
-        <link rel="icon" href="/assets/icon.svg" type="image/svg+xml"/>
-        <link rel="apple-touch-icon" href="/assets/icon-196.png"/>
+        <link rel="shortcut icon" href="/assets/icons/favicon.ico" sizes="any" type="image/x-icon"/>
+        <link rel="icon" href="/assets/icons/icon.svg" type="image/svg+xml"/>
+        <link rel="apple-touch-icon" href="/assets/icons/icon-196.png"/>
 
         {/* PWA */}
-        <link rel="manifest" href="/manifest/manifest.webmanifest"/>
+        <link rel="manifest" href="/manifest/bpio.webmanifest"/>
     </_Head>
 )
 
