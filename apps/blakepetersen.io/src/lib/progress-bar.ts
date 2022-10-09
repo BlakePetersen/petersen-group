@@ -2,7 +2,7 @@ import Debounce from 'lodash/debounce'
 
 let _canvas, _canvasHeight, _canvasWidth, _ctx, _scrollDepth, _target
 
-const init = (target) => {
+const init = target => {
   _target = target
   _createCanvas()
   _drawCanvas()
@@ -18,7 +18,7 @@ const _attachEventListeners = () => {
         _createCanvas()
         _drawCanvas()
       }
-    }, 250)
+    }, 250),
   )
 }
 
@@ -40,13 +40,13 @@ const _createCanvas = () => {
   _target.appendChild(_canvas)
 }
 
-const _destroyCanvas = function (canvas) {
+function _destroyCanvas(canvas) {
   if (canvas) {
     canvas.parentNode.removeChild(canvas)
   }
 }
 
-const _drawCanvas = function () {
+function _drawCanvas() {
   window.requestAnimationFrame(_drawCanvas)
 
   // Reassess scroll position relative to when target is at top of viewport
@@ -64,7 +64,7 @@ const _drawCanvas = function () {
     0,
     _canvasWidth *
       (_scrollDepth / (document.body.scrollHeight - window.innerHeight)),
-    _canvasHeight
+    _canvasHeight,
   )
   _ctx.fill()
   _ctx.restore()

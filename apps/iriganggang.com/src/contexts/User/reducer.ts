@@ -14,7 +14,7 @@ export const reducer = (state: userState, action: userAction) => {
     case 'login':
       return {
         ...state,
-        id: action.data ? (action.data as String) : null,
+        id: action.data ? (action.data as string) : null,
         loggedIn: true,
       }
 

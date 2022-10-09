@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     userData?.user?.tokens?.map(token => {
-      token.base === 'Iridescent'
+      return token.base === 'Iridescent'
         ? userDispatch({
             type: 'setIriGangGang',
           })

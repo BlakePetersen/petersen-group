@@ -1,3 +1,3 @@
 import { FC } from 'react'
 
-export type WordmarkType = FC<{}>
+export type WordmarkType = FC

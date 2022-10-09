@@ -60,43 +60,41 @@ export const Footer = () => {
   return (
     <_Footer style={{ color: `white`, lineHeight: `1.5` }}>
       {profile && (
-        <>
-          <_Attribution>
-            {/* _TwitterAttribution */}
-            <HoverCard.Root>
-              <HoverCard.Trigger asChild>
-                <div>
-                  <_Avatar>
-                    <_AvatarImage src={profile.pfp} alt={profile.handle} />
-                    <_AvatarFallback delayMs={600}>
-                      {profile.handle}
-                    </_AvatarFallback>
-                  </_Avatar>
+        <_Attribution>
+          {/* _TwitterAttribution */}
+          <HoverCard.Root>
+            <HoverCard.Trigger asChild>
+              <div>
+                <_Avatar>
+                  <_AvatarImage src={profile.pfp} alt={profile.handle} />
+                  <_AvatarFallback delayMs={600}>
+                    {profile.handle}
+                  </_AvatarFallback>
+                </_Avatar>
 
-                  <_Handle>
-                    &copy; {new Date().getFullYear()} ~ {profile.handle}
-                  </_Handle>
-                </div>
-              </HoverCard.Trigger>
+                <_Handle>
+                  &copy; {new Date().getFullYear()} ~ {profile.handle}
+                </_Handle>
+              </div>
+            </HoverCard.Trigger>
 
-              <_Content side="top">
-                {/* _Tweet */}
-                <div>
-                  {profile.tweet.text}
-                  {profile.tweet.time}
-                </div>
+            <_Content side="top">
+              {/* _Tweet */}
+              <div>
+                {profile.tweet.text}
+                {profile.tweet.time}
+              </div>
 
-                {/* _Followers */}
-                <div>
-                  {profile.followers}
-                  {profile.followings}
-                </div>
+              {/* _Followers */}
+              <div>
+                {profile.followers}
+                {profile.followings}
+              </div>
 
-                <_Arrow />
-              </_Content>
-            </HoverCard.Root>
-          </_Attribution>
-        </>
+              <_Arrow />
+            </_Content>
+          </HoverCard.Root>
+        </_Attribution>
       )}
     </_Footer>
   )

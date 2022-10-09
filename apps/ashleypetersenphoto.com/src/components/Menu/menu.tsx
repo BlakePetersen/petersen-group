@@ -1,14 +1,12 @@
 import { Root, Sub, Trigger } from '@radix-ui/react-dropdown-menu'
 import { HamburgerMenuIcon, CaretRightIcon } from '@radix-ui/react-icons'
-import useSWR from '@zeit/swr'
+import useSWR from 'swr'
 import groq from 'groq'
-import { ConditionalWrap, fetcher, SanityClient, ThemeSelector } from 'artax-ui'
+import { ConditionalWrap, SanityClient, ThemeSelector } from 'artax-ui'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-
-const path = require('path')
-
+import path from 'path'
 import {
   _Content,
   _Item,

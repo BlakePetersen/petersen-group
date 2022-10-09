@@ -1,11 +1,10 @@
 import React from 'react'
-import useSWR from '@zeit/swr'
+import useSWR from 'swr'
 import groq from 'groq'
-import { SanityClient } from 'artax-ui'
+import { SanityClient, Page } from 'artax-ui'
 
 import type { NextPage } from 'next'
 
-import { Page } from 'artax-ui'
 import Card from '@/components/Card'
 import CardImage from '@/components/CardImage'
 import Frame from '@/components/Frame'

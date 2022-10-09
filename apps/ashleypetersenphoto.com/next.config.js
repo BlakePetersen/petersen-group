@@ -7,10 +7,10 @@ const withTM = require('next-transpile-modules')(['artax-ui'])
 
 const nextConfig = {
     sassOptions: {
-        includePaths: [path.join(__dirname, 'styles')],
+        includePaths: [path.join(__dirname, 'styles')]
     },
     images: {
-        domains: ['mint.sacredskullsnft.io', 'cdn.sanity.io'],
+        domains: ['cdn.sanity.io']
     },
 }
 

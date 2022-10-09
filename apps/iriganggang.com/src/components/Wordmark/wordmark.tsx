@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
-import { _Wordmark } from '@/components/Wordmark/wordmark.styles'
+import { _Wordmark, _H1 } from '@/components/Wordmark/wordmark.styles'
 import { WordmarkType } from '@/components/Wordmark/wordmark.types'
-import { _H1 } from '@/components/Wordmark'
 
 export const Wordmark: WordmarkType = () => {
   return (

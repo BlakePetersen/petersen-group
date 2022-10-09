@@ -1,4 +1,4 @@
-import { Wordmark } from './wordmark'
+import { Wordmark as _Wordmark } from './wordmark'
 
 export * from './wordmark.styles'
-export default Wordmark
+export default _Wordmark
