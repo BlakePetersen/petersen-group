@@ -11,16 +11,19 @@
     "build:0xbp": "turbo run build --scope=0xbp.io",
     "build:app": "turbo run build --scope=ashleypetersenphoto.com",
     "build:bpio": "turbo run build --scope=blakepetersen.io",
+    "build:dbre": "turbo run build --scope=dalebridges.com",
     "build:igg": "turbo run build --scope=iriganggang.com",
     "build:studio:0xbp": "turbo run build --scope=studio.0xbp.io",
     "build:studio:app": "turbo run build --scope=studio.ashleypetersenphoto.com",
     "build:studio:bpio": "turbo run build --scope=studio.blakepetersen.io",
+    "build:studio:dbre": "turbo run build --scope=studio.dalebridges.com",
     "build:studio:igg": "turbo run build --scope=studio.iriganggang.com",
     "clean": "turbo run clean",
     "dev": "turbo run dev --parallel",
     "dev:0xbp": "turbo run dev --scope=0xbp.io",
     "dev:app": "turbo run dev --scope=ashleypetersenphoto.com",
     "dev:bpio": "turbo run dev --scope=blakepetersen.io",
+    "dev:dbre": "turbo run dev --scope=dalebridges.com",
     "dev:igg": "turbo run dev --scope=iriganggang.com",
     "test": "turbo run test",
     "lint": "turbo run lint",
@@ -29,10 +32,12 @@
     "start:0xbp": "turbo run start --scope=0xbp.io",
     "start:app": "turbo run start --scope=ashleypetersenphoto.com",
     "start:bpio": "turbo run start --scope=blakepetersen.io",
+    "start:dbre": "turbo run start --scope=dalebridges.com",
     "start:igg": "turbo run start --scope=iriganggang.com",
     "start:studio:0xbp": "turbo run sanity start --scope=studio.0xbp.io",
     "start:studio:app": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
     "start:studio:bpio": "turbo run sanity start --scope=studio.blakepetersen.io",
+    "start:studio:dbre": "turbo run sanity start --scope=studio.dalebridges.com",
     "start:studio:igg": "turbo run sanity start --scope=studio.iriganggang.com",
     "prepare": "husky install"
   },
@@ -51,10 +56,5 @@
     "*.{json,md}": [
       "prettier --write"
     ]
-  },
-  "dependencies": {
-    "next": "^12.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }
