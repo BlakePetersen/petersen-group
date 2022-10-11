@@ -96,6 +96,8 @@ export const { styled, css, globalCss, keyframes, theme, createTheme, config } =
       },
       shadows: {
         ...blackA,
+        ...grayA,
+        ...indigo,
       },
     },
     media: {
@@ -121,6 +123,10 @@ export const darkTheme = createTheme({
     ...redDarkA,
     ...yellowDark,
     ...yellowDarkA,
+  },
+  shadows: {
+    ...blackA,
+    ...grayDarkA,
   },
 })
 

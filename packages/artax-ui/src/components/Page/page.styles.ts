@@ -4,5 +4,5 @@ export const _Page = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  margin: 0,
+  margin: `2rem`,
 })

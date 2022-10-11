@@ -2,6 +2,11 @@
 
 body {
   font-family: 'Lora', serif;
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.5;
 }
 
 a {
@@ -10,4 +15,14 @@ a {
 
 div[data-radix-popper-content-wrapper] {
   will-change: unset !important;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+button {
+
 }
