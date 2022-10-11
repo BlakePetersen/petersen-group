@@ -128,7 +128,6 @@ const ContactPage: NextPage = () => {
             { setSubmitting }: FormikHelpers<FormValues>,
           ) => {
             setTimeout(() => {
-              alert(JSON.stringify(values, null, 2))
               console.log(values.honeyPot)
               setSubmitting(false)
             }, 500)
