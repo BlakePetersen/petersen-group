@@ -20,6 +20,7 @@ module.exports = {
       rootDir: [
         'apps/ashleypetersenphoto.com/',
         'apps/blakepetersen.io/',
+        'apps/dalebridges.com/',
         'apps/iriganggang.com/',
         'apps/0xbp.io/',
       ],

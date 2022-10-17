@@ -159,7 +159,7 @@ const ContactPage: NextPage = () => {
               {/* Details */}
               <_FieldGroup>
                 <_Label htmlFor="details">Project Details</_Label>
-                <_Textbox type="textbox" id="details" required />
+                <_Textbox id="details" required />
               </_FieldGroup>
 
               {/* Honey Pot */}
