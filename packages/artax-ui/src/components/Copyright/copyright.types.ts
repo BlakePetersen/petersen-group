@@ -1,6 +1,5 @@
-import { FC } from 'react'
+import {FC} from 'react'
 
 export type CopyrightTypes = FC<{
-  siteName: string
-  statement: string
+    statement: string
 }>

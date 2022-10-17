@@ -108,15 +108,6 @@ export const Menu = () => {
         })}
 
         <_Separator />
-        <_Label>Sign In</_Label>
-        <ConnectButton
-          label="Sign in"
-          chainStatus="none"
-          accountStatus="avatar"
-        />
-
-        <_Separator />
-        <_Label>Color Mode</_Label>
         <ThemeSelector useTheme={useTheme} />
       </_Content>
     </Root>
