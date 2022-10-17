@@ -7,7 +7,7 @@ export const _Header = styled('header', {
   alignItems: 'center',
   gap: '1rem',
   backgroundColor: '$accentBgA',
-  borderBottom: `1px solid $accentBgA`,
+  borderBottom: `1px solid $accentBorderA`,
   boxShadow: `0px 10px 50px -10px $blackA7, 0px 10px 30px -15px $blackA7`,
   width: '100%',
   padding: '1rem',

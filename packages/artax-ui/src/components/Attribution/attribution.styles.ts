@@ -1,11 +1,10 @@
 import { styled } from '@stitches/react'
-import { blackA, gray, grayDarkA, violet, whiteA } from '@radix-ui/colors'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'
 import * as HoverCard from '@radix-ui/react-hover-card'
 import { slideDownAndFade } from 'artax-ui'
 
 export const _Arrow = styled(HoverCard.Arrow, {
-  fill: whiteA.whiteA12,
+  fill: `$accentBg`,
 })
 
 export const _Avatar = styled(AvatarPrimitive.Root, {
@@ -18,8 +17,8 @@ export const _Avatar = styled(AvatarPrimitive.Root, {
   width: `3rem`,
   height: `3rem`,
   borderRadius: '100%',
-  backgroundColor: whiteA.whiteA12,
-  border: `3px solid ${whiteA.whiteA12}`,
+  backgroundColor: `$accentBase`,
+  border: `3px solid $accentLine`,
   transition: 'box-shadow 200ms ease, transform 200ms ease',
   '&:hover': {
     transform: `translateY(-3px)`,
@@ -39,8 +38,8 @@ export const _AvatarFallback = styled(AvatarPrimitive.Fallback, {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: whiteA.whiteA12,
-  color: violet.violet11,
+  backgroundColor: `$accentBase`,
+  color: `$accentTextContrast`,
   fontSize: 15,
   lineHeight: 1,
   fontWeight: 500,
@@ -52,14 +51,12 @@ export const _Attribution = styled('div', {
 
 export const _Handle = styled('div', {
   transform: `translateY(-.75rem)`,
-  color: blackA.blackA12,
-  backgroundColor: whiteA.whiteA12,
+  color: `$accentTextContrast`,
+  backgroundColor: `$accentLine`,
   borderRadius: `999999px`,
   padding: `.25rem .5rem`,
   position: `relative`,
 })
-
-export const _Copyright = styled('div', {})
 
 export const _Content = styled(HoverCard.Content, {
   bottom: 0,
@@ -71,8 +68,8 @@ export const _Content = styled(HoverCard.Content, {
   padding: `.5rem`,
   fontSize: 15,
   lineHeight: 1,
-  color: blackA.blackA12,
-  backgroundColor: whiteA.whiteA12,
+  color: `$accentTextContrast`,
+  backgroundColor: `$accentBg`,
   maxWidth: 300,
   boxShadow:
     'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
@@ -88,18 +85,24 @@ export const _Content = styled(HoverCard.Content, {
 })
 
 export const _TweetContainer = styled('div', {
-  background: gray.gray3,
+  background: `$accentBgActive`,
   borderRadius: 4,
   padding: `.75rem`,
+  border: `1px solid $accentLine`,
+  lineHeight: 1.25
 })
 
 export const _TweetFollowerContainer = styled('div', {
   fontSize: `.75rem`,
+  textAlign: `center`,
 })
 
 export const _TweetLabel = styled('div', {
   fontSize: `.75rem`,
   textAlign: `left`,
+  display: `flex`,
+  gap: `.5rem`,
+  alignItems: `center`,
 })
 
 export const _TweetLead = styled('div', {

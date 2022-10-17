@@ -2,7 +2,6 @@ import { styled } from '@stitches/react'
 
 export const _LogoAnchor = styled('a', {
   textAlign: 'center',
-  textShadow: '0px 2px 0 $blackA6',
 })
 
 export const _LogoLine1 = styled('div', {

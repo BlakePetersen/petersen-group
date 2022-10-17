@@ -46,6 +46,7 @@ export const { styled, css, globalCss, keyframes, theme, createTheme, config } =
         accentBgActive: '$indigo5',
         accentLine: '$indigo6',
         accentBorder: '$indigo7',
+        accentBorderA: '$indigo7A',
         accentBorderHover: '$indigo8',
         accentSolid: '$indigo9',
         accentSolidHover: '$indigo10',

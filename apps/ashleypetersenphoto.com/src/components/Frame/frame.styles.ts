@@ -7,5 +7,6 @@ export const _Frame = styled('div', {
   backgroundColor: '$gray1',
   gap: `1rem`,
   width: `100vw`,
+  maxWidth: `1600px`,
   padding: `2rem`,
 })

@@ -1,6 +1,7 @@
 import path from 'path'
 import useSWR from 'swr'
-import { fetcher, toOrdinalSuffix } from 'artax-ui'
+import { fetcher } from 'artax-ui'
+import { TwitterLogoIcon } from '@radix-ui/react-icons'
 import * as HoverCard from '@radix-ui/react-hover-card'
 import twitter from 'twitter-text'
 import ReactHtmlParser from 'react-html-parser'
@@ -41,7 +42,7 @@ export const Attribution: AttributionTypes = () => {
         {/* _TwitterAttribution */}
         <HoverCard.Root>
           <HoverCard.Trigger>
-            <>
+
               <_Avatar>
                 <_AvatarImage src={profile.pfp} alt={profile.handle} />
                 <_AvatarFallback delayMs={600}>
@@ -50,14 +51,14 @@ export const Attribution: AttributionTypes = () => {
               </_Avatar>
 
               <_Handle>by {profile.handle}</_Handle>
-            </>
+
           </HoverCard.Trigger>
 
           <HoverCard.Portal>
             <_Content side={'top'}>
               {/* _Tweet */}
               <_TweetLead>
-                <_TweetLabel>Latest Tweet</_TweetLabel>
+                <_TweetLabel><TwitterLogoIcon /> Latest Tweet</_TweetLabel>
                 <_TweetTimestamp>{tweetDate.toLocaleString()}</_TweetTimestamp>
               </_TweetLead>
 
@@ -71,8 +72,7 @@ export const Attribution: AttributionTypes = () => {
               <_TweetFollowerContainer>
                 <Link href={`https://www.twitter.com/${screenName}`}>
                   <a>
-                    Be {profile.handle}'s{' '}
-                    {toOrdinalSuffix(profile.followers + 1, true)} follower!
+                    Follow {profile.handle} on Twitter{' '}
                   </a>
                 </Link>
               </_TweetFollowerContainer>
