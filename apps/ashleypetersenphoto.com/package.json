@@ -18,8 +18,8 @@
     "formik": "^2.2.9",
     "groq": "2.29.3",
     "modern-normalize": "1.1.0",
-    "next": "12.3.1",
-    "next-axiom": "0.14.0",
+    "next": "13.0.0",
+    "next-axiom": "0.15.0",
     "next-themes": "0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -30,10 +30,13 @@
     "wagmi": "0.6.8"
   },
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "clean": "rm -rf .next && rm -rf .turbo && rm -rf node_modules",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbo",
+    "dev:turbo:show-all": "next dev --turbo --show-all",
+    "lint": "next lint",
+    "start": "next start"
   },
   "devDependencies": {
     "@types/node": "18.8.3",
@@ -41,9 +44,9 @@
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "eslint": "8.21.0",
-    "eslint-config-next": "12.3.1",
+    "eslint-config-next": "13.0.0",
     "next-compose-plugins": "2.2.1",
-    "next-transpile-modules": "9.0.0",
+    "next-transpile-modules": "9.1.0",
     "typescript": "4.8.4"
   }
 }

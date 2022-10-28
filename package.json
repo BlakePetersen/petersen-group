@@ -18,7 +18,7 @@
     "build:studio:bpio": "turbo run build --scope=studio.blakepetersen.io",
     "build:studio:dbre": "turbo run build --scope=studio.dalebridges.com",
     "build:studio:igg": "turbo run build --scope=studio.iriganggang.com",
-    "clean": "turbo run clean",
+    "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev --parallel",
     "dev:0xbp": "turbo run dev --scope=0xbp.io",
     "dev:app": "turbo run dev --scope=ashleypetersenphoto.com",
