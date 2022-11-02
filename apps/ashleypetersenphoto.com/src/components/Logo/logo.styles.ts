@@ -1,6 +1,7 @@
 import {styled} from '@stitches/react'
+import Link from 'next/link'
 
-export const _LogoAnchor = styled('a', {
+export const _LogoAnchor = styled(Link, {
     textAlign: 'center',
 })
 

@@ -1,5 +1,4 @@
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
-import { _ButtonIcon, _Flex, _Switch, _Thumb } from './styles'
+import { _ButtonIcon, _Flex } from './styles'
 
 export const ThemeSelector = ({ useTheme }) => {
   const { theme, setTheme } = useTheme()
@@ -10,21 +9,9 @@ export const ThemeSelector = ({ useTheme }) => {
 
   return (
     <_Flex>
-      <_ButtonIcon onClick={() => setTheme('light')}>
-        <SunIcon />
-      </_ButtonIcon>
+      <_ButtonIcon onClick={() => setTheme('light')}>Light</_ButtonIcon>
 
-      <_Switch
-        checked={theme === 'dark'}
-        onCheckedChange={() => toggleTheme()}
-        id="s1"
-      >
-        <_Thumb />
-      </_Switch>
-
-      <_ButtonIcon onClick={() => setTheme('dark')}>
-        <MoonIcon />
-      </_ButtonIcon>
+      <_ButtonIcon onClick={() => setTheme('dark')}>Dark</_ButtonIcon>
     </_Flex>
   )
 }

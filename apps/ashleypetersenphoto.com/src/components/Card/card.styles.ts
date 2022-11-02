@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react'
+import {styled} from '@stitches/react'
 
 export const _Card = styled('div', {
   borderRadius: '.3rem',
@@ -7,3 +7,4 @@ export const _Card = styled('div', {
   aspectRatio: `3/2`,
   display: 'block',
 })
+

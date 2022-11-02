@@ -7,23 +7,19 @@
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next && rm -rf .turbo && rm -rf node_modules",
-    "dev": "next dev",
-    "dev:turbo": "next dev --turbo",
-    "dev:turbo:show-all": "next dev --turbo --show-all",
+    "dev": "next dev --turbo",
+    "dev:debug": "next dev --turbo --show-all",
     "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0",
-    "next": "13.0.0",
-    "next-themes": "0.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
     "@stitches/react": "1.2.8",
+    "modern-normalize": "^1.1.0",
+    "next": "13.0.1",
+    "next-themes": "0.2.1",
     "next-axiom": "0.15.0",
     "next-compose-plugins": "2.2.1",
-    "next-transpile-modules": "9.1.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }

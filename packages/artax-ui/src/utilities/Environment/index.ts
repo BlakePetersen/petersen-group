@@ -1,1 +1,3 @@
-export * from './environment'
+export const isClientside = (): boolean => {
+  return typeof window !== 'undefined'
+}
