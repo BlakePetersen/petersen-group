@@ -1,3 +1,5 @@
-import { Frame } from './frame'
+'use client'
 
-export default Frame
+import { _Frame } from './styles'
+
+export const Frame = ({ children }) => <_Frame>{children}</_Frame>

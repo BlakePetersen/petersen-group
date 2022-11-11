@@ -3,12 +3,11 @@
 import React from 'react'
 import { styled, keyframes } from '@stitches/react'
 import { PaperPlaneIcon } from '@radix-ui/react-icons'
-import { Grid, Page } from 'artax-ui'
+import { Grid } from 'artax-ui'
+import { Frame } from '@/components/Frame'
 import * as LabelPrimitive from '@radix-ui/react-label'
 
 import { Formik, Field, Form, FormikHelpers } from 'formik'
-
-import Frame from '@/components/Frame'
 
 interface FormValues {
   name: string
@@ -51,9 +50,9 @@ const _Field = {
   lineHeight: 1,
   color: '$accentTextContrast',
   backgroundColor: '$accentBgSubtle',
-  boxShadow: `0 0 0 1px $grayA1`,
+  boxShadow: `0 0 0 1px $indigoA6`,
   textShadow: `0 1px 0 $grayA1`,
-  '&:focus': { boxShadow: `0 0 0 1px $indigo6` },
+  '&:focus': { boxShadow: `0 0 0 1px $indigoA8` },
 }
 
 const _Input = styled('input', {
@@ -105,75 +104,70 @@ const _Submit = styled('button', {
 
 const ContactPage = () => {
   return (
-    <Page
-      title={`Contact Ashley to Book Your Next Photo Shoot`}
-      description={`Contact Ashley to book your next conceptual portraiture, boudoir, or underwater photo shoot.`}
-    >
-      <Frame>
-        <_H1>Contact</_H1>
-        <p style={{ maxWidth: 640 }}>
-          To book a shoot with Ashley Petersen, please provide a few details
-          about the project using the form below and a representative will reach
-          out within a few days.
-        </p>
-        <Formik
-          initialValues={{
-            name: '',
-            email: '',
-            details: '',
-            honeyPot: false,
-          }}
-          onSubmit={(
-            values: FormValues,
-            { setSubmitting }: FormikHelpers<FormValues>,
-          ) => {
-            setTimeout(() => {
-              console.log(values.honeyPot)
-              setSubmitting(false)
-            }, 500)
-          }}
-        >
-          <Form>
-            <Grid
-              css={{
-                padding: '0 2rem',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: `3rem`,
-                alignItems: 'center',
-                width: `100vw`,
-              }}
-            >
-              {/* Name */}
-              <_FieldGroup>
-                <_Label htmlFor="name">Name</_Label>
-                <_Input type="text" id="name" required />
-              </_FieldGroup>
+    <Frame>
+      <_H1>Contact</_H1>
+      <p style={{ maxWidth: 640 }}>
+        To book a shoot with Ashley Petersen, please provide a few details about
+        the project using the form below and a representative will reach out
+        within a few days.
+      </p>
+      <Formik
+        initialValues={{
+          name: '',
+          email: '',
+          details: '',
+          honeyPot: false,
+        }}
+        onSubmit={(
+          values: FormValues,
+          { setSubmitting }: FormikHelpers<FormValues>,
+        ) => {
+          setTimeout(() => {
+            console.log(values.honeyPot)
+            setSubmitting(false)
+          }, 500)
+        }}
+      >
+        <Form>
+          <Grid
+            css={{
+              padding: '0 2rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: `3rem`,
+              alignItems: 'center',
+              width: `100vw`,
+            }}
+          >
+            {/* Name */}
+            <_FieldGroup>
+              <_Label htmlFor="name">Name</_Label>
+              <_Input type="text" id="name" required />
+            </_FieldGroup>
 
-              {/* Email */}
-              <_FieldGroup>
-                <_Label htmlFor="email">Email</_Label>
-                <_Input type="email" id="email" required />
-              </_FieldGroup>
+            {/* Email */}
+            <_FieldGroup>
+              <_Label htmlFor="email">Email</_Label>
+              <_Input type="email" id="email" required />
+            </_FieldGroup>
 
-              {/* Details */}
-              <_FieldGroup>
-                <_Label htmlFor="details">Project Details</_Label>
-                <_Textbox id="details" required />
-              </_FieldGroup>
+            {/* Details */}
+            <_FieldGroup>
+              <_Label htmlFor="details">Project Details</_Label>
+              <_Textbox id="details" required />
+            </_FieldGroup>
 
-              {/* Honey Pot */}
-              <_HoneyPot type="checkbox" id="honeypot" />
+            {/* Honey Pot */}
+            <_HoneyPot type="checkbox" id="honeypot" />
 
-              {/* Button */}
-              <_Submit type="submit">
-                Submit <PaperPlaneIcon />
-              </_Submit>
-            </Grid>
-          </Form>
-        </Formik>
-      </Frame>
-    </Page>
+            {/* Button */}
+            <_Submit type="submit">
+              Submit <PaperPlaneIcon />
+            </_Submit>
+          </Grid>
+        </Form>
+      </Formik>
+    </Frame>
   )
 }
 

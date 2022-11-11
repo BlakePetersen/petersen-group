@@ -1,21 +1,28 @@
+import { Frame } from '@/components/Frame'
 import { SanityClient } from 'artax-ui'
 
-async function getPost(slug: string) {
+// Data
+async function getPost(slug: string): Promise<{
+  title: string
+  publishedAt: string
+}> {
   return await SanityClient.fetch(
     `
-    *[_type == "post" && ${slug.toString()}.current == $slug][0]
+    *[_type == "post" && slug.current == '${slug}'][0]
   `,
   )
 }
 
+// Component
 const Post = async ({ params }) => {
-  const { slug = '' } = params
-  const post = await getPost(slug)
+  const { slug } = params
+  const { title, publishedAt } = await getPost(slug)
 
   return (
-    <article>
-      <h1>{post?.current}</h1>
-    </article>
+    <Frame>
+      <h1>{title}</h1>
+      <div>{publishedAt}</div>
+    </Frame>
   )
 }
 

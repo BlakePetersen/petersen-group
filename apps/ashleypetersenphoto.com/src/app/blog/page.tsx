@@ -1,4 +1,5 @@
-import { Page, SanityClient } from 'artax-ui'
+import { Frame } from '@/components/Frame'
+import { SanityClient } from 'artax-ui'
 import Link from 'next/link'
 
 async function getPosts() {
@@ -13,21 +14,19 @@ const BlogRoot = async () => {
   const posts = await getPosts()
 
   return (
-    <Page
-      title={`Conceptual Portraiture, Underwater Photography`}
-      description={`Ashley Petersen Photography`}
-    >
-      {posts &&
-        posts.map((post, i) => {
-          return (
-            <div key={i}>
-              <Link href={`/blog/${post.slug.current}`}>
-                <h1>{post.title}</h1>
-              </Link>
-            </div>
-          )
-        })}
-    </Page>
+    <Frame>
+      {posts
+        ? posts.map(({ title, slug }, i) => {
+            return (
+              <div key={i}>
+                <Link href={`/blog/${slug.current}`}>
+                  <h1>{title}</h1>
+                </Link>
+              </div>
+            )
+          })
+        : null}
+    </Frame>
   )
 }
 

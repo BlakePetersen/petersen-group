@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import Link from 'next/link'
 
 import Colors from '@/styles/colors'
-import ArtaxLink from '@/components/primitives/link'
 
 const _TitleLink = styled.h1`
   color: ${Colors.slate};
@@ -12,9 +12,9 @@ const _TitleLink = styled.h1`
 `
 
 const Title = ({ title, slug }) => (
-  <ArtaxLink href={`/posts/${slug}`}>
+  <Link href={`/posts/${slug}`}>
     <_TitleLink>{title}</_TitleLink>
-  </ArtaxLink>
+  </Link>
 )
 
 export default Title

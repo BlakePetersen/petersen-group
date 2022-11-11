@@ -5,15 +5,16 @@
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next && rm -rf .turbo && rm -rf node_modules",
-    "dev": "next dev --turbo",
-    "dev:debug": "next dev --turbo --show-all",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbo",
+    "dev:turbo:debug": "next dev --turbo --show-all",
     "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "0.7.4",
     "@stitches/react": "1.2.8",
-    "next": "13.0.1",
+    "next": "13.0.2",
     "next-axiom": "0.15.0",
     "next-themes": "0.2.1",
     "react": "18.2.0",
@@ -23,9 +24,9 @@
   },
   "devDependencies": {
     "@types/node": "18.11.9",
-    "@types/react": "18.0.24",
+    "@types/react": "18.0.25",
     "eslint": "8.26.0",
-    "eslint-config-next": "13.0.1",
+    "eslint-config-next": "13.0.2",
     "next-compose-plugins": "2.2.1",
     "typescript": "4.8.4"
   }

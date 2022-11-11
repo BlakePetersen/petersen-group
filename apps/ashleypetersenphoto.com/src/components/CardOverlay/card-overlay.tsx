@@ -1,6 +1,7 @@
+'use client'
+
 import { _CardOverlay } from './card-overlay.styles'
 import { CardOverlayTypes } from './card-overlay.types'
-import Image from 'next/image'
 
 import React, { ReactElement } from 'react'
 import { CameraIcon, GlobeIcon } from '@radix-ui/react-icons'

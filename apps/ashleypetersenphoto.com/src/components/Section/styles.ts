@@ -1,4 +1,4 @@
-import { styled } from '@stitches/react'
+import { styled } from '@/config/stitches.config'
 
 export const _Section = styled('section', {
   position: 'relative',

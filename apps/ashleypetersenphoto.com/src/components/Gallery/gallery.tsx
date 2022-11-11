@@ -1,3 +1,5 @@
+'use client'
+
 import { _Gallery } from './gallery.styles'
 import { GalleryTypes } from './gallery.types'
 

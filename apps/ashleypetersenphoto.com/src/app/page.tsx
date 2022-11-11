@@ -1,14 +1,15 @@
-import { Page, Section } from 'artax-ui'
+import { Frame } from '@/components/Frame'
+import { Section } from '@/components/Section'
 
-const Index = async () => {
+const RootPage = () => {
   return (
-    <Page
-      title={`Conceptual Portraiture, Underwater Photography`}
-      description={`Ashley Petersen Photography`}
-    >
+    <Frame>
+      <Section css={{ backgroundColor: '$accentBg' }}>Bing Bong</Section>
       <Section>Bing Bong</Section>
-    </Page>
+      <Section>Bing Bong</Section>
+      <Section>Bing Bong</Section>
+    </Frame>
   )
 }
 
-export default Index
+export default RootPage

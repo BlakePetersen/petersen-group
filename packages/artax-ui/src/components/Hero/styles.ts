@@ -1,5 +1,5 @@
 import { styled } from '@stitches/react'
-import { Section } from 'artax-ui'
+import { Section } from '../Section'
 
 export const _Hero = styled(Section, {
   display: 'flex',
@@ -8,7 +8,7 @@ export const _Hero = styled(Section, {
   justifyContent: 'center',
   backgroundPosition: 'center',
   width: `100vw`,
-  padding: `2rem`,
+  padding: `2rem`
 })
 
 export const _Lead = styled('div', {
@@ -17,20 +17,20 @@ export const _Lead = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
   gap: '1rem',
-  textAlign: `center`,
+  textAlign: `center`
 })
 
 export const _Copy = styled('div', {
   fontSize: '.8rem',
-  margin: `0`,
+  margin: `0`
 })
 
 export const _H1 = styled('h1', {
   fontSize: '1.5rem',
-  margin: `0`,
+  margin: `0`
 })
 
 export const _H2 = styled('h2', {
   fontSize: '1rem',
-  margin: `0`,
+  margin: `0`
 })

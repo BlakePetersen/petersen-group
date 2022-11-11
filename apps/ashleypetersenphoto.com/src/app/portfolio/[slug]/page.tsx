@@ -1,7 +1,7 @@
 import React from 'react'
 import groq from 'groq'
-import { Page, SanityClient } from 'artax-ui'
-import Frame from '@/components/Frame'
+import { SanityClient, Section } from 'artax-ui'
+import { Frame } from '@/components/Frame'
 import Gallery from '@/components/Gallery'
 import Card from '@/components/Card'
 import CardOverlay from '@/components/CardOverlay'
@@ -13,11 +13,10 @@ async function getPortfolioImages(slug: string) {
     : ``
   const portfolioQuery = `*[_type=="photo" ${pathQuery}]`
 
-  const res = await SanityClient.fetch(groq`${portfolioQuery}{
+  return await SanityClient.fetch(groq`${portfolioQuery}{
       "imageSrc": image.asset->url,
       "imageName": name
     }`)
-  return res.json()
 }
 
 const PortfolioIndexPage = async ({ params }: { params: { slug: string } }) => {
@@ -25,14 +24,13 @@ const PortfolioIndexPage = async ({ params }: { params: { slug: string } }) => {
   const images = await getPortfolioImages(slug)
 
   return (
-    <Page
-      title={`Portfolio`}
-      description={`Ashley Petersen Photography Portfolio`}
-    >
-      <Frame>
+    <Frame>
+      <Section>
         <h1>Portfolio {slug && ` - ${slug.toString()}`}</h1>
         {images && <h3>Displaying {images.length} images</h3>}
+      </Section>
 
+      <Section>
         <Gallery>
           {images ? (
             images.map((image, i) => (
@@ -45,8 +43,8 @@ const PortfolioIndexPage = async ({ params }: { params: { slug: string } }) => {
             <p>No images found.</p>
           )}
         </Gallery>
-      </Frame>
-    </Page>
+      </Section>
+    </Frame>
   )
 }
 

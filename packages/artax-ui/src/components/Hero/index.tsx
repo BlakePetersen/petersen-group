@@ -7,7 +7,7 @@ export const Hero: HeroTypes = ({ css, h1, h2, background, children }) => {
       css={{
         ...css,
         backgroundImage: background ? `url(${background.src})` : 'none',
-        backgroundSize: `cover`,
+        backgroundSize: `cover`
       }}
     >
       {(h1 || h2) && (

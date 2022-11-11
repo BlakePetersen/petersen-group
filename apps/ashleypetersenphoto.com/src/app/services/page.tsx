@@ -1,9 +1,5 @@
-import Head from 'next/head'
+import { Frame } from '@/components/Frame'
 
-const ServicesIndexPage = () => (
-  <Head>
-    <title>Portfolio - Ashley Petersen Photography</title>
-  </Head>
-)
+const ServicesIndexPage = () => <Frame>Service Index</Frame>
 
 export default ServicesIndexPage

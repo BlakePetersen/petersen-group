@@ -1,17 +1,17 @@
-import React, { useMemo } from 'react'
+import { createContext, useMemo, useReducer } from 'react'
 import { reducer, initialState } from './reducer'
 import { UserProviderTypes } from './user-context.types'
 
-export const UserContext = React.createContext<any>({
+export const UserContext = createContext<any>({
   state: initialState,
-  dispatch: () => null,
+  dispatch: () => null
 })
 
 export const UserProvider: UserProviderTypes = ({ children }) => {
-  const [state, dispatch] = React.useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
   const userProviderValue = useMemo(
     () => ({ state, dispatch }),
-    [state, dispatch],
+    [state, dispatch]
   )
 
   return (

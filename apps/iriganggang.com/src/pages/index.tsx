@@ -13,7 +13,7 @@ const fetcher = query => request(Constants.SUBGRAPH_URI, query)
 
 const Home: NextPage = () => {
   const { address } = useAccount()
-  const [userState, userDispatch] = React.useContext(UserContext)
+  const [userState, userDispatch] = useContext(UserContext)
 
   useEffect(() => {
     address
@@ -32,17 +32,17 @@ const Home: NextPage = () => {
       }
     }`
       : null,
-    fetcher,
+    fetcher
   )
 
   useEffect(() => {
     userData?.user?.tokens?.map(token => {
       return token.base === 'Iridescent'
         ? userDispatch({
-            type: 'setIriGangGang',
+            type: 'setIriGangGang'
           })
         : userDispatch({
-            type: 'unsetIriGangGang',
+            type: 'unsetIriGangGang'
           })
     })
   }, [userData])
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
         background={userState.isIriGangGang ? Iggbg : null}
         css={{
           height: `100vh`,
-          maxHeight: `100%`,
+          maxHeight: `100%`
         }}
       />
     </Page>
