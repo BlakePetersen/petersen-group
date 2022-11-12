@@ -1,10 +1,9 @@
-import {styled} from '@stitches/react'
+import { styled } from '@/config/stitches.config'
 
 export const _Card = styled('div', {
-  borderRadius: '.3rem',
+  borderRadius: '.5rem',
   overflow: 'hidden',
   position: `relative`,
-  aspectRatio: `3/2`,
   display: 'block',
+  boxShadow: '0 3px 6px 0 $grayA6'
 })
-

@@ -1,3 +1,5 @@
+'use client'
+
 import { _Card } from './card.styles'
 import { CardTypes } from './card.types'
 
