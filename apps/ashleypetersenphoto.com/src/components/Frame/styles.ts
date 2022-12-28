@@ -6,7 +6,7 @@ export const _Frame = styled('main', {
   flexDirection: 'column',
   alignItems: 'center',
   backgroundColor: '$gray1',
-  gap: `2rem`,
   width: `100vw`,
-  padding: `4rem 2rem`,
+  padding: `1.5rem`,
+  borderRadius: `1rem`
 })

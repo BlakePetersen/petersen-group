@@ -18,7 +18,7 @@ interface FormValues {
 
 const _H1 = styled('h1', {
   fontSize: '1.5rem',
-  margin: `0`,
+  margin: `2rem`
 })
 
 const _FieldGroup = styled('div', {
@@ -26,14 +26,14 @@ const _FieldGroup = styled('div', {
   flexDirection: 'column',
   gap: '1rem',
   width: `100%`,
-  maxWidth: 420,
+  maxWidth: 420
 })
 
 const _Label = styled(LabelPrimitive.Root, {
   fontSize: 15,
   fontWeight: 500,
   color: `$accentText`,
-  userSelect: 'none',
+  userSelect: 'none'
 })
 
 const _Field = {
@@ -52,27 +52,27 @@ const _Field = {
   backgroundColor: '$accentBgSubtle',
   boxShadow: `0 0 0 1px $indigoA6`,
   textShadow: `0 1px 0 $grayA1`,
-  '&:focus': { boxShadow: `0 0 0 1px $indigoA8` },
+  '&:focus': { boxShadow: `0 0 0 1px $indigoA8` }
 }
 
 const _Input = styled('input', {
-  ..._Field,
+  ..._Field
 })
 
 const _Textbox = styled('textarea', {
   ..._Field,
-  height: 200,
+  height: 200
 })
 
 const _HoneyPot = styled('input', {
   visibility: 'hidden',
-  display: 'none',
+  display: 'none'
 })
 
 const _AnimRotate = keyframes({
   to: {
-    '--angle': '360deg',
-  },
+    '--angle': '360deg'
+  }
 })
 
 const _Submit = styled('button', {
@@ -98,8 +98,8 @@ const _Submit = styled('button', {
       'linear-gradient($gray1, $gray1), linear-gradient(var(--angle), $indigo8, $indigo11)',
     scale: 1.05,
     transform: `translateY(-3px)`,
-    boxShadow: '0 4px 8px 2px $blackA5',
-  },
+    boxShadow: '0 4px 8px 2px $blackA5'
+  }
 })
 
 const ContactPage = () => {
@@ -116,11 +116,11 @@ const ContactPage = () => {
           name: '',
           email: '',
           details: '',
-          honeyPot: false,
+          honeyPot: false
         }}
         onSubmit={(
           values: FormValues,
-          { setSubmitting }: FormikHelpers<FormValues>,
+          { setSubmitting }: FormikHelpers<FormValues>
         ) => {
           setTimeout(() => {
             console.log(values.honeyPot)
@@ -136,7 +136,7 @@ const ContactPage = () => {
               flexDirection: 'column',
               gap: `3rem`,
               alignItems: 'center',
-              width: `100vw`,
+              width: `100vw`
             }}
           >
             {/* Name */}

@@ -18,8 +18,8 @@ import {
   _Item,
   _Separator,
   _TriggerIcon,
-  _TriggerItem,
-} from '@/components/Menu/menu.styles'
+  _TriggerItem
+} from '@/components/Menu/styles'
 
 const publicSans = Public_Sans()
 
@@ -48,7 +48,7 @@ const Menu = () => {
         }
       }
      }}}`,
-    query => SanityClient.fetch(query),
+    query => SanityClient.fetch(query)
   )
 
   return (
@@ -76,7 +76,11 @@ const Menu = () => {
                 key={i}
               >
                 {!!section?.externalUrl ? (
-                  <a href={_navSectionSlug} target={`_blank`}>
+                  <a
+                    href={_navSectionSlug}
+                    target={`_blank`}
+                    rel={`noreferrer noopener`}
+                  >
                     <_ExternalItem>
                       {section.title} <_ExternalLinkIcon />
                     </_ExternalItem>
@@ -102,14 +106,14 @@ const Menu = () => {
                             href={path
                               .join(
                                 _navSectionSlug,
-                                link.internalLink.slug.current,
+                                link.internalLink.slug.current
                               )
                               .toString()}
                             key={i}
                           >
                             <_Item>{link.title}</_Item>
                           </Link>
-                        ),
+                        )
                     )}
                   </_Content>
                 )}

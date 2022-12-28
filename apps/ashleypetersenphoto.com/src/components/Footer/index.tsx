@@ -1,9 +1,11 @@
+'use client'
+
 import { Copyright } from 'artax-ui'
-import { _Copyright, _Footer } from './footer.styles'
+import { _Copyright, _Footer } from './styles'
 import C from '@/config/constants'
 import Logo from '@/components/Logo'
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <_Footer>
       <_Copyright>
@@ -13,3 +15,5 @@ export const Footer = () => {
     </_Footer>
   )
 }
+
+export default Footer

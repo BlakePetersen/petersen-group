@@ -1,12 +1,10 @@
+import React from 'react'
+import groq from 'groq'
 import { Frame } from '@/components/Frame'
 import { Section } from '@/components/Section'
 import { SanityClient } from 'artax-ui'
 import Gallery from '@/components/Gallery'
-import Card from '@/components/Card'
-import CardImage from '@/components/CardImage'
-import CardOverlay from '@/components/CardOverlay'
-import React from 'react'
-import groq from 'groq'
+import Hero from '@/components/Hero'
 
 async function getFeaturedImages() {
   const featuredQuery = `*[_type=="photo" && count((facets[]->slug.current)[@ in ["featured"]]) == 1]`
@@ -22,19 +20,13 @@ const RootPage = async () => {
 
   return (
     <Frame>
-      <Section>
-        <Gallery>
-          {images ? (
-            images.map((image, i) => (
-              <Card key={i}>
-                <CardImage src={`${image.imageSrc}?crop=entropy&h=1600`} />
-              </Card>
-            ))
-          ) : (
-            <p>No images found.</p>
-          )}
-        </Gallery>
-      </Section>
+      <Gallery images={images} />
+
+      <Hero
+        image={images[0]}
+        h1={`Ashley Petersen Photography`}
+        h2={`Portrait / Boudior / Underwater`}
+      />
     </Frame>
   )
 }

@@ -20,7 +20,7 @@ import {
   indigo,
   indigoA,
   indigoDark,
-  indigoDarkA,
+  indigoDarkA
 } from '@radix-ui/colors'
 
 export const {
@@ -31,7 +31,7 @@ export const {
   getCssText,
   theme,
   createTheme,
-  config,
+  config
 } = createStitches({
   theme: {
     colors: {
@@ -47,6 +47,7 @@ export const {
       ...indigoA,
 
       accentBase: '$indigo1',
+      accentBaseA: '$indigoA1',
       accentBgSubtle: '$indigo2',
       accentBg: '$indigo3',
       accentBgA: '$indigo3A',
@@ -54,12 +55,15 @@ export const {
       accentBgActive: '$indigo5',
       accentLine: '$indigo6',
       accentBorder: '$indigo7',
-      accentBorderA: '$indigo7A',
+      accentBorderA: '$indigoA7',
       accentBorderHover: '$indigo8',
+      accentBorderHoverA: '$indigoA8',
       accentSolid: '$indigo9',
       accentSolidHover: '$indigo10',
+      accentSolidHoverA: '$indigoA10',
       accentText: '$indigo11',
       accentTextContrast: '$indigo12',
+      accentTextContrastA: '$indigoA12',
 
       successBase: '$green1',
       successBgSubtle: '$green2',
@@ -101,23 +105,23 @@ export const {
       dangerSolid: '$red9',
       dangerSolidHover: '$red10',
       dangerText: '$red11',
-      dangerTextContrast: '$red12',
+      dangerTextContrast: '$red12'
     },
     shadows: {
       ...blackA,
       ...grayA,
-      ...indigoA,
-    },
+      ...indigoA
+    }
   },
   media: {
     bp1: '(min-width: 480px)',
     bp2: '(min-width: 768px)',
     bp3: '(min-width: 1024px)',
-    bp4: '(min-width: 1200px)',
+    bp4: '(min-width: 1200px)'
   },
   utils: {
-    marginX: value => ({ marginLeft: value, marginRight: value }),
-  },
+    marginX: value => ({ marginLeft: value, marginRight: value })
+  }
 })
 
 export const darkTheme = createTheme({
@@ -131,18 +135,18 @@ export const darkTheme = createTheme({
     ...yellowDark,
     ...yellowDarkA,
     ...indigoDark,
-    ...indigoDarkA,
-  },
+    ...indigoDarkA
+  }
 })
 
 globalCss({
   body: {
     background: '$gray1',
-    color: '$gray12',
+    color: '$gray12'
   },
   a: {
     textDecoration: 'underline',
     textUnderlineOffset: '1px',
-    color: '$accentText',
-  },
+    color: '$accentText'
+  }
 })()

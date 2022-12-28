@@ -31,18 +31,7 @@ const PortfolioIndexPage = async ({ params }: { params: { slug: string } }) => {
       </Section>
 
       <Section>
-        <Gallery>
-          {images ? (
-            images.map((image, i) => (
-              <Card key={i}>
-                <CardImage src={image.imageSrc} />
-                <CardOverlay name={image.imageName} />
-              </Card>
-            ))
-          ) : (
-            <p>No images found.</p>
-          )}
-        </Gallery>
+        <Gallery images={images} />
       </Section>
     </Frame>
   )
