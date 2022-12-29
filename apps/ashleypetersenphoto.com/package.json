@@ -35,11 +35,12 @@
     "dev:turbo": "next dev --turbo",
     "dev:turbo:debug": "next dev --turbo --show-all",
     "lint": "next lint",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "start": "next start"
   },
   "devDependencies": {
+    "eslint-config-next": "13.1.1",
     "next-compose-plugins": "2.2.1"
   }
 }

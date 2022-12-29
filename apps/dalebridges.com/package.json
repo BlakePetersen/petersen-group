@@ -11,7 +11,7 @@
     "dev:debug": "next dev --turbo --show-all",
     "lint": "next lint",
     "start": "next start",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch"
   },
   "dependencies": {
@@ -23,5 +23,9 @@
     "next-compose-plugins": "2.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-next": "13.1.1",
+    "next-compose-plugins": "2.2.1"
   }
 }

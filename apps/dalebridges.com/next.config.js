@@ -7,8 +7,7 @@ const { withAxiom } = require('next-axiom')
 
 const nextConfig = {
   experimental: {
-    appDir: true,
-    transpilePackages: ['artax-ui']
+    appDir: true
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
@@ -16,7 +15,8 @@ const nextConfig = {
   images: {
     domains: ['cdn.sanity.io']
   },
-  reactStrictMode: true
+  reactStrictMode: true,
+  transpilePackages: ['artax-ui']
 }
 
 module.exports = withPlugins([withAxiom], nextConfig)

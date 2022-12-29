@@ -4,7 +4,7 @@ import { _H1 } from '@/components/Typography/styles'
 import { _Container } from '@/components/Container'
 
 export const _Hero = styled(_Section, {
-  minHeight: `50vw`,
+  maxWidth: 1920,
   justifyContent: `center`,
   position: `relative`,
   overflow: `hidden`,
