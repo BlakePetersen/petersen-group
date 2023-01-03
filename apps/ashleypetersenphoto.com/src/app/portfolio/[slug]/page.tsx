@@ -1,11 +1,7 @@
-import React from 'react'
 import groq from 'groq'
 import { SanityClient, Section } from 'artax-ui'
 import { Frame } from '@/components/Frame'
 import Gallery from '@/components/Gallery'
-import Card from '@/components/Card'
-import CardOverlay from '@/components/CardOverlay'
-import CardImage from '@/components/CardImage'
 
 async function getPortfolioImages(slug: string) {
   const pathQuery = slug?.length

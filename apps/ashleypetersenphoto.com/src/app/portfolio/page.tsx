@@ -1,11 +1,8 @@
 import React from 'react'
 import groq from 'groq'
-import { Page, SanityClient } from 'artax-ui'
+import { SanityClient, Section } from 'artax-ui'
 import { Frame } from '@/components/Frame'
 import Gallery from '@/components/Gallery'
-import Card from '@/components/Card'
-import CardOverlay from '@/components/CardOverlay'
-import CardImage from '@/components/CardImage'
 
 async function getPortfolioImages(slug: string) {
   const pathQuery = slug?.length
@@ -25,21 +22,14 @@ const PortfolioIndexPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <Frame>
-      <h1>Portfolio {slug && ` - ${slug.toString()}`}</h1>
-      {images && <h3>Displaying {images.length} images</h3>}
+      <Section>
+        <h1>Portfolio {slug && ` - ${slug.toString()}`}</h1>
+        {images && <h3>Displaying {images.length} images</h3>}
+      </Section>
 
-      <Gallery>
-        {images ? (
-          images.map((image, i) => (
-            <Card key={i}>
-              <CardImage src={image.imageSrc} />
-              <CardOverlay name={image.imageName} />
-            </Card>
-          ))
-        ) : (
-          <p>No images found.</p>
-        )}
-      </Gallery>
+      <Section>
+        <Gallery images={images} />
+      </Section>
     </Frame>
   )
 }
