@@ -11,11 +11,10 @@ import {
 } from './styles'
 import { HeroTypes } from './types'
 import Image from 'next/image'
-import { CallToAction } from '@/components/CallToAction'
-import { Pencil2Icon } from '@radix-ui/react-icons'
 import Section from '@/components/Section'
+import { CallToAction } from '@/components/CallToAction'
 
-const Hero: HeroTypes = ({ image, css, h1, h2 }): ReactElement => (
+const Hero: HeroTypes = ({ image, css, h1, h2, ctas }): ReactElement => (
   <Section>
     <_Hero css={{ ...css }}>
       <_HeroBackground>
@@ -29,14 +28,13 @@ const Hero: HeroTypes = ({ image, css, h1, h2 }): ReactElement => (
         />
       </_HeroBackground>
       <_HeroContainer>
-        <_HeroH1>
-          Book your <br /> session today
-        </_HeroH1>
+        {h1 ? <_HeroH1>{h1}</_HeroH1> : null}
         <_HeroCtas>
-          <CallToAction href="/book">
-            <Pencil2Icon />
-            Book Now
-          </CallToAction>
+          {ctas
+            ? ctas.map((cta, i) => (
+                <CallToAction href={cta.url}>{cta.text}</CallToAction>
+              ))
+            : null}
         </_HeroCtas>
       </_HeroContainer>
     </_Hero>

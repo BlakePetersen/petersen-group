@@ -24,8 +24,7 @@ export const _Hero = styled(_Container, {
 
 export const _HeroBackground = styled('div', {
   position: 'absolute',
-  top: 0,
-  left: 0,
+
   width: `100%`,
   height: `auto`,
   aspectRatio: 3 / 2,

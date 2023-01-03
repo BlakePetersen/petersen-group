@@ -1,12 +1,12 @@
 'use client'
 
-import { _CardOverlay } from './card-overlay.styles'
-import { CardOverlayTypes } from './card-overlay.types'
+import { _CardOverlay } from './styles'
+import { Types } from './types'
 
 import React, { ReactElement } from 'react'
 import { CameraIcon, GlobeIcon } from '@radix-ui/react-icons'
 
-const CardOverlay: CardOverlayTypes = ({ name, location }): ReactElement => {
+const Index: Types = ({ name, location }): ReactElement => {
   return (
     <_CardOverlay>
       <p>
@@ -19,4 +19,4 @@ const CardOverlay: CardOverlayTypes = ({ name, location }): ReactElement => {
   )
 }
 
-export default CardOverlay
+export default Index

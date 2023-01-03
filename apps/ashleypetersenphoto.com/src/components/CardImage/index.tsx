@@ -1,11 +1,11 @@
 'use client'
 
-import { _CardImage } from './card-image.styles'
-import { CardImageTypes } from './card-image.types'
+import { _CardImage } from './styles'
+import { Types } from './types'
 
 import React, { ReactElement } from 'react'
 
-const CardImage: CardImageTypes = ({ src }): ReactElement => {
+const Index: Types = ({ src }): ReactElement => {
   return (
     <_CardImage
       src={src}
@@ -19,4 +19,4 @@ const CardImage: CardImageTypes = ({ src }): ReactElement => {
   )
 }
 
-export default CardImage
+export default Index

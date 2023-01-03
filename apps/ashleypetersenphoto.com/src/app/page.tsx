@@ -1,4 +1,3 @@
-import React from 'react'
 import groq from 'groq'
 import { Frame } from '@/components/Frame'
 import { SanityClient } from 'artax-ui'
@@ -16,16 +15,24 @@ async function getFeaturedImages() {
 
 const RootPage = async () => {
   const images = await getFeaturedImages()
+  const heroImage = images.splice(Math.random() * images.length, 1)[0]
+  const heroCtas = [
+    {
+      url: `/book`,
+      text: 'Book Now'
+    }
+  ]
 
   return (
     <Frame>
-      <Gallery images={images} />
-
       <Hero
-        image={images[0]}
+        image={heroImage}
         h1={`Ashley Petersen Photography`}
         h2={`Portrait / Boudior / Underwater`}
+        ctas={heroCtas}
       />
+
+      <Gallery images={images} />
     </Frame>
   )
 }

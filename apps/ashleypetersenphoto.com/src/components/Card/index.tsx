@@ -5,8 +5,8 @@ import { Types } from './types'
 
 import { Children, ReactElement } from 'react'
 
-const Card: Types = ({ children }): ReactElement => {
+const Index: Types = ({ children }): ReactElement => {
   return <_Card>{Children.map(children, (child: ReactElement) => child)}</_Card>
 }
 
-export default Card
+export default Index

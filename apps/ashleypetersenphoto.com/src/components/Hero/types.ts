@@ -9,4 +9,8 @@ export type HeroTypes = FC<{
   css?: Stitches.CSS
   h1: string
   h2: string
+  ctas: {
+    url: string
+    text: string
+  }[]
 }>
