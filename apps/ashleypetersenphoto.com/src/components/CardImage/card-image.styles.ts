@@ -1,7 +1,7 @@
 import { styled } from '@stitches/react'
 import Image from 'next/image'
 
-export const _CardImage = styled(Image, {
+export const _CardImage: any = styled(Image, {
   width: '100%',
   height: `auto`,
   display: 'block',
