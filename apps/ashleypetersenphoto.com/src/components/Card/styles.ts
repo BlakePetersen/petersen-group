@@ -1,7 +1,7 @@
 import { styled } from '@/config/stitches.config'
 
 export const _Card = styled('div', {
-  borderRadius: '.25rem',
+  borderRadius: '.5rem',
   overflow: 'hidden',
   position: `relative`,
   display: 'block',

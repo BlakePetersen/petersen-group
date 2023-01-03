@@ -1,7 +1,6 @@
 import React from 'react'
 import groq from 'groq'
 import { Frame } from '@/components/Frame'
-import { Section } from '@/components/Section'
 import { SanityClient } from 'artax-ui'
 import Gallery from '@/components/Gallery'
 import Hero from '@/components/Hero'

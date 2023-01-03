@@ -5,5 +5,6 @@ export const _Section = styled('section', {
   display: 'flex',
   justifyContent: `center`,
   width: `100%`,
-  padding: `1rem`
+  margin: `1rem`,
+  maxWidth: 1400
 })

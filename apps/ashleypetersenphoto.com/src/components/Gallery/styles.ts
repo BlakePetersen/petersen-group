@@ -6,6 +6,5 @@ export const _Gallery = styled(_Container, {
   gridTemplateColumns: 'repeat(auto-fit, minmax(420px, .5fr))',
   gap: `1rem`,
   width: `100%`,
-  padding: `0 1rem`,
   justifyContent: `center`
 })

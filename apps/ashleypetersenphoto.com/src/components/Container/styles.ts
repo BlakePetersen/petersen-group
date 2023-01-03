@@ -7,5 +7,5 @@ export const _Container = styled('div', {
   gap: `1rem`,
   width: `100%`,
   maxWidth: 1600,
-  padding: `2rem`
+  margin: `1rem`
 })

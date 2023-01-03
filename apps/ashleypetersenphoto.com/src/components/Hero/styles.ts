@@ -1,14 +1,14 @@
 import { styled } from '@/config/stitches.config'
-import { _Section } from '@/components/Section'
 import { _H1 } from '@/components/Typography/styles'
 import { _Container } from '@/components/Container'
 
-export const _Hero = styled(_Section, {
-  maxWidth: 1920,
+export const _Hero = styled(_Container, {
   justifyContent: `center`,
   position: `relative`,
   overflow: `hidden`,
-  borderRadius: `1rem`,
+  borderRadius: `.5rem`,
+  boxShadow: '0 3px 6px 0 $grayA6',
+  minHeight: 600,
   '&:after': {
     content: `''`,
     position: `absolute`,
@@ -44,7 +44,9 @@ export const _HeroContainer = styled(_Container, {
   justifyContent: `flex-end`,
   textAlign: `left`,
   position: `relative`,
-  zIndex: 1
+  height: `100%`,
+  zIndex: 1,
+  padding: `2rem`
 })
 
 export const _HeroCtas = styled('div', {

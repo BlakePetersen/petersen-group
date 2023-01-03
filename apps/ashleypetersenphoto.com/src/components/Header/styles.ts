@@ -3,7 +3,7 @@ import { styled } from '@/config/stitches.config'
 export const _Header = styled('header', {
   position: `sticky`,
   display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
+  gridTemplateColumns: '0 auto 0',
   alignItems: 'center',
   gap: '1rem',
   backgroundColor: '$accentBgA',
@@ -15,8 +15,8 @@ export const _Header = styled('header', {
   top: '0',
   backdropFilter: 'blur(.5rem)',
   a: {
-    textDecoration: 'none',
-  },
+    textDecoration: 'none'
+  }
 })
 
 export const _LogoContainer = styled('div', {
@@ -24,5 +24,5 @@ export const _LogoContainer = styled('div', {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  textAlign: 'center',
+  textAlign: 'center'
 })
