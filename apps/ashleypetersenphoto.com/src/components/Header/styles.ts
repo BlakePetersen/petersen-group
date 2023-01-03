@@ -3,7 +3,7 @@ import { styled } from '@/config/stitches.config'
 export const _Header = styled('header', {
   position: `sticky`,
   display: 'grid',
-  gridTemplateColumns: '0 auto 0',
+  gridTemplateColumns: '1fr auto 1fr',
   alignItems: 'center',
   gap: '1rem',
   backgroundColor: '$accentBgA',
