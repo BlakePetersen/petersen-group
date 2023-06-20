@@ -4,6 +4,7 @@ import { _Container } from '@/components/Container'
 
 export const _Hero = styled(_Container, {
   justifyContent: `center`,
+  alignItems: `center`,
   position: `relative`,
   overflow: `hidden`,
   borderRadius: `.5rem`,
@@ -41,7 +42,7 @@ export const _HeroBackground = styled('div', {
 export const _HeroContainer = styled(_Container, {
   flexDirection: `column`,
   justifyContent: `flex-end`,
-  textAlign: `left`,
+  textAlign: `center`,
   position: `relative`,
   height: `100%`,
   zIndex: 1,
