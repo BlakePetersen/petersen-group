@@ -8,14 +8,17 @@ const { withAxiom } = require('next-axiom')
 const nextConfig = {
   experimental: {
     appDir: true,
-    transpilePackages: ['artax-ui']
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } }
+    ]
+  },
+  images: {
+    domains: ['cdn.sanity.io']
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
-  images: {
-    domains: ['cdn.sanity.io']
-  }
+  transpilePackages: ['artax-ui']
 }
 
 module.exports = withPlugins([withAxiom], nextConfig)
