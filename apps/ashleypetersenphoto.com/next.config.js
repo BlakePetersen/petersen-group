@@ -8,7 +8,10 @@ const { withAxiom } = require('next-axiom')
 const nextConfig = {
   experimental: {
     appDir: true,
-    transpilePackages: ['artax-ui']
+    transpilePackages: ['artax-ui'],
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } }
+    ]
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
