@@ -2,7 +2,7 @@
 
 import { Root, Sub, Trigger } from '@radix-ui/react-dropdown-menu'
 import { CaretRightIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
-import { Public_Sans } from '@next/font/google'
+import { Public_Sans } from "next/font/google"
 
 import useSWR from 'swr'
 import groq from 'groq'

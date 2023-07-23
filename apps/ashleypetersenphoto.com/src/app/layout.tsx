@@ -1,4 +1,4 @@
-import { Lora } from '@next/font/google'
+import { Lora } from "next/font/google"
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
