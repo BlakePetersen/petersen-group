@@ -1,11 +1,11 @@
-import { Lora } from "next/font/google"
+import { Lora } from 'next/font/google'
 
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
 import '@/styles/global-styles.scss'
 
-const lora = Lora()
+const lora = Lora({ subsets: ['latin'] })
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
