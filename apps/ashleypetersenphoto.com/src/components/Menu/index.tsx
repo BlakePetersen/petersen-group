@@ -2,7 +2,7 @@
 
 import { Root, Sub, Trigger } from '@radix-ui/react-dropdown-menu'
 import { CaretRightIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
-import { Public_Sans } from '@next/font/google'
+import { Public_Sans } from 'next/font/google'
 
 import useSWR from 'swr'
 import groq from 'groq'
@@ -21,7 +21,7 @@ import {
   _TriggerItem
 } from '@/components/Menu/styles'
 
-const publicSans = Public_Sans()
+const publicSans = Public_Sans({ subsets: ['latin'] })
 
 const Menu = () => {
   const { data: menuData } = useSWR(
@@ -82,7 +82,8 @@ const Menu = () => {
                     rel={`noreferrer noopener`}
                   >
                     <_ExternalItem>
-                      {section.title} <_ExternalLinkIcon />
+                      {section.title}
+                      <_ExternalLinkIcon />
                     </_ExternalItem>
                   </a>
                 ) : (
