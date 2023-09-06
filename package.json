@@ -26,6 +26,7 @@
     "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
     "start": "turbo run start --parallel",
     "start:0xbp": "turbo run start --scope=0xbp.io",
     "start:app": "turbo run start --scope=ashleypetersenphoto.com",
@@ -34,31 +35,30 @@
     "start:studio:0xbp": "turbo run sanity start --scope=studio.0xbp.io",
     "start:studio:app": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
     "start:studio:bpio": "turbo run sanity start --scope=studio.blakepetersen.io",
-    "start:studio:dbre": "turbo run sanity start --scope=studio.dalebridges.com",
-    "prepare": "husky install"
+    "start:studio:dbre": "turbo run sanity start --scope=studio.dalebridges.com"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.3.0",
-    "@commitlint/config-conventional": "17.3.0",
+    "@commitlint/cli": "17.6.7",
+    "@commitlint/config-conventional": "17.6.7",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
-    "@types/node": "20.4.5",
-    "@types/react": "18.2.17",
-    "@typescript-eslint/eslint-plugin": "6.2.0",
-    "@typescript-eslint/parser": "6.2.0",
-    "eslint": "8.45.0",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.18",
+    "@typescript-eslint/eslint-plugin": "6.2.1",
+    "@typescript-eslint/parser": "6.2.1",
+    "eslint": "8.46.0",
     "husky": "8.0.3",
-    "jest": "29.6.1",
-    "jest-environment-jsdom": "29.6.1",
+    "jest": "29.6.2",
+    "jest-environment-jsdom": "29.6.2",
     "lint-staged": "13.2.3",
-    "prettier": "3.0.0",
+    "prettier": "3.0.1",
     "turbo": "1.10.12",
     "typescript": "5.1.6"
   },
   "lint-staged": {
     "apps/**/*.{js,jsx,ts,tsx}": [
-      "yarn eslint --quiet --fix"
+      "pnpm eslint --quiet --fix"
     ],
     "*.{json,md}": [
       "prettier --write"

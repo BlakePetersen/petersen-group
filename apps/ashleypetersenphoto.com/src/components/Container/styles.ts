@@ -5,7 +5,5 @@ export const _Container = styled('div', {
   display: 'flex',
   flexDirection: `column`,
   gap: `1rem`,
-  width: `100%`,
-  maxWidth: 1600,
-  margin: `1rem`
+  width: `100%`
 })

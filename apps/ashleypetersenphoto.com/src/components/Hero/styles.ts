@@ -9,23 +9,11 @@ export const _Hero = styled(_Container, {
   overflow: `hidden`,
   borderRadius: `.5rem`,
   boxShadow: '0 3px 6px 0 $grayA6',
-  minHeight: 600,
-  '&:after': {
-    content: `''`,
-    position: `absolute`,
-    bottom: `-50%`,
-    left: `-25%`,
-    width: `200%`,
-    height: `66.6%`,
-    background: `-webkit-linear-gradient($accentBaseA, $accentBorderA), -webkit-linear-gradient($accentBaseA, $accentBorderHoverA)`,
-    backgroundBlendMode: `luminosity`,
-    transform: `rotate(15deg)`
-  }
+  aspectRatio: 2.5
 })
 
 export const _HeroBackground = styled('div', {
   position: 'absolute',
-
   width: `100%`,
   height: `auto`,
   aspectRatio: 3 / 2,
@@ -34,7 +22,6 @@ export const _HeroBackground = styled('div', {
     width: `100%`,
     height: `auto`,
     minHeight: `66.6vh`,
-    maxHeight: `1200px`,
     objectFit: `cover`
   }
 })

@@ -7,6 +7,7 @@ export const _Frame = styled('main', {
   alignItems: 'center',
   backgroundColor: '$gray1',
   width: `100vw`,
-  padding: `1.5rem`,
-  borderRadius: `1rem`
+  padding: `1rem`,
+  borderRadius: `1rem`,
+  gap: `1rem`
 })

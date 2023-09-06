@@ -28,11 +28,13 @@ const Hero: HeroTypes = ({ image, css, h1, h2, ctas }): ReactElement => (
         />
       </_HeroBackground>
       <_HeroContainer>
-        {h1 ? <_HeroH1>{h1}</_HeroH1> : null}
+        {/*{h1 ? <_HeroH1>{h1}</_HeroH1> : null}*/}
         <_HeroCtas>
           {ctas
             ? ctas.map((cta, i) => (
-                <CallToAction href={cta.url}>{cta.text}</CallToAction>
+                <CallToAction href={cta.url} key={i.toString()}>
+                  {cta.text}
+                </CallToAction>
               ))
             : null}
         </_HeroCtas>

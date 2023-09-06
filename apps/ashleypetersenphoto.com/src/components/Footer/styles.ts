@@ -11,7 +11,7 @@ export const _Footer = styled('footer', {
   justifyContent: `center`,
   alignItems: `center`,
   padding: `1.5rem`,
-  borderTop: `1px solid $accentBorder`,
+  // borderTop: `1px solid $accentBorder`,
   a: {
     color: '$accentTextContrast',
     textDecoration: 'none'
