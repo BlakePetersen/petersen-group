@@ -17,15 +17,15 @@
   "dependencies": {
     "@stitches/react": "1.2.8",
     "modern-normalize": "2.0.0",
-    "next": "13.4.12",
-    "next-themes": "0.2.1",
-    "next-axiom": "0.18.0",
+    "next": "13.5.5",
+    "next-axiom": "1.0.0",
     "next-compose-plugins": "2.2.1",
+    "next-themes": "0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint-config-next": "13.4.12",
+    "eslint-config-next": "13.5.5",
     "next-compose-plugins": "2.2.1"
   }
 }
