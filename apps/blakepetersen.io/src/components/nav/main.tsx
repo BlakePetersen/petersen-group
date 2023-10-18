@@ -3,6 +3,10 @@ import React from 'react'
 import Link from 'next/link'
 import Triangles from '@/components/triangles'
 
+interface TitleProps {
+  isTop: boolean
+}
+
 const _MainNav = styled.div`
   position: relative;
   display: flex;
@@ -17,7 +21,9 @@ const _MainNav = styled.div`
     text-decoration: none;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
-    transition: color 150ms ease 150ms, text-shadow 300ms ease-out,
+    transition:
+      color 150ms ease 150ms,
+      text-shadow 300ms ease-out,
       transform 300ms ease;
 
     &:hover {
@@ -39,7 +45,9 @@ const _MainNav = styled.div`
     fill: rgba(255, 255, 255, 0.95);
     width: 30px;
     filter: drop-shadow(0 7px 0 rgba(0, 0, 0, 0.15));
-    transition: filter 300ms ease, transform 300ms ease;
+    transition:
+      filter 300ms ease,
+      transform 300ms ease;
     flex-shrink: 0;
 
     &:hover {
@@ -66,7 +74,9 @@ const _Logo = styled.h1`
   white-space: nowrap;
 
   .is-post & {
-    transition: opacity 150ms ease-out, transform 300ms ease-out;
+    transition:
+      opacity 150ms ease-out,
+      transform 300ms ease-out;
     opacity: 0;
     transform: translateY(-100px);
   }
@@ -77,7 +87,7 @@ const _Logo = styled.h1`
   }
 `
 
-const _Title = styled.div`
+const _Title = styled.div<TitleProps>`
   padding: 0 0 0.5rem;
   opacity: 1;
   transition: opacity 300ms ease;
@@ -105,7 +115,7 @@ const MainNav = ({ isTop = true }) => {
         <_Logo>
           <Link href={`/`}>
             <_Title isTop={isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
-            <_Subtitle isTop={isTop}>Good Times in Web Development</_Subtitle>
+            <_Subtitle>Good Times in Web Development</_Subtitle>
           </Link>
         </_Logo>
       </_Content>

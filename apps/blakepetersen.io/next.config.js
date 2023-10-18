@@ -8,9 +8,6 @@ const withPlugins = require('next-compose-plugins')
 const { withAxiom } = require('next-axiom')
 
 const nextConfig = {
-  experimental: {
-    transpilePackages: ['artax-ui']
-  },
   compiler: {
     // Enables the styled-components SWC transform
     styledComponents: true
@@ -19,6 +16,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
+  transpilePackages: ['artax-ui'],
   async headers() {
     return [
       {
