@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import React from 'react'
 import Link from 'next/link'
 import Triangles from '@/components/triangles'
+import { Flex, Text, Button, Link as _Link } from '@radix-ui/themes'
 
 interface TitleProps {
-  isTop: boolean
+  $isTop: boolean
 }
 
 const _MainNav = styled.div`
@@ -19,7 +20,6 @@ const _MainNav = styled.div`
   a {
     display: inline-block;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
     transition:
       color 150ms ease 150ms,
@@ -28,7 +28,6 @@ const _MainNav = styled.div`
 
     &:hover {
       transform: translateY(-4px);
-      color: rgb(255, 255, 255);
       text-shadow: 0 11px 1px rgba(0, 0, 0, 0.15);
     }
   }
@@ -89,14 +88,8 @@ const _Logo = styled.h1`
 
 const _Title = styled.div<TitleProps>`
   padding: 0 0 0.5rem;
-  opacity: 1;
+  opacity: ${props => (props.$isTop ? 1 : 0)};
   transition: opacity 300ms ease;
-
-  ${({ isTop }) =>
-    !isTop &&
-    `
-    opacity: 0;
-  `}
 `
 
 const _Subtitle = styled.div`
@@ -113,9 +106,14 @@ const MainNav = ({ isTop = true }) => {
     <_MainNav className={`main-nav full`}>
       <_Content>
         <_Logo>
-          <Link href={`/`}>
-            <_Title isTop={isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
-            <_Subtitle>Good Times in Web Development</_Subtitle>
+          <Link href={`/`} passHref>
+            <_Link asChild>
+              <_Title $isTop={isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
+            </_Link>
+
+            <_Link asChild>
+              <_Subtitle>Good Times in Web Development</_Subtitle>
+            </_Link>
           </Link>
         </_Logo>
       </_Content>

@@ -1,23 +1,22 @@
 import '@/styles/_global-styles.scss'
+
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes'
 import { AnimatePresence } from 'framer-motion'
+import { Theme, ThemePanel } from '@radix-ui/themes'
 
 import Layout from '@/components/layout'
-import { darkTheme, theme } from '../../stitches.config'
-
-export { reportWebVitals } from 'next-axiom'
+import { WebVitals } from 'artax-ui/src/components/WebVitals'
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme={theme.className}
-      value={{
-        light: theme.className,
-        dark: darkTheme.className
-      }}
+    <Theme
+      accentColor="mint"
+      grayColor="gray"
+      panelBackground="solid"
+      scaling="100%"
+      radius="full"
     >
+      <WebVitals />
       <Layout>
         <AnimatePresence
           mode={`wait`}
@@ -27,7 +26,8 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </Layout>
-    </ThemeProvider>
+      <ThemePanel />
+    </Theme>
   )
 }
 

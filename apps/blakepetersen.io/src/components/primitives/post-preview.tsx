@@ -6,13 +6,17 @@ import Description from '@/components/posts/description'
 import Tags from '@/components/posts/tags'
 import Colors from '@/styles/colors'
 
-const _ListWrapper = styled.div`
+interface ListWrapperProps {
+  size?: string
+}
+
+const _ListWrapper = styled.div<ListWrapperProps>`
   display: grid;
   grid-gap: 2rem;
 
   :not(:last-child) {
-    border-bottom: ${(props) => props.size || `1px`} solid
-      ${(props) => props.color || Colors.ash};
+    border-bottom: ${props => props.size || `1px`} solid
+      ${props => props.color || Colors.ash};
     padding-bottom: 3rem;
   }
 `

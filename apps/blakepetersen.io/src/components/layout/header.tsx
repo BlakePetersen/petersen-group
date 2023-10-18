@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 interface StickyHeaderProps {
-  isTop: boolean
+  $isTop: boolean
 }
 
 const _StickyHeader = styled.header<StickyHeaderProps>`
@@ -30,13 +30,8 @@ const _StickyHeader = styled.header<StickyHeaderProps>`
   transition:
     background 300ms ease,
     transform 300ms ease;
-  transform: translateY(0);
-
-  ${({ isTop }) =>
-    !isTop &&
-    `
-    transform: translateY(-3.75rem);
-  `}
+  transform: ${props =>
+    props.$isTop ? `translateY(0)` : `translateY(-3.75rem)`};
 `
 
 const Header = () => {
@@ -50,7 +45,7 @@ const Header = () => {
   )
 
   return (
-    <_StickyHeader isTop={isTop}>
+    <_StickyHeader $isTop={isTop}>
       {/*<Menu />*/}
       <MainNav isTop={isTop} />
       {/*<Search />*/}

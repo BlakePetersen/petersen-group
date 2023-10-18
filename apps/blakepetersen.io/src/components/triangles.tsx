@@ -2,21 +2,27 @@ import styled from 'styled-components'
 import React, { useEffect, useRef, useState } from 'react'
 import Trianglify from '@wordbots/trianglify-no-canvas'
 
-const _Triangles = styled.div`
+interface TrianglesProps {
+  trianglespattern: string
+}
+
+const _Triangles = styled.div<TrianglesProps>`
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url('${(props) => props.trianglesPattern}');
+  background-image: url('${props => props.trianglespattern}');
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1),
-    inset 0 0 25px rgba(0, 0, 0, 0.15), inset 0 0 125px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.1),
+    inset 0 0 25px rgba(0, 0, 0, 0.15),
+    inset 0 0 125px rgba(0, 0, 0, 0.2);
 
   opacity: 1;
 `
 
-const _generatePattern = (current) => {
+const _generatePattern = current => {
   const _canvasHeight = current.offsetHeight || 120,
     _canvasWidth = current.clientWidth || 2400
 
@@ -33,7 +39,7 @@ const _generatePattern = (current) => {
       '#3690c0',
       '#02818a',
       '#016c59',
-      '#014636',
+      '#014636'
     ],
     y_colors: [
       '#ffffff',
@@ -44,9 +50,9 @@ const _generatePattern = (current) => {
       // "#737373",
       '#525252',
       // "#252525",
-      '#000000',
+      '#000000'
     ],
-    cell_size: 60 * 2,
+    cell_size: 60 * 2
   }
 
   const _pattern = new Trianglify(_patternOptions)
@@ -63,7 +69,7 @@ const Triangles = () => {
     setTrianglesPattern(_generatePattern(current))
   }, [])
 
-  return <_Triangles ref={trianglesRef} trianglesPattern={trianglesPattern} />
+  return <_Triangles ref={trianglesRef} trianglespattern={trianglesPattern} />
 }
 
 export default Triangles
