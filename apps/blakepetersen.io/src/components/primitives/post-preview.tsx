@@ -6,15 +6,15 @@ import Description from '@/components/posts/description'
 import Tags from '@/components/posts/tags'
 import Colors from '@/styles/colors'
 
-interface ListWrapperProps {
+interface PostPreviewProps {
   size?: string
 }
 
-const _ListWrapper = styled.div<ListWrapperProps>`
+const _PostPreview = styled.div<PostPreviewProps>`
   display: grid;
   grid-gap: 2rem;
 
-  :not(:last-child) {
+  &:not(&:last-child) {
     border-bottom: ${props => props.size || `1px`} solid
       ${props => props.color || Colors.ash};
     padding-bottom: 3rem;
@@ -22,12 +22,12 @@ const _ListWrapper = styled.div<ListWrapperProps>`
 `
 
 const PostPreview = ({ post }) => (
-  <_ListWrapper>
+  <_PostPreview>
     <Meta publishDate={post?.fields.publishDate} />
     <Title slug={post?.fields.slug} title={post?.fields.title} />
     <Description description={post?.fields.description} />
     {post?.fields.tags && <Tags tags={post?.fields.tags} />}
-  </_ListWrapper>
+  </_PostPreview>
 )
 
 export default PostPreview

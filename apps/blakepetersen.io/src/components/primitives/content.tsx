@@ -6,7 +6,6 @@ const _Content = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
   padding: 4rem 2rem;
 
   @media (min-width: ${Breakpoints.medium}) {
