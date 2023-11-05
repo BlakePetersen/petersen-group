@@ -11,9 +11,6 @@ interface PostPreviewProps {
 }
 
 const _PostPreview = styled.div<PostPreviewProps>`
-  display: grid;
-  grid-gap: 2rem;
-
   &:not(&:last-child) {
     border-bottom: ${props => props.size || `1px`} solid
       ${props => props.color || Colors.ash};

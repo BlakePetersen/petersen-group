@@ -1,10 +1,10 @@
 import styled from 'styled-components'
+import { Link as ThemedLink } from '@radix-ui/themes'
 import Link from 'next/link'
 
 import Colors from '@/styles/colors'
 
 const _TitleLink = styled.h1`
-  color: ${Colors.slate};
   text-decoration: none;
   cursor: pointer;
   font-size: 2rem;
@@ -12,9 +12,11 @@ const _TitleLink = styled.h1`
 `
 
 const Title = ({ title, slug }) => (
-  <Link href={`/posts/${slug}`}>
-    <_TitleLink>{title}</_TitleLink>
-  </Link>
+  <ThemedLink asChild>
+    <Link href={`/posts/${slug}`}>
+      <_TitleLink>{title}</_TitleLink>
+    </Link>
+  </ThemedLink>
 )
 
 export default Title

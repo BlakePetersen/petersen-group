@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   extends: [
     'next/core-web-vitals',
@@ -12,7 +12,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'prettier',
+    'prettier'
   ],
   plugins: ['import', '@typescript-eslint'],
   settings: {
@@ -21,21 +21,20 @@ module.exports = {
         'apps/ashleypetersenphoto.com/',
         'apps/blakepetersen.io/',
         'apps/dalebridges.com/',
-        'apps/iriganggang.com/',
-        'apps/0xbp.io/',
-      ],
+        'apps/0xbp.io/'
+      ]
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx']
     },
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
       },
       typescript: {
-        alwaysTryTypes: true,
-      },
-    },
+        alwaysTryTypes: true
+      }
+    }
   },
   rules: {
     '@typescript-eslint/naming-convention': 0,
@@ -75,26 +74,26 @@ module.exports = {
     'react/function-component-definition': [
       2,
       {
-        namedComponents: 'arrow-function',
-      },
+        namedComponents: 'arrow-function'
+      }
     ],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
         components: ['Link'],
         specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
-    ],
+        aspects: ['invalidHref', 'preferButton']
+      }
+    ]
   },
   overrides: [
     {
       env: {
-        jest: true,
+        jest: true
       },
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
-    },
+      extends: ['plugin:testing-library/react', 'plugin:jest/recommended']
+    }
   ],
   ignorePatterns: [
     '**/*.js',
@@ -102,6 +101,6 @@ module.exports = {
     'node_modules',
     '.turbo',
     '.next',
-    'public',
-  ],
+    'public'
+  ]
 }
