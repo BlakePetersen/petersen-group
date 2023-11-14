@@ -6,9 +6,7 @@ const withPlugins = require('next-compose-plugins')
 const { withAxiom } = require('next-axiom')
 
 const nextConfig = {
-  experimental: {
-    transpilePackages: ['artax-ui']
-  },
+  experimental: {},
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
@@ -35,7 +33,8 @@ const nextConfig = {
       'eth-mainnet.alchemyapi.io',
       'safe-nft-metadata-provider-3-5mgae.ondigitalocean.app'
     ]
-  }
+  },
+  transpilePackages: ['artax-ui']
 }
 
 module.exports = withPlugins([withAxiom], nextConfig)

@@ -4,7 +4,7 @@ import ProgressBar from '@/lib/progress-bar'
 import styled from 'styled-components'
 
 const _ProgressBar = styled.div`
-  height: 3px;
+  height: 5px;
   width: 100%;
   display: flex;
 `

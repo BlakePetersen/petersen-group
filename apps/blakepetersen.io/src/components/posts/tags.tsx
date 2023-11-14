@@ -1,9 +1,6 @@
 import styled from 'styled-components'
-import { rgba } from 'polished'
 import Link from 'next/link'
 import { Link as ThemedLink } from '@radix-ui/themes'
-
-import Colors from '@/styles/colors'
 
 const _Tags = styled.div`
   display: flex;
@@ -16,7 +13,7 @@ const _Tags = styled.div`
 `
 
 const _Tag = styled.div`
-  background-color: ${Colors.ash};
+  background-color: var(--gray-4);
   border-radius: 4px;
   padding: 0.35rem;
   font-size: 0.65rem;
@@ -29,9 +26,9 @@ const _Tag = styled.div`
     box-shadow 250ms ease;
 
   &:hover:not(:active) {
-    background-color: ${Colors.ash};
+    background-color: var(--gray-4);
     transform: translateY(-3px);
-    box-shadow: 0 3px 0 4px ${Colors.slate};
+    box-shadow: 0 3px 0 4px var(--gray-6);
   }
 `
 

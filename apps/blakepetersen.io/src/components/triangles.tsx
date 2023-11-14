@@ -18,9 +18,9 @@ const _Triangles = styled.div<TrianglesProps>`
   background-size: cover;
   background-position: center;
   box-shadow:
-    inset 0 0 10px rgba(0, 0, 0, 0.1),
-    inset 0 0 25px rgba(0, 0, 0, 0.15),
-    inset 0 0 125px rgba(0, 0, 0, 0.2);
+    inset 0 0 10px rgba(0, 0, 0, 0.05),
+    inset 0 0 25px rgba(0, 0, 0, 0.075),
+    inset 0 0 125px rgba(0, 0, 0, 0.1);
 
   opacity: 1;
 `
@@ -59,11 +59,11 @@ const Triangles = () => {
   const palette = {
     accentColors:
       activeTheme === 'dark'
-        ? ['#061e24', '#07303b', '#064150', '#00647d', '#00b1cc']
+        ? ['#061e24', '#0a4554', '#0a647b', '#0099bd', '#00b1cc']
         : ['#f2fcfd', '#d8f3f6', '#aadee6', '#3db9cf', '#0894b3'],
     grayColors:
       activeTheme === 'dark'
-        ? ['#787f85', '#4c5155', '#313538', '#26292b', '#1a1d1e']
+        ? ['#787f85', '#4c5155', '#313538', '#17191a', '#1a1d1e']
         : ['#7e868c', '#c1c8cd', '#dfe3e6', '#eceef0', '#f8f9fa']
   }
 

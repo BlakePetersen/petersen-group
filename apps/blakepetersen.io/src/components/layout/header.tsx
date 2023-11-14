@@ -18,10 +18,9 @@ const _StickyHeader = styled.header<StickyHeaderProps>`
   z-index: 100;
   max-width: 100vw;
   width: 100%;
-  background-color: #dde2e5;
+  background-color: var(--gray-8);
   background-size: 300px 100%;
   text-align: center;
-  color: rgba(0, 255, 255, 0.95);
   margin-bottom: 0;
   box-shadow:
     0 0 30px rgba(0, 0, 0, 0.15),
