@@ -6,7 +6,6 @@ const withPlugins = require('next-compose-plugins')
 const { withAxiom } = require('next-axiom')
 
 const nextConfig = {
-  experimental: {},
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
@@ -31,8 +30,11 @@ const nextConfig = {
       'gateway.ipfs.io',
       'res.cloudinary.com',
       'eth-mainnet.alchemyapi.io',
-      'safe-nft-metadata-provider-3-5mgae.ondigitalocean.app'
-    ]
+      'safe-nft-metadata-provider-3-5mgae.ondigitalocean.app',
+      'nft-cdn.alchemy.com',
+      'secopi.site'
+    ],
+    dangerouslyAllowSVG: true
   },
   transpilePackages: ['artax-ui']
 }

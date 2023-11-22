@@ -6,9 +6,6 @@ const withPlugins = require('next-compose-plugins')
 const { withAxiom } = require('next-axiom')
 
 const nextConfig = {
-  experimental: {
-    appDir: true
-  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
