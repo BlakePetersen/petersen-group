@@ -5,13 +5,11 @@ import { AnimatePresence } from 'framer-motion'
 import { Theme, ThemePanel } from '@radix-ui/themes'
 import { ThemeProvider } from 'next-themes'
 import Layout from '@/components/layout'
-import { WebVitals } from 'artax-ui/src/components/WebVitals'
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
   return (
     <ThemeProvider attribute="class">
       <Theme grayColor={'slate'} accentColor={'cyan'}>
-        <WebVitals />
         <Layout>
           <AnimatePresence
             mode={`wait`}
@@ -21,7 +19,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
         </Layout>
-        <ThemePanel />
+        {process.env.NODE_ENV === 'development' ? <ThemePanel /> : null}
       </Theme>
     </ThemeProvider>
   )
