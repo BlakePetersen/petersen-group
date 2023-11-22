@@ -18,7 +18,7 @@ const _attachEventListeners = () => {
         _createCanvas()
         _drawCanvas()
       }
-    }, 250),
+    }, 250)
   )
 }
 
@@ -58,13 +58,13 @@ function _drawCanvas() {
 
   // Draw element
   _ctx.beginPath()
-  _ctx.fillStyle = '#708fb3'
+  _ctx.fillStyle = '#00647d'
   _ctx.rect(
     0,
     0,
     _canvasWidth *
       (_scrollDepth / (document.body.scrollHeight - window.innerHeight)),
-    _canvasHeight,
+    _canvasHeight
   )
   _ctx.fill()
   _ctx.restore()

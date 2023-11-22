@@ -1,6 +1,7 @@
 import React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { getCssText } from 'config/stitches.config'
+import { Analytics } from '@vercel/analytics/react'
 
 export default class SiteDocument extends Document {
   render() {
@@ -20,6 +21,7 @@ export default class SiteDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     )

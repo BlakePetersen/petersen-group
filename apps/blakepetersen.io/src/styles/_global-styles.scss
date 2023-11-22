@@ -1,40 +1,12 @@
-@import "vendor/normalize/normalize";
-@import './breakpoints';
-@import './colors';
-@import './fonts';
+@import '@radix-ui/themes/styles.css';
+@import 'modern-normalize/modern-normalize.css';
 
-body, html {
-  background: $snow;
-  color: rgba($onyx, .75);
-  font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
+div[data-radix-popper-content-wrapper] {
+  will-change: unset !important;
 }
 
-a {
-  color: $ash;
-  transition: color 180ms ease-in;
-
-  &:hover {
-    color: darken($concrete, .1);
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 300;
-}
-
-img {
-  max-width: 100%;
-}
-
-p, pre {
-  line-height: 1.8;
-  margin: 0;
-}
-
-code {
-  padding: .5rem;
-  position: relative;
-  white-space: inherit;
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }

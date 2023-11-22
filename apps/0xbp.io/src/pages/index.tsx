@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import { ArtaxImage, Card, Grid, Page } from 'artax-ui'
+import Image from 'next/image'
+import { Card, Grid, Page } from 'artax-ui'
 import useSWR from 'swr'
 import { useAccount } from 'wagmi'
 
@@ -24,8 +25,8 @@ const Home: NextPage = () => {
             ownedNft.media.map((image, i) => {
               return (
                 image.gateway && (
-                  <Card>
-                    <ArtaxImage src={image.gateway} layout="fill" key={i} />
+                  <Card key={i}>
+                    <Image src={image.gateway} alt={``} layout="fill" />
                   </Card>
                 )
               )

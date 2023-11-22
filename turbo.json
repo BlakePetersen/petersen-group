@@ -1,5 +1,4 @@
 {
-  "baseBranch": "origin/main",
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -14,6 +13,11 @@
       "dependsOn": ["^build"]
     },
     "sanity": {},
-    "test": {}
+    "test": {
+      "outputs": []
+    },
+    "test:watch": {
+      "cache": false
+    }
   }
 }

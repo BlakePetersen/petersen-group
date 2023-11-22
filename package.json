@@ -12,49 +12,57 @@
     "build:app": "turbo run build --scope=ashleypetersenphoto.com",
     "build:bpio": "turbo run build --scope=blakepetersen.io",
     "build:dbre": "turbo run build --scope=dalebridges.com",
-    "build:igg": "turbo run build --scope=iriganggang.com",
     "build:studio:0xbp": "turbo run build --scope=studio.0xbp.io",
     "build:studio:app": "turbo run build --scope=studio.ashleypetersenphoto.com",
     "build:studio:bpio": "turbo run build --scope=studio.blakepetersen.io",
     "build:studio:dbre": "turbo run build --scope=studio.dalebridges.com",
-    "build:studio:igg": "turbo run build --scope=studio.iriganggang.com",
-    "clean": "turbo run clean",
+    "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev --parallel",
     "dev:0xbp": "turbo run dev --scope=0xbp.io",
     "dev:app": "turbo run dev --scope=ashleypetersenphoto.com",
     "dev:bpio": "turbo run dev --scope=blakepetersen.io",
     "dev:dbre": "turbo run dev --scope=dalebridges.com",
-    "dev:igg": "turbo run dev --scope=iriganggang.com",
     "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
     "start": "turbo run start --parallel",
     "start:0xbp": "turbo run start --scope=0xbp.io",
     "start:app": "turbo run start --scope=ashleypetersenphoto.com",
     "start:bpio": "turbo run start --scope=blakepetersen.io",
     "start:dbre": "turbo run start --scope=dalebridges.com",
-    "start:igg": "turbo run start --scope=iriganggang.com",
     "start:studio:0xbp": "turbo run sanity start --scope=studio.0xbp.io",
     "start:studio:app": "turbo run sanity start --scope=studio.ashleypetersenphoto.com",
     "start:studio:bpio": "turbo run sanity start --scope=studio.blakepetersen.io",
-    "start:studio:dbre": "turbo run sanity start --scope=studio.dalebridges.com",
-    "start:studio:igg": "turbo run sanity start --scope=studio.iriganggang.com",
-    "prepare": "husky install"
+    "start:studio:dbre": "turbo run sanity start --scope=studio.dalebridges.com"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.0.3",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "2.7.1",
-    "turbo": "^1.4.3"
+    "@commitlint/cli": "18.2.0",
+    "@commitlint/config-conventional": "18.4.0",
+    "@testing-library/jest-dom": "6.1.4",
+    "@testing-library/react": "14.1.0",
+    "@testing-library/user-event": "14.5.1",
+    "@types/node": "20.9.0",
+    "@types/react": "18.2.37",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "eslint": "8.53.0",
+    "husky": "8.0.3",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "lint-staged": "15.1.0",
+    "prettier": "3.1.0",
+    "turbo": "1.10.16",
+    "typescript": "5.2.2"
   },
   "lint-staged": {
     "apps/**/*.{js,jsx,ts,tsx}": [
-      "yarn eslint --quiet --fix"
+      "pnpm eslint --quiet --fix"
     ],
     "*.{json,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }

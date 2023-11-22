@@ -1,5 +1,6 @@
 /.idea
 /.next
+/.turbo
 /node_modules
 /out
 
@@ -20,3 +21,4 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+.vscode

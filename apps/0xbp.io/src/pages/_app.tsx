@@ -1,34 +1,34 @@
 import '../styles/global-styles.scss'
 import '@rainbow-me/rainbowkit/styles.css'
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
+import { configureChains, createConfig, WagmiConfig } from 'wagmi'
+import { mainnet, polygon, optimism, arbitrum, base, zora } from 'wagmi/chains'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
 import Frame from '@/components/Frame'
 
-export { reportWebVitals } from 'next-axiom'
-
-const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
-  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()],
+const { chains, publicClient } = configureChains(
+  [mainnet, polygon, optimism, arbitrum],
+  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()]
 )
 
 const { connectors } = getDefaultWallets({
   appName: '0xbp.io Wallet Visualizer',
-  chains,
+  projectId: 'e5273f5b902bd128300842ed18422716',
+  chains
 })
 
-const wagmiClient = createClient({
+const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
-  provider,
+  publicClient
 })
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <WagmiConfig client={wagmiClient}>
+    <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
         <ThemeProvider>
           <Frame>

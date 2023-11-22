@@ -2,6 +2,11 @@ import styled from 'styled-components'
 import React from 'react'
 import Link from 'next/link'
 import Triangles from '@/components/triangles'
+import { Link as _Link } from '@radix-ui/themes'
+
+interface TitleProps {
+  $isTop: boolean
+}
 
 const _MainNav = styled.div`
   position: relative;
@@ -15,15 +20,13 @@ const _MainNav = styled.div`
   a {
     display: inline-block;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
-    transition: color 150ms ease 150ms, text-shadow 300ms ease-out,
+    transition:
+      color 150ms ease 150ms,
+      text-shadow 300ms ease-out,
       transform 300ms ease;
 
     &:hover {
-      transform: translateY(-4px);
-      color: rgb(255, 255, 255);
-      text-shadow: 0 11px 1px rgba(0, 0, 0, 0.15);
+      transform: translateY(-6px);
     }
   }
 
@@ -36,14 +39,16 @@ const _MainNav = styled.div`
   }
 
   svg {
-    fill: rgba(255, 255, 255, 0.95);
+    fill: rgb(255, 255, 255);
     width: 30px;
     filter: drop-shadow(0 7px 0 rgba(0, 0, 0, 0.15));
-    transition: filter 300ms ease, transform 300ms ease;
+    transition:
+      filter 300ms ease,
+      transform 300ms ease;
     flex-shrink: 0;
 
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       fill: rgb(255, 255, 255);
       filter: drop-shadow(0 11px 1px rgba(0, 0, 0, 0.15));
     }
@@ -54,19 +59,21 @@ const _Content = styled.div`
   z-index: 3;
 `
 
-const _Logo = styled.h1`
+const _Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.75rem;
   font-weight: 900;
-  margin: 1.5rem;
+  margin: 1rem;
   position: relative;
   letter-spacing: -1px;
   white-space: nowrap;
 
   .is-post & {
-    transition: opacity 150ms ease-out, transform 300ms ease-out;
+    transition:
+      opacity 150ms ease-out,
+      transform 300ms ease-out;
     opacity: 0;
     transform: translateY(-100px);
   }
@@ -77,16 +84,10 @@ const _Logo = styled.h1`
   }
 `
 
-const _Title = styled.div`
-  padding: 0 0 0.5rem;
-  opacity: 1;
+const _Title = styled.div<TitleProps>`
+  opacity: ${props => (props.$isTop ? 1 : 0)};
   transition: opacity 300ms ease;
-
-  ${({ isTop }) =>
-    !isTop &&
-    `
-    opacity: 0;
-  `}
+  text-decoration: none;
 `
 
 const _Subtitle = styled.div`
@@ -94,8 +95,10 @@ const _Subtitle = styled.div`
   text-transform: uppercase;
   display: block;
   letter-spacing: 5px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
 `
 
 const MainNav = ({ isTop = true }) => {
@@ -103,11 +106,14 @@ const MainNav = ({ isTop = true }) => {
     <_MainNav className={`main-nav full`}>
       <_Content>
         <_Logo>
-          <Link href={`/`}>
-            <a>
-              <_Title isTop={isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
-              <_Subtitle isTop={isTop}>Good Times in Web Development</_Subtitle>
-            </a>
+          <Link href={`/`} passHref>
+            <_Link color={'gray'} asChild>
+              <_Title $isTop={isTop}>ʙ ʟ Λ ĸ ᴇ</_Title>
+            </_Link>
+
+            <_Link color={'gray'} asChild>
+              <_Subtitle>Good Times in Web Development</_Subtitle>
+            </_Link>
           </Link>
         </_Logo>
       </_Content>
