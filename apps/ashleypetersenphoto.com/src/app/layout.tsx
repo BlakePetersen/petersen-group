@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Lora } from 'next/font/google'
 
 import Footer from '@/components/Footer'
@@ -14,6 +15,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
