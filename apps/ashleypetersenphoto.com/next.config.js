@@ -6,12 +6,9 @@ const withPlugins = require('next-compose-plugins')
 const { withAxiom } = require('next-axiom')
 
 const nextConfig = {
-  experimental: {
-    appDir: true,
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } }
-    ]
-  },
+  fontLoaders: [
+    { loader: '@next/font/google', options: { subsets: ['latin'] } }
+  ],
   images: {
     domains: ['cdn.sanity.io']
   },
