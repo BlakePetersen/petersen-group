@@ -1,8 +1,6 @@
 import sgMail from '@sendgrid/mail'
 import { htmlToText } from 'html-to-text'
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-
 const allowCors = (fn) => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -22,6 +20,8 @@ const allowCors = (fn) => async (req, res) => {
 }
 
 const handler = async (req, res) => {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
   const { body } = req
 
   const msg = {
@@ -47,4 +47,4 @@ const handler = async (req, res) => {
     })
 }
 
-module.exports = allowCors(handler)
+export default allowCors(handler)
